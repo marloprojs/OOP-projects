@@ -19,14 +19,14 @@ class Animal
 
 class Feline extends Animal
 {
-
+	public Feline(){}
 	public void roam()
 	{
 		System.out.println("Wandering");
 	}
 }
 
-class Cat extends Feline
+public class Cat extends Feline
 {
 	public Cat(){}
 	public void random_action_generator()
@@ -47,8 +47,9 @@ class Cat extends Feline
 	}
 }
 
-/*class Lion extends Feline
+class Lion extends Feline
 {
+	public Lion(){}
 	public void makeNoise()
 	{
 		System.out.println("Roar");
@@ -57,6 +58,7 @@ class Cat extends Feline
 
 class Tiger extends Feline
 {
+	public Tiger(){}
 	public void makeNoise()
 	{
 		System.out.println("Grrrrrr");
@@ -65,6 +67,7 @@ class Tiger extends Feline
 
 class Canine extends Animal
 {
+	public Canine(){}
 	public void roam()
 	{
 		System.out.println("Scampering");
@@ -73,6 +76,7 @@ class Canine extends Animal
 
 class Wolf extends Canine
 {
+	public Wolf(){}
 	public void makeNoise()
 	{
 		System.out.println("Grrrrr");
@@ -81,6 +85,7 @@ class Wolf extends Canine
 
 class Dog extends Canine
 {
+	public Dog(){}
 	public void makeNoise()
 	{
 		System.out.println("Bark Bark");
@@ -89,6 +94,7 @@ class Dog extends Canine
 
 class Pachyderm extends Animal 
 {
+	public Pachyderm(){}
 	public void roam()
 	{
 		System.out.println("Stompping");
@@ -97,6 +103,7 @@ class Pachyderm extends Animal
 
 class Hippo extends Pachyderm
 {
+	public Hippo(){}
 	public void makeNoise()
 	{
 		System.out.println("Whaaaa");
@@ -105,6 +112,7 @@ class Hippo extends Pachyderm
 
 class Rhino extends Pachyderm
 {
+	public Rhino(){}
 	public void makeNoise()
 	{
 		System.out.println("Grumble Grumble");
@@ -113,8 +121,9 @@ class Rhino extends Pachyderm
 
 class Elephant extends Pachyderm
 {
+	public Elephant(){}
 	public void makeNoise()
 	{
 		System.out.println("Raaaaaaa");
 	}
-}*/
+}
