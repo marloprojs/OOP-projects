@@ -19,7 +19,7 @@ class Animal
 
 class Feline extends Animal
 {
-	//public Feline(){}
+
 	public void roam()
 	{
 		System.out.println("Wandering");
