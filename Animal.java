@@ -1,12 +1,9 @@
 import java.io.*;
 import java.util.Random;
 
-public class Animal
+class Animal
 {
-	public Animal()
-	{
-		System.out.println("REEEEEE");
-	}
+	public Animal(){}
 
 	public void sleep()
 	{
@@ -22,7 +19,8 @@ public class Animal
 
 class Feline extends Animal
 {
-	public void roam();
+	//public Feline(){}
+	public void roam()
 	{
 		System.out.println("Wandering");
 	}
@@ -30,6 +28,7 @@ class Feline extends Animal
 
 class Cat extends Feline
 {
+	public Cat(){}
 	public void random_action_generator()
 	{
 		int num = random_number_generator();
@@ -48,7 +47,7 @@ class Cat extends Feline
 	}
 }
 
-class Lion extends Feline
+/*class Lion extends Feline
 {
 	public void makeNoise()
 	{
@@ -118,4 +117,4 @@ class Elephant extends Pachyderm
 	{
 		System.out.println("Raaaaaaa");
 	}
-}
+}*/
