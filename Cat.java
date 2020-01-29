@@ -1,6 +1,12 @@
 import java.io.*;
 import java.util.Random;
 
+/*class Zookeeper
+{
+	public Zookeeper(){System.out.println("Zookeeper");}
+	public void hello(){System.out.println("hello");}
+}*/
+
 class Animal
 {
 	public Animal(){}
