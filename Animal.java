@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.Random;
 
-public class Animal
+class Animal
 {
 	public Animal()
 	{
@@ -22,7 +22,7 @@ public class Animal
 
 class Feline extends Animal
 {
-	public void roam();
+	public void roam()
 	{
 		System.out.println("Wandering");
 	}
