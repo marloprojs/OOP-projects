@@ -1,3 +1,4 @@
+/*
 import java.io.*;
 
 public class zoo
@@ -36,5 +37,4 @@ public class zoo
 		System.out.println("Salary: "+salary);
 	}
 }
-
-
+*/
