@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Random;
 
+//Animal class is the superclass, variables include the animal's name, if it's been fed, and if it's awake
 public class Animal
 {
   public String name = "";
@@ -22,6 +23,7 @@ public class Animal
   }
 }
 
+//Feline is a subclass of Animal
 class Feline extends Animal
 {
 	public Feline(){}
@@ -31,11 +33,13 @@ class Feline extends Animal
 	}
 }
 
+//Cat is a subclass of Feline
 class Cat extends Feline
 {
 	public Cat(String name){
     this.name=name;
   }
+  //The cat's action is unpredictable, hence the random action generator for when it makes a noise
 	public void random_action_generator()
 	{
 		int num = random_number_generator();
@@ -54,6 +58,7 @@ class Cat extends Feline
 	}
 }
 
+//Lion is a subclass of Feline
 class Lion extends Feline
 {
 	public Lion(String name){
@@ -65,6 +70,7 @@ class Lion extends Feline
 	}
 }
 
+//Tiger is a subclass of Feline
 class Tiger extends Feline
 {
 	public Tiger(String name){
@@ -76,6 +82,7 @@ class Tiger extends Feline
 	}
 }
 
+//Canine is a subclass of Animal 
 class Canine extends Animal
 {
 //	public Canine(){}
@@ -85,6 +92,7 @@ class Canine extends Animal
 	}
 }
 
+//Wolf is a subclass of Canine
 class Wolf extends Canine
 {
 	public Wolf(String name){
@@ -96,6 +104,7 @@ class Wolf extends Canine
 	}
 }
 
+//Dog is a subclass of Canine
 class Dog extends Canine
 {
 	public Dog(String name){
@@ -107,6 +116,7 @@ class Dog extends Canine
 	}
 }
 
+//Pachyderm is a subclass of Animal
 class Pachyderm extends Animal
 {
 	public Pachyderm(){}
@@ -116,6 +126,7 @@ class Pachyderm extends Animal
 	}
 }
 
+//Hippo is a subclass of Pachyderm
 class Hippo extends Pachyderm
 {
 	public Hippo(String name ){
@@ -127,6 +138,7 @@ class Hippo extends Pachyderm
 	}
 }
 
+//Rhino is a subclass of Pachyderm
 class Rhino extends Pachyderm
 {
 	public Rhino(String name){
@@ -138,6 +150,7 @@ class Rhino extends Pachyderm
 	}
 }
 
+//Elephant is a subclass of Pachyderm
 class Elephant extends Pachyderm
 {
 	public Elephant(String name){
