@@ -1,5 +1,8 @@
 import random
 
+#Yuck Look at this code!
+
+
 #Animal class is the superclass, variables include the animal's name, if it's been fed, and if it's awake
 class Animal(object):
 	def __init__(self, name="", isAwake=False, isFed=False):
@@ -54,7 +57,7 @@ class Tiger(Feline):
 	def makeNoise():
 		print("Grrrrrr")
 
-#Canine is a subclass of Animal 
+#Canine is a subclass of Animal
 class Canine (Animal):
 	def __init__(self, name="", isAwake=False, isFed=False):
 		Animal.__init__(self, name="", isAwake=False, isFed=False)
