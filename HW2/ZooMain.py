@@ -1,3 +1,4 @@
+
 from Animal import *
 from Zoo import *
 from Zookeeper import *
@@ -23,10 +24,45 @@ Zoo.addZookeper( Zookeeper("Bruce",24, 250000))
 #wake up
 Zoo.wakeUp()
 #roll call
-Zoo.rollCall()
+#Zoo.rollCall()
 #feed animals
-Zoo.feedAnimals()
+#Zoo.feedAnimals()
 #excersize
-Zoo.excersizeAnimals()
+#Zoo.excersizeAnimals()
 #shutdown
-Zoo.shutDownZoo()
+#Zoo.shutDownZoo()
+
+
+
+
+
+"""
+from Animal import *
+
+kitty = Cat()
+kitty.sleep()
+kitty.roam()
+kitty.makeNoise()
+rhino = Rhino()
+Rhino.makeNoise()
+dog = Dog()
+dog.makeNoise()
+elephant = Elephant()
+elephant.makeNoise()
+hippo = Hippo()
+hippo.makeNoise()
+pacy = Pachyderm()
+pacy.roam()
+dog = Dog()
+dog.makeNoise()
+dog.roam()
+dog.sleep()
+wolf = Wolf()
+wolf.makeNoise()
+can = Canine()
+can.roam()
+tiger = Tiger()
+tiger.makeNoise()
+lion = Lion()
+lion.makeNoise()
+"""

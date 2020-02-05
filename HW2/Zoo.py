@@ -18,24 +18,26 @@ class Zoo:
         return this.zooAnimals
 
     #Get zoo keeper
+    
     def getZooKeeper():
         return this.zooKeeper
 
     #Number of animals in the zoo
-    def getNumberOfAnimals():
-        print(zooAnimals.size())
+    def getNumberOfAnimals(self):
+        print(len(self.zooAnimals))
 
     #Wake up all of the animals in the zoo if they're not already awake
     def wakeUp(self):
         allNames= ""
         for ani in self.zooAnimals:
-            if (ani.isAwake == false):
+            if (ani.isAwake == False):
                 ani.isAwake = true
-                allNames+= ani.name + ", "
+                allNames+= this.ani.name + ", "
             else:
                 print(ani.name + " already awake")
-        print(zooKeeper.name + " woke up "+ allNames)
+        print(self.zooKeeper.name + " woke up "+ allNames)
 
+    '''
     #Roll call all of the animals: call out the animals' names
     def rollCall():
         print("Roll Call")
@@ -48,7 +50,7 @@ class Zoo:
     def feedAnimals():
         allNames= ""
         for ani in this.zooAnimals:
-            if(ani.isFed == false):
+            if(ani.isFed == False):
                 allNames+= ani.name + ", "
             else:
                 print(ani.name + " already Fed.")
@@ -67,6 +69,7 @@ class Zoo:
         print(zooKeeper.name +" shutting down zoo!")
         for ani in self.zooAnimals:
             allNames += ani.name + ", "
-            ani.isAwake = false
-            ani.isFed = false
+            ani.isAwake = False
+            ani.isFed = False
         print(zooKeeper.name +" put " + allNames + "to sleep")
+        '''
