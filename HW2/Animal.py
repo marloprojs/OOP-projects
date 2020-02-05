@@ -3,9 +3,9 @@ import random
 #Animal class is the superclass, variables include the animal's name, if it's been fed, and if it's awake
 class Animal(object):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		name = name
-		isAwake = isAwake
-		isFed = isFed
+		self.name = name
+		self.isAwake = isAwake
+		self.isFed = isFed
 
 	def sleep(self):
 		print("Sleeping")
@@ -20,7 +20,7 @@ class Animal(object):
 #Feline is a subclass of Animal
 class Feline(Animal):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Animal.__init__(self, name="", isAwake=False, isFed=False)
+		Animal.__init__(self, name=name, isAwake=False, isFed=False)
 
 	def roam(self):
 		print("Wandering")
@@ -28,7 +28,7 @@ class Feline(Animal):
 #Cat is a subclass of Feline
 class Cat(Feline):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Feline.__init__(self, name="", isAwake=False, isFed=False)
+		Feline.__init__(self, name=name, isAwake=False, isFed=False)
 
     #The cat's action is unpredictable, hence the random action generator for when it makes a noise
 	def random_action_generator(self):
@@ -44,21 +44,21 @@ class Cat(Feline):
 #Lion is a subclass of Feline
 class Lion(Feline):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Feline.__init__(self, name="", isAwake=False, isFed=False)
+		Feline.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Roar")
 
 #Tiger is a subclass of Feline
 class Tiger(Feline):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Feline.__init__(self, name="", isAwake=False, isFed=False)
+		Feline.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Grrrrrr")
 
 #Canine is a subclass of Animal 
 class Canine (Animal):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Animal.__init__(self, name="", isAwake=False, isFed=False)
+		Animal.__init__(self, name=name, isAwake=False, isFed=False)
 	def roam(self):
 		print("Scampering")
 
@@ -66,7 +66,7 @@ class Canine (Animal):
 #Wolf is a subclass of Canine
 class Wolf(Canine):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Canine.__init__(self, name="", isAwake=False, isFed=False)
+		Canine.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Grrrrr")
 
@@ -74,7 +74,7 @@ class Wolf(Canine):
 #Dog is a subclass of Canine
 class Dog(Canine):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Canine.__init__(self, name="", isAwake=False, isFed=False)
+		Canine.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Bark Bark")
 
@@ -82,7 +82,7 @@ class Dog(Canine):
 #Pachyderm is a subclass of Animal
 class Pachyderm(Animal):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Animal.__init__(self, name="", isAwake=False, isFed=False)
+		Animal.__init__(self, name=name, isAwake=False, isFed=False)
 	def roam(self):
 		print("Stomping")
 
@@ -90,7 +90,7 @@ class Pachyderm(Animal):
 #Hippo is a subclass of Pachyderm
 class Hippo(Pachyderm):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Pachyderm.__init__(self, name="", isAwake=False, isFed=False)
+		Pachyderm.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Whaaaa")
 
@@ -98,7 +98,7 @@ class Hippo(Pachyderm):
 #Rhino is a subclass of Pachyderm
 class Rhino(Pachyderm):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Pachyderm.__init__(self, name="", isAwake=False, isFed=False)
+		Pachyderm.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise():
 		print("Grumble Grumble")
 
@@ -106,7 +106,7 @@ class Rhino(Pachyderm):
 #Elephant is a subclass of Pachyderm
 class Elephant(Pachyderm):
 	def __init__(self, name="", isAwake=False, isFed=False):
-		Animal.__init__(self, name="", isAwake=False, isFed=False)
+		Animal.__init__(self, name=name, isAwake=False, isFed=False)
 	def makeNoise(self):
 		print("Raaaaaaa")
 

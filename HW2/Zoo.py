@@ -15,12 +15,12 @@ class Zoo:
 
     #Get list of animals in zoo
     def getAnimals():
-        return this.zooAnimals
+        return self.zooAnimals
 
     #Get zoo keeper
     
     def getZooKeeper():
-        return this.zooKeeper
+        return self.zooKeeper
 
     #Number of animals in the zoo
     def getNumberOfAnimals(self):
@@ -31,8 +31,8 @@ class Zoo:
         allNames= ""
         for ani in self.zooAnimals:
             if (ani.isAwake == False):
-                ani.isAwake = true
-                allNames+= this.ani.name + ", "
+                ani.isAwake = True
+                allNames+= ani.name + ", "
             else:
                 print(ani.name + " already awake")
         print(self.zooKeeper.name + " woke up "+ allNames)
