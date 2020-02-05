@@ -28,13 +28,13 @@ Zoo.wakeUp()
 print("")
 Zoo.animalMakeNoise()
 #roll call
-#Zoo.rollCall()
+Zoo.rollCall()
 #feed animals
-#Zoo.feedAnimals()
+Zoo.feedAnimals()
 #excersize
-#Zoo.excersizeAnimals()
+Zoo.excersizeAnimals()
 #shutdown
-#Zoo.shutDownZoo()
+Zoo.shutDownZoo()
 
 
 
