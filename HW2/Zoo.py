@@ -18,7 +18,7 @@ class Zoo:
         return self.zooAnimals
 
     #Get zoo keeper
-    
+
     def getZooKeeper():
         return self.zooKeeper
 
@@ -36,6 +36,10 @@ class Zoo:
             else:
                 print(ani.name + " already awake")
         print(self.zooKeeper.name + " woke up "+ allNames)
+    def animalMakeNoise(self):
+        for ani in self.zooAnimals:
+            print(ani.name ,end = " said ")
+            ani.makeNoise()
 
     '''
     #Roll call all of the animals: call out the animals' names
