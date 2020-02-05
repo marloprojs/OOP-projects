@@ -2,7 +2,7 @@
 from Animal import *
 from Zoo import *
 from Zookeeper import *
-#from ZooAnnouncer import *
+from ZooAnnouncer import *
 
 #class zooMain:
   #def main():
@@ -19,7 +19,11 @@ Zoo.addAnimal( Wolf("Watson"))
 Zoo.addAnimal( Hippo("Henry"))
 Zoo.addAnimal( Elephant("Eagor"))
 Zoo.addAnimal( Dog("David"))
-Zoo.addZookeper( Zookeeper("Bruce",24, 250000))
+keeper = Zookeeper("Bruce",24, 250000)
+an = ZooAnnouncer()
+keeper.register_observer(an)
+Zoo.addZookeper(keeper)
+#Zoo.addAnnouncer(ZooAnnouncer(keeper))
 
 #wake up
 Zoo.wakeUp()
