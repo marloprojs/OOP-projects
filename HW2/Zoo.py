@@ -37,39 +37,38 @@ class Zoo:
                 print(ani.name + " already awake")
         print(self.zooKeeper.name + " woke up "+ allNames)
 
-    '''
+    
     #Roll call all of the animals: call out the animals' names
-    def rollCall():
+    def rollCall(self):
         print("Roll Call")
         allNames= ""
-        for ani in this.zooAnimals:
+        for ani in self.zooAnimals:
             allNames+= ani.name + ", "
         print(allNames)
 
     #Feed all of the animals in the zoo if they haven't already been fed
-    def feedAnimals():
+    def feedAnimals(self):
         allNames= ""
-        for ani in this.zooAnimals:
+        for ani in self.zooAnimals:
             if(ani.isFed == False):
                 allNames+= ani.name + ", "
             else:
                 print(ani.name + " already Fed.")
-        print(zooKeeper.name + " fed "+ allNames)
+        print(self.zooKeeper.name + " fed "+ allNames)
 
     #Exercise all of the animals in the zoo
-    def excersizeAnimals():
+    def excersizeAnimals(self):
         allNames= ""
-        for ani in this.zooAnimals:
+        for ani in self.zooAnimals:
             allNames += ani.name + ", "
-        print(zooKeeper.name + " excersized "+ allNames)
+        print(self.zooKeeper.name + " exercised "+ allNames)
 
     #Reset the zoo - all of the animals haven't been fed and are asleep after reset
-    def shutDownZoo():
+    def shutDownZoo(self):
         allNames= ""
-        print(zooKeeper.name +" shutting down zoo!")
+        print(self.zooKeeper.name +" shutting down zoo!")
         for ani in self.zooAnimals:
             allNames += ani.name + ", "
             ani.isAwake = False
             ani.isFed = False
-        print(zooKeeper.name +" put " + allNames + "to sleep")
-        '''
+        print(self.zooKeeper.name +" put " + allNames + "to sleep")
