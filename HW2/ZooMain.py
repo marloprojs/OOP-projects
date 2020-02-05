@@ -11,6 +11,7 @@ Zoo = Zoo()
 Zoo.addAnimal(Cat("Charlie"))
 Zoo.addAnimal( Cat("Carl"))
 Zoo.addAnimal( Cat("Creg"))
+
 Zoo.addAnimal( Lion("Larry"))
 Zoo.addAnimal( Lion("Lissa"))
 Zoo.addAnimal( Dog("Dennis"))
@@ -23,10 +24,11 @@ keeper = Zookeeper("Bruce",24, 250000)
 an = ZooAnnouncer()
 keeper.register_observer(an)
 Zoo.addZookeper(keeper)
-#Zoo.addAnnouncer(ZooAnnouncer(keeper))
 
 #wake up
 Zoo.wakeUp()
+print("")
+Zoo.animalMakeNoise()
 #roll call
 Zoo.rollCall()
 #feed animals
