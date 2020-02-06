@@ -45,7 +45,7 @@ class Zoo:
         print(self.zooKeeper.name + " woke up "+ allNames)
     def animalMakeNoise(self):
         for ani in self.zooAnimals:
-            print(ani.name ,end = " said ")
+            print(ani.name ,end = " went ")
             ani.makeNoise()
 
 

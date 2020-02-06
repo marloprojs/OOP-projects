@@ -14,13 +14,13 @@ class makeNoiseStrategyAbstract(abc.ABC):
     #
 class catMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Mewo")
+        print("Meow")
 class lionMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
         print("Roar")
 class tigerMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Grrrr")
+        print("Rawr")
 
 class wolfMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
@@ -37,4 +37,4 @@ class rhinoMakeNoise(makeNoiseStrategyAbstract):
         print("Grumble Grumble")
 class elephantMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Raaaaaa")
+        print("Raaaaa")
