@@ -28,9 +28,10 @@ Zoo.addZookeper(keeper)
 #wake up
 Zoo.wakeUp()
 print("")
-Zoo.animalMakeNoise()
 #roll call
 Zoo.rollCall()
+print("")
+#Zoo.animalMakeNoise()
 #feed animals
 Zoo.feedAnimals()
 #excersize
