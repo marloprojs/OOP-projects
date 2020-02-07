@@ -15,6 +15,7 @@ class ZooAnnouncer(Observer, DisplayElement):
 		self.action = action
 		self.display()
 
+	#Announce the action that the zoo keeper has taken
 	def display(self):
 		print("Hi, this is the Zoo Announcer. The Zookeeper is about to "+self.action + "\n")
 

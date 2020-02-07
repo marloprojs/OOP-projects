@@ -31,6 +31,7 @@ class Zoo:
         print(len(self.zooAnimals))
 
     #Wake up all of the animals in the zoo if they're not already awake
+    #Notify observer that an action has occured
     def wakeUp(self):
         self.zooKeeper.action = " wake up the animals"
         self.zooKeeper.action_occured()
@@ -43,6 +44,7 @@ class Zoo:
                 print(ani.name + " already awake")
 
         print(self.zooKeeper.name + " woke up "+ allNames)
+    #Notify observer that an action has occured
     def animalMakeNoise(self):
         for ani in self.zooAnimals:
             print(ani.name ,end = " went ")
@@ -50,6 +52,7 @@ class Zoo:
 
 
     #Roll call all of the animals: call out the animals' names
+    #Notify observer that an action has occured
     def rollCall(self):
         self.zooKeeper.action = " take roll call"
         self.zooKeeper.action_occured()
@@ -60,6 +63,7 @@ class Zoo:
         #print(allNames)
 
     #Feed all of the animals in the zoo if they haven't already been fed
+    #Notify observer that an action has occured
     def feedAnimals(self):
         self.zooKeeper.action = " feed the animals"
         self.zooKeeper.action_occured()
@@ -72,6 +76,7 @@ class Zoo:
         #print(self.zooKeeper.name + " fed "+ allNames)
 
     #Exercise all of the animals in the zoo
+    #Notify observer that an action has occured
     def excersizeAnimals(self):
         self.zooKeeper.action = " exercise the animals"
         self.zooKeeper.action_occured()
@@ -81,6 +86,7 @@ class Zoo:
         #print(self.zooKeeper.name + " exercised "+ allNames)
 
     #Reset the zoo - all of the animals haven't been fed and are asleep after reset
+    #Notify observer that an action has occured
     def shutDownZoo(self):
         self.zooKeeper.action = " shut down the zoo"
         self.zooKeeper.action_occured()

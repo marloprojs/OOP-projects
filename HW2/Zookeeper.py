@@ -18,12 +18,14 @@ class Zookeeper(Subject):
 		self.action = ""
 		self.observers = []
 
+	#Make a list of the observers
 	def register_observer(self, Observer):
 		self.observers.append(Observer)
 
 	def remove_observer(self, Observer):
 		self.observers.remove(Observer)
 
+	#Update the observers that an action has occured
 	def notify_observers(self):
 		for observer in self.observers:
 			observer.update(self.action)
