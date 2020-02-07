@@ -43,20 +43,17 @@ class Zoo:
                 print(ani.name + " already awake")
 
         print(self.zooKeeper.name + " woke up "+ allNames)
-    def animalMakeNoise(self):
-        for ani in self.zooAnimals:
-            print(ani.name ,end = " went ")
-            ani.makeNoise()
-
 
     #Roll call all of the animals: call out the animals' names
     def rollCall(self):
         self.zooKeeper.action = " take roll call"
         self.zooKeeper.action_occured()
         #print("Roll Call")
-        allNames= ""
+        #allNames= ""
         for ani in self.zooAnimals:
-            allNames+= ani.name + ", "
+            print (ani.name, end =" went ")
+            ani.makeNoise()
+            #allNames+= ani.name + ", "
         #print(allNames)
 
     #Feed all of the animals in the zoo if they haven't already been fed
