@@ -10,6 +10,8 @@ class Zoo:
 
     def addZookeper(self, keeper):
         self.zooKeeper = keeper
+        length = len(keeper.observers)
+        self.addAnnouncer(keeper.observers[length-1])
 
     def addAnnouncer(self, announcer):
         self.zooAnnouncer = announcer
@@ -99,4 +101,5 @@ class Zoo:
             allNames += ani.name + ", "
             ani.isAwake = False
             ani.isFed = False
+        self.zooKeeper.remove_observer(self.zooAnnouncer)
         #print(self.zooKeeper.name +" put " + allNames + "to sleep")
