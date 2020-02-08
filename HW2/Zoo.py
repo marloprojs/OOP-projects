@@ -19,10 +19,6 @@ class Zoo:
     def addAnimal(self, newAnimal):
         self.zooAnimals.append(newAnimal)
 
-    #Get list of animals in zoo
-    def getAnimals():
-        return self.zooAnimals
-
     #Get zoo keeper
 
     def getZooKeeper():
@@ -102,4 +98,5 @@ class Zoo:
             ani.isAwake = False
             ani.isFed = False
         self.zooKeeper.remove_observer(self.zooAnnouncer)
+        print("Announcer Successfully Deconstructed")
         #print(self.zooKeeper.name +" put " + allNames + "to sleep")
