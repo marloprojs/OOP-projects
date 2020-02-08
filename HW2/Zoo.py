@@ -1,5 +1,3 @@
-
-
 #Zoo class with methods to get details on the zoo and actions that can occur at the zoo
 class Zoo:
     #Construct a zoo with animals and zoo keeper
@@ -19,15 +17,6 @@ class Zoo:
     def addAnimal(self, newAnimal):
         self.zooAnimals.append(newAnimal)
 
-    #Get zoo keeper
-
-    def getZooKeeper():
-        return self.zooKeeper
-
-    #Number of animals in the zoo
-    def getNumberOfAnimals(self):
-        print(len(self.zooAnimals))
-
     #Wake up all of the animals in the zoo if they're not already awake
     #Notify observer that an action has occured
     def wakeUp(self):
@@ -42,13 +31,6 @@ class Zoo:
                 print(ani.name + " already awake")
 
         print(self.zooKeeper.name + " woke up "+ allNames)
-
-    #Notify observer that an action has occured
-    def animalMakeNoise(self):
-        for ani in self.zooAnimals:
-            print(ani.name ,end = " went ")
-            ani.makeNoise()
-
 
     #Roll call all of the animals: call out the animals' names
     #Notify observer that an action has occured
@@ -92,7 +74,6 @@ class Zoo:
         self.zooKeeper.action = " shut down the zoo"
         self.zooKeeper.action_occured()
         allNames= ""
-        #print(self.zooKeeper.name +" shutting down zoo!")
         for ani in self.zooAnimals:
             allNames += ani.name + ", "
             ani.isAwake = False
