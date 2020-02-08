@@ -24,10 +24,8 @@ Zoo.addZookeper(keeper)
 
 #wake up
 Zoo.wakeUp()
-print("")
 #roll call
 Zoo.rollCall()
-print("")
 #feed animals
 Zoo.feedAnimals()
 #excersize
