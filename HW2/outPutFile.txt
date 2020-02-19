@@ -1,0 +1,25 @@
+Hi, this is the Zoo Announcer. The Zookeeper is about to  wake up the animals
+
+Bruce woke up Charlie, Carl, Creg, Larry, Lissa, Dennis, Tyler, Watson, Henry, Eagor, David, 
+
+Hi, this is the Zoo Announcer. The Zookeeper is about to  take roll call
+
+Charlie went Meow
+Carl went Meow
+Creg went Wandering
+Larry went Roar
+Lissa went Roar
+Dennis went Bark Bark
+Tyler went Rawr
+Watson went Grrr
+Henry went Whaaaa
+Eagor went Raaaaa
+David went Bark Bark
+
+Hi, this is the Zoo Announcer. The Zookeeper is about to  feed the animals
+
+Hi, this is the Zoo Announcer. The Zookeeper is about to  exercise the animals
+
+Hi, this is the Zoo Announcer. The Zookeeper is about to  shut down the zoo
+
+Announcer Successfully Deconstructed

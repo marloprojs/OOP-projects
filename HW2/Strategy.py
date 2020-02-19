@@ -7,34 +7,34 @@ class makeNoiseStrategyAbstract(abc.ABC):
 
     @abc.abstractmethod
     def makeNoise(self):
-        pass
+        return ""
 
 #All these are instantiating makeNoise to make a noise for a certain animal typeself
     #like loud quack and quiet quack but its for us its different "quacks" or noises
     #
 class catMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Meow")
+        return ("Meow")
 class lionMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Roar")
+        return("Roar")
 class tigerMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Rawr")
+        return("Rawr")
 
 class wolfMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Grrr")
+        return("Grrr")
 class dogMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Bark Bark")
+        return("Bark Bark")
 
 class hippoMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Whaaaa")
+        return("Whaaaa")
 class rhinoMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Grumble Grumble")
+        return("Grumble Grumble")
 class elephantMakeNoise(makeNoiseStrategyAbstract):
     def makeNoise(self):
-        print("Raaaaa")
+        return("Raaaaa")

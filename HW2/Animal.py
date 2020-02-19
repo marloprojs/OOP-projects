@@ -26,7 +26,7 @@ class Feline(Animal):
 		Animal.__init__(self, name=name,strgy = strgy, isAwake=False, isFed=False)
 
 	def roam(self):
-		print("Wandering")
+		return("Wandering")
 
 
 
@@ -40,11 +40,11 @@ class Cat(Feline):
 	def random_action_generator(self):
 		num = self.random_number_generator()
 		if num == 0:
-			self.roam()
+			return (self.roam())
 		else:
-			self._makeNoise_strategy.makeNoise();
+			return (self._makeNoise_strategy.makeNoise())
 	def makeNoise(self):
-		self.random_action_generator()
+		return (self.random_action_generator())
 
 
 #Lion is a subclass of Feline
@@ -52,21 +52,21 @@ class Lion(Feline):
 	def __init__(self, name="",strgy = lionMakeNoise(), isAwake=False, isFed=False):
 		Feline.__init__(self, name=name, strgy = strgy ,isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return(self._makeNoise_strategy.makeNoise())
 
 #Tiger is a subclass of Feline
 class Tiger(Feline):
 	def __init__(self, name="",strgy =tigerMakeNoise(), isAwake=False, isFed=False):
 		Feline.__init__(self, name=name, strgy = strgy, isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return(self._makeNoise_strategy.makeNoise())
 
 #Canine is a subclass of Animal
 class Canine (Animal):
 	def __init__(self, name="",strgy = "", isAwake=False, isFed=False):
 		Animal.__init__(self, name=name,strgy = strgy, isAwake=False, isFed=False)
 	def roam(self):
-		print("Scampering")
+		return("Scampering")
 
 
 #Wolf is a subclass of Canine
@@ -74,7 +74,7 @@ class Wolf(Canine):
 	def __init__(self, name="", strgy = wolfMakeNoise(), isAwake=False, isFed=False):
 		Canine.__init__(self, name=name, strgy = strgy ,isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return (self._makeNoise_strategy.makeNoise())
 
 
 #Dog is a subclass of Canine
@@ -82,7 +82,7 @@ class Dog(Canine):
 	def __init__(self, name="", strgy = dogMakeNoise(), isAwake=False, isFed=False):
 		Canine.__init__(self, name=name,strgy = strgy, isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return (self._makeNoise_strategy.makeNoise())
 
 
 #Pachyderm is a subclass of Animal
@@ -90,7 +90,7 @@ class Pachyderm(Animal):
 	def __init__(self, name="", strgy = "", isAwake=False, isFed=False):
 		Animal.__init__(self, name=name, strgy =strgy, isAwake=False, isFed=False)
 	def roam(self):
-		print("Stomping")
+		return("Stomping")
 
 
 #Hippo is a subclass of Pachyderm
@@ -98,7 +98,7 @@ class Hippo(Pachyderm):
 	def __init__(self, name="", strgy = hippoMakeNoise(), isAwake=False, isFed=False):
 		Pachyderm.__init__(self, name=name,strgy = strgy, isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return (self._makeNoise_strategy.makeNoise())
 
 
 #Rhino is a subclass of Pachyderm
@@ -106,7 +106,7 @@ class Rhino(Pachyderm):
 	def __init__(self, name="", strgy = rhinoMakeNoise(), isAwake=False, isFed=False):
 		Pachyderm.__init__(self, name=name,strgy = strgy, isAwake=False, isFed=False)
 	def makeNoise():
-		self._makeNoise_strategy.makeNoise();
+		return (self._makeNoise_strategy.makeNoise())
 
 
 #Elephant is a subclass of Pachyderm
@@ -114,4 +114,4 @@ class Elephant(Pachyderm):
 	def __init__(self, name="", strgy = elephantMakeNoise(), isAwake=False, isFed=False):
 		Animal.__init__(self, name=name, strgy = strgy, isAwake=False, isFed=False)
 	def makeNoise(self):
-		self._makeNoise_strategy.makeNoise();
+		return (self._makeNoise_strategy.makeNoise())
