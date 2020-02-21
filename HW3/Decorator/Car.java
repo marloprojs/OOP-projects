@@ -3,11 +3,11 @@ import java.io.*;
 //Create Car class as the Component of the decorator
 public class Car
 {
-    public String features = ""
+    public String features = "";
     public String licenseID = "";
-    public void getFeatures(this)
+    public String getFeatures()
     {
-        return = this.features;
+        return this.features;
     }
 }
 
