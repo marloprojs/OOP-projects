@@ -7,7 +7,7 @@ public class Car
     public String licenseID = "";
     public void getFeatures(this)
     {
-        return self.features;
+        return = this.features;
     }
 }
 
