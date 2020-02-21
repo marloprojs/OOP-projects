@@ -1,22 +1,32 @@
-import java.io.*;
-
+//package HW3;
 //Create Car class as the Component of the decorator
 public class Car
 {
     public String features = "";
     public String licenseID = "";
+
+    public Car(String licenseID)
+    {
+        //this.features = features;
+        this.licenseID = licenseID;
+    }
     public String getFeatures()
     {
         return this.features;
     }
 }
 
-class Economy extends Car
+/*class Economy extends Car
 {
+    public Economy(String licenseID)
+    {
+        //this.Car(licenseID);
+        this.licenseID = licenseID;
+    }
     public int pricePerDay = 20;
 }
 
-class Standard extends Car
+/*class Standard extends Car
 {
     public int pricePerDay = 30;
 }
@@ -34,4 +44,4 @@ class Suv extends Car
 class Minivan extends Car
 {
     public int pricePerDay = 25;
-}
+}*/

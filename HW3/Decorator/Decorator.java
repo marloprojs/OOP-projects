@@ -1,5 +1,4 @@
-import java.io.*;
-
+package HW3;
 //Create Car class as the Component of the decorator
 public class Decorator
 {
