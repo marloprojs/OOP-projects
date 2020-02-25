@@ -1,9 +1,11 @@
 package Default;
 
-public class Factory{
+
+public class MJMRentalCompany extends RentalCompany{
+
   public Car getCar(String model){
-    
     Car car = null;
+
     if (model.equals("Economy")){
       car = new Economy("");
     }
@@ -22,7 +24,3 @@ public class Factory{
     return car;
   }
 }
-
-
-
-
