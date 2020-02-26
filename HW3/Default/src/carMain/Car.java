@@ -2,7 +2,7 @@ package Default;
 import java.util.*;
 //Create Car class as the Component of the decorator
 public class Car
-{
+{   public String type = "";
     public String features = "";
     public String licenseID = "";
     int numGPS = 0;
@@ -24,11 +24,11 @@ public class Car
 class Economy extends Car
 {
     int pricePerDay = 20;
-    String type = "economy";
 
     public Economy(String licenseID)
     {
         this.licenseID = licenseID;
+        this.type = "Economy";
     }
     public int getTotalCost()
     {
@@ -39,12 +39,12 @@ class Economy extends Car
 
 class Standard extends Car
 {
-    String type = "standard";
     int pricePerDay = 30;
 
     public Standard(String licenseID)
     {
         this.licenseID = licenseID;
+        this.type = "Standard";
     }
     public int getTotalCost()
     {
@@ -56,11 +56,11 @@ class Standard extends Car
 class Luxury extends Car
 {
     int pricePerDay = 45;
-    String type = "luxury";
 
     public Luxury(String licenseID)
     {
         this.licenseID = licenseID;
+        this.type = "Luxury";
     }
     public int getTotalCost()
     {
@@ -70,12 +70,12 @@ class Luxury extends Car
 
 class Suv extends Car
 {
-    String type = "suv";
     int pricePerDay = 35;
 
     public Suv(String licenseID)
     {
         this.licenseID = licenseID;
+        this.type = "SUV";
     }
 
     public int getTotalCost()
@@ -89,12 +89,12 @@ class Minivan extends Car
     int numGPS = 0;
     int numSR = 0;
     int numcarSeat = 0;
-    String type = "minivan";
     int pricePerDay = 25;
 
     public Minivan(String licenseID)
     {
         this.licenseID = licenseID;
+        this.type = "Minivan";
     }
 
     public int getTotalCost()

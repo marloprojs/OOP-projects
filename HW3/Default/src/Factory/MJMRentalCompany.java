@@ -1,9 +1,13 @@
 package Default;
 
+import java.util.*; 
 
 public class MJMRentalCompany extends RentalCompany{
   
-  // This is the factory????
+  public MJMRentalCompany(int eco, int std, int lux, int su, int min){
+    super(eco, std, lux, su, min);
+  }
+  
   public Stack<Car> getCars(String model, int count){
     Stack<Car> cars = new Stack<Car>();
 
@@ -38,10 +42,10 @@ public class MJMRentalCompany extends RentalCompany{
   public Car UpdateRental(Car car, String feature){
     if (feature.equals("Car Seat")){
       car = new carSeat(car);
-      //price = car.rentalPrice;
+      //price = car.rentalPrice; 
     }
     else if (feature.equals("GPS")){
-      car = new gps(car);
+      car = new gps(car);  
     }
     else {
       car = new satelliteRadio(car);

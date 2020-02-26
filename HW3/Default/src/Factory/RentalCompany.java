@@ -39,7 +39,7 @@ public abstract class RentalCompany{
 
   public void returnCar(Car car){
     //update catalog
-    String model = car.model;
+    String model = car.type;
     this.catalog.get(model).push(car);
     //set other attributes with the car
     //set return date checkout date

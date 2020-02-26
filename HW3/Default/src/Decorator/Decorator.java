@@ -1,7 +1,7 @@
 package Default;
 
 //Create Car class as the Component of the decorator
-public class Decorator
+public class Decorator extends Car
 {
     Car car;
 }
