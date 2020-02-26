@@ -5,6 +5,9 @@ public class Car
 {
     public String features = "";
     public String licenseID = "";
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
 
     public String getFeatures()
     {
@@ -14,9 +17,6 @@ public class Car
 
 class Economy extends Car
 {
-    int numGPS = 0;
-    int numSR = 0;
-    int numcarSeat = 0;
     int pricePerDay = 20;
     String type = "economy";
 
@@ -29,9 +29,6 @@ class Economy extends Car
 
 class Standard extends Car
 {
-    int numGPS = 0;
-    int numSR = 0;
-    int numcarSeat = 0;
     String type = "standard";
     int pricePerDay = 30;
 
@@ -44,9 +41,6 @@ class Standard extends Car
 
 class Luxury extends Car
 {
-    int numGPS = 0;
-    int numSR = 0;
-    int numcarSeat = 0;
     int pricePerDay = 45;
     String type = "luxury";
 
@@ -59,9 +53,6 @@ class Luxury extends Car
 
 class Suv extends Car
 {
-    int numGPS = 0;
-    int numSR = 0;
-    int numcarSeat = 0;
     String type = "suv";
     int pricePerDay = 35;
 
