@@ -14,6 +14,11 @@ public class Car
     {
         return this.features;
     }
+
+    public int getTotalCost()
+    {
+        return -1;
+    }
 }
 
 class Economy extends Car
@@ -25,7 +30,11 @@ class Economy extends Car
     {
         this.licenseID = licenseID;
     }
-   
+    public int getTotalCost()
+    {
+        return this.totalFeatureCost + this.pricePerDay;
+    }
+
 }
 
 class Standard extends Car
@@ -36,6 +45,10 @@ class Standard extends Car
     public Standard(String licenseID)
     {
         this.licenseID = licenseID;
+    }
+    public int getTotalCost()
+    {
+        return this.totalFeatureCost + this.pricePerDay;
     }
 
 }
@@ -49,7 +62,10 @@ class Luxury extends Car
     {
         this.licenseID = licenseID;
     }
-
+    public int getTotalCost()
+    {
+        return this.totalFeatureCost + this.pricePerDay;
+    }
 }
 
 class Suv extends Car
@@ -62,6 +78,10 @@ class Suv extends Car
         this.licenseID = licenseID;
     }
 
+    public int getTotalCost()
+    {
+        return this.totalFeatureCost + this.pricePerDay;
+    }
 }
 
 class Minivan extends Car
@@ -77,4 +97,8 @@ class Minivan extends Car
         this.licenseID = licenseID;
     }
 
+    public int getTotalCost()
+    {
+        return this.totalFeatureCost + this.pricePerDay;
+    }
 }

@@ -86,7 +86,7 @@ class carSeat extends Decorator
     public carSeat(Car car)
     {
         this.car = car;
-        addCarSeat(Car car);
+        addCarSeat(car);
     }
 
     public String getFeatures()

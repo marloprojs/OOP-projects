@@ -11,6 +11,7 @@ public class carMain
         System.out.println(economy.licenseID);
         System.out.println(economy.totalFeatureCost);
         System.out.println(economy.numGPS);
+        System.out.println(economy.getTotalCost());
 
         Car luxury = new Luxury("44455");
         System.out.println(luxury.licenseID);
