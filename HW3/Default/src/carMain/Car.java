@@ -1,4 +1,5 @@
 package Default;
+import java.util.*;
 //Create Car class as the Component of the decorator
 public class Car
 {
@@ -13,49 +14,75 @@ public class Car
 
 class Economy extends Car
 {
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
+    int pricePerDay = 20;
+    String type = "economy";
+
     public Economy(String licenseID)
     {
         this.licenseID = licenseID;
     }
-    public int pricePerDay = 20;
+   
 }
 
 class Standard extends Car
 {
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
+    String type = "standard";
+    int pricePerDay = 30;
+
     public Standard(String licenseID)
     {
         this.licenseID = licenseID;
     }
 
-    public int pricePerDay = 30;
 }
 
 class Luxury extends Car
 {
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
+    int pricePerDay = 45;
+    String type = "luxury";
+
     public Luxury(String licenseID)
     {
         this.licenseID = licenseID;
     }
 
-    public int pricePerDay = 45;
 }
 
 class Suv extends Car
 {
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
+    String type = "suv";
+    int pricePerDay = 35;
+
     public Suv(String licenseID)
     {
         this.licenseID = licenseID;
     }
 
-    public int pricePerDay = 35;
 }
 
 class Minivan extends Car
 {
+    int numGPS = 0;
+    int numSR = 0;
+    int numcarSeat = 0;
+    String type = "minivan";
+    int pricePerDay = 25;
+
     public Minivan(String licenseID)
     {
         this.licenseID = licenseID;
     }
 
-    public int pricePerDay = 25;
 }
