@@ -5,6 +5,9 @@ public abstract class CarDecorator extends Car
 {
     public Car car;
     public abstract String getFeatures();
+	public String getType(){
+		return car.getType();
+	}
 
     public int getNumGPS(){
       return car.getNumGPS();
@@ -34,11 +37,6 @@ class gps extends CarDecorator{
         this.car = car2;
         addGPS();
     }
-
-    public String getType(){
-      return car.getType();
-    }
-
     public void addGPS(){
         if(car.getNumGPS() == 0){
 			car.setGPS();
@@ -70,10 +68,6 @@ class satelliteRadio extends CarDecorator{
     public satelliteRadio(Car car2){
         this.car = car2;
         addSR();
-    }
-
-	public String getType(){
-      return car.getType();
     }
 
 	public void addSR(){
@@ -109,10 +103,6 @@ class carSeat extends CarDecorator{
         this.car = car;
         addCarSeat();
     }
-
-	public String getType(){
-	  return car.getType();
-	}
 
 	public String getFeatures(){
         return car.getFeatures() + "car seat, ";

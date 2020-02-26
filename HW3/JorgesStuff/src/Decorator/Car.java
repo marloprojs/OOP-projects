@@ -55,7 +55,7 @@ class Economy extends Car
     public Economy(String licenseID)
     {
         licenseID = licenseID;
-        this.type = "economy";
+        type = "economy";
         this.features = "";
 
     }
