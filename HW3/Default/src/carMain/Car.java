@@ -8,6 +8,7 @@ public class Car
     int numGPS = 0;
     int numSR = 0;
     int numcarSeat = 0;
+    int totalFeatureCost = 0;
 
     public String getFeatures()
     {

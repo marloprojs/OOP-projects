@@ -6,7 +6,10 @@ public class carMain
     {
        // Car car = new Car("12345");
         Car economy = new Economy("55555");
+        Decorator gps = new gps(economy);
+        Decorator gps2 = new gps(economy);
         System.out.println(economy.licenseID);
+        System.out.println(economy.totalFeatureCost);
         System.out.println(economy.numGPS);
 
         Car luxury = new Luxury("44455");
