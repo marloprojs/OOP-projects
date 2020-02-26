@@ -2,6 +2,7 @@ package Default;
 
 import java.util.*; 
 
+ // Factory //
 public class MJMRentalCompany extends RentalCompany{
   
   public MJMRentalCompany(int eco, int std, int lux, int su, int min){
@@ -42,13 +43,25 @@ public class MJMRentalCompany extends RentalCompany{
   public Car UpdateRental(Car car, String feature){
     if (feature.equals("Car Seat")){
       car = new carSeat(car);
-      //price = car.rentalPrice; 
     }
     else if (feature.equals("GPS")){
       car = new gps(car);  
     }
     else {
       car = new satelliteRadio(car);
+    }
+    return car;
+  }
+ 
+  public Car UndoRental(Car car, String feature){
+    if (feature.equals("Car Seat")){
+      car = new removeCarSeat(car);
+    }
+    else if (feature.equals("GPS")){
+      car = new removeGps(car);  
+    }
+    else {
+      car = new removeSatelliteRadio(car);
     }
     return car;
   }

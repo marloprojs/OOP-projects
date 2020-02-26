@@ -1,6 +1,8 @@
 package Default;
 import java.util.*;
+
 //import carMain.Car;
+
 public class carMain
 {
   public static void main(String args[])
@@ -39,6 +41,23 @@ public class carMain
     customers[10] = new customerObject("Josiah", "Business");
     customers[11] = new customerObject("Mac", "Casual");
     System.out.println("ITS ALIVE!!!!!");
+
+    // Order of inventory: eco, std, lux, su, min
+    MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+    // FEATURES: "Car Seat"  "GPS"  "Satellite Radio"
+    List<String> features = new ArrayList<String>();
+    features.add("GPS");
+    features.add("Satellite Radio");
+    // MODELS:  "Economy"  "Standard"   "Luxury"  "SUV" "Minivan"
+    HashMap<String, Object> testRental = mjm.rentCar("Luxury", 3, features);
+    // Price should be $152
+    System.out.println(testRental.get("statment"));
+
+    // Have to cast Object to Car and List
+    mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
+    // Price should be $0s
+    //System.out.println(testRental.get("car").getTotalCost());
+
 
     for(int i = 0; i < 35; i++){
       //need to check if there are any cars availaible

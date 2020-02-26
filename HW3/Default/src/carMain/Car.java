@@ -5,10 +5,11 @@ public class Car
 {   public String type = "";
     public String features = "";
     public String licenseID = "";
-    int numGPS = 0;
-    int numSR = 0;
-    int numcarSeat = 0;
-    int totalFeatureCost = 0;
+    public int days = 0;
+    protected int numGPS = 0;
+    protected int numSR = 0;
+    protected int numcarSeat = 0;
+    protected int totalFeatureCost = 0;
 
     public String getFeatures()
     {
@@ -32,7 +33,7 @@ class Economy extends Car
     }
     public int getTotalCost()
     {
-        return this.totalFeatureCost + this.pricePerDay;
+        return this.totalFeatureCost + this.pricePerDay*this.days;
     }
 
 }
@@ -48,7 +49,7 @@ class Standard extends Car
     }
     public int getTotalCost()
     {
-        return this.totalFeatureCost + this.pricePerDay;
+        return this.totalFeatureCost + this.pricePerDay*this.days;
     }
 
 }
@@ -64,7 +65,7 @@ class Luxury extends Car
     }
     public int getTotalCost()
     {
-        return this.totalFeatureCost + this.pricePerDay;
+        return this.totalFeatureCost + this.pricePerDay*this.days;
     }
 }
 
@@ -80,7 +81,7 @@ class Suv extends Car
 
     public int getTotalCost()
     {
-        return this.totalFeatureCost + this.pricePerDay;
+        return this.totalFeatureCost + this.pricePerDay*this.days;
     }
 }
 
@@ -99,6 +100,6 @@ class Minivan extends Car
 
     public int getTotalCost()
     {
-        return this.totalFeatureCost + this.pricePerDay;
+        return this.totalFeatureCost + this.pricePerDay*this.days;
     }
 }

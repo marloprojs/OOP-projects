@@ -42,6 +42,42 @@ class gps extends Decorator
 
 }
 
+class removeGps extends Decorator
+{
+    Car car;
+    int cost = 10;
+
+    public removeGps(Car car)
+    {
+        this.car = car;
+        unplugGPS(car);
+    }
+
+    public String getFeatures()
+    {
+        return car.getFeatures().replace(", gps", "");
+    }
+
+    public void updateCost(Car car)
+    {
+        car.totalFeatureCost -= this.cost;
+    }
+
+    public void unplugGPS(Car car)
+    {
+        if(car.numGPS == 0)
+        {
+            System.out.println("Sorry, you can't remove more than zero GPSs");   
+        }
+        else
+        {
+            car.numGPS = 0;
+            updateCost(car);
+        }
+    }
+
+}
+
 class satelliteRadio extends Decorator
 {
     Car car;
@@ -78,6 +114,42 @@ class satelliteRadio extends Decorator
 
 }
 
+class removeSatelliteRadio extends Decorator
+{
+    Car car;
+    int cost = 7;
+
+    public removeSatelliteRadio(Car car)
+    {
+        this.car = car;
+        unplugSR(car);
+    }
+
+    public String getFeatures()
+    {
+        return car.getFeatures().replace(", satellite radio", "");
+    }
+
+    public void updateCost(Car car)
+    {
+        car.totalFeatureCost -= this.cost;
+    }
+
+    public void unplugSR(Car car)
+    {
+        if(car.numSR == 0)
+        {
+            System.out.println("Sorry, you can't remove more than zero satellite radios");  
+        }
+        else
+        {
+            car.numSR = 0;
+            updateCost(car);
+        }
+    }
+
+}
+
 class carSeat extends Decorator
 {
     Car car;
@@ -109,6 +181,42 @@ class carSeat extends Decorator
         else
         {
             System.out.println("Sorry, you can't rent more than four car seats per car");
+        }
+    }
+}
+
+
+class removeCarSeat extends Decorator
+{
+    Car car;
+    int cost = 5;
+
+    public removeCarSeat(Car car)
+    {
+        this.car = car;
+        unplugCarSeat(car);
+    }
+
+    public String getFeatures()
+    {
+        return car.getFeatures().replace(", car seat", "");
+    }
+
+    public void updateCost(Car car)
+    {
+        car.totalFeatureCost -= this.cost;
+    }
+
+    public void unplugCarSeat(Car car)
+    {
+        if(car.numcarSeat == 0)
+        {
+            System.out.println("Sorry, you can't remove more than zero car seats");
+        }
+        else
+        {
+            car.numcarSeat -= 1;
+            updateCost(car);
         }
     }
 }
