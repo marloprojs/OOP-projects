@@ -5,6 +5,9 @@ public class carMain
 {
   public static void main(String args[])
   {
+    //To do:
+      //Make our car rental place
+      
 
       //Karen
       //For loop for 35 dats, 34 nights
