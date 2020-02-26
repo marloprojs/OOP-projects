@@ -5,8 +5,8 @@ public class carMain
 {
  	public static void main(String args[])
  	{
-/* Testing to make sure Decorator Works
-
+ //Testing to make sure Decorator Works
+/*
 //++++++++++++++++++++++++++++++ Test1 ++++++++++++++++++++++++++++++//
 	    Car car = new Luxury("Lux123");
 	    System.out.println("Car type is: " +car.getType() );
