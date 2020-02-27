@@ -6,11 +6,24 @@ public class carMain
  	public static void main(String args[])
  	{
  //Testing to make sure Decorator Works
-/*
+
 //++++++++++++++++++++++++++++++ Test1 ++++++++++++++++++++++++++++++//
+/*
 	    Car car = new Luxury("Lux123");
-	    System.out.println("Car type is: " +car.getType() );
+		car = new gps(car);
+		car = new gps(car);
+	    System.out.println("Car type is: " +car.getType() + " : "+car.getTotalCost() );
+*/
 //++++++++++++++++++++++++++++++ Test2 ++++++++++++++++++++++++++++++//
+/*
+		Car car2 = new Economy("Econ123");
+		car2 = new gps(car2);
+		System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
+		car2.removeFeatures("gps");
+		System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
+*/
+//++++++++++++++++++++++++++++++ Test3 ++++++++++++++++++++++++++++++//
+/*
 	    Car car2 = new Economy("Eco123"); //20
 	    car2 = new gps(car2); // 10
 	    car2 = new gps(car2); // 0
@@ -30,9 +43,43 @@ public class carMain
 		System.out.println("Car Type is: " + car2.getType());
 		System.out.println("Total Cost is: $" + car2.getTotalCost());
 		String features = car2.getFeatures();
-		System.out.println("Feature List is: \n[" + features.substring(0, features.length()-1) + "]");
-//++++++++++++++++++++++++++++++ End of Testing ++++++++++++++++++++++++++++++//
+		System.out.println("Feature List is: \n[" + features.substring(0, features.length()-2 ) + "]");
 */
+//++++++++++++++++++++++++++++++ End of Testing ++++++++++++++++++++++++++++++//
+
+
+
+//Testing to see Factory Working
+//++++++++++++++++++++++++++++++ Testing ++++++++++++++++++++++++++++++//
+// Order of inventory: eco, std, lux, su, min
+MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+// FEATURES: "Car Seat"  "GPS"  "Satellite Radio"
+List<String> features = new ArrayList<String>();
+features.add("GPS");
+features.add("Satellite Radio");
+// MODELS:  "Economy"  "Standard"   "Luxury"  "SUV" "Minivan"
+HashMap<String, Object> testRental = mjm.rentCar("Luxury", 3, features);
+// Price should be $152
+System.out.println(testRental.get("statment"));
+
+// Have to cast Object to Car and List
+mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
+// Price should be $0s
+//System.out.println(testRental.get("car").getTotalCost());
+//++++++++++++++++++++++++++++++ End of Testing ++++++++++++++++++++++++++++++//
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //To Do:
 	//Instantiate a Factory
