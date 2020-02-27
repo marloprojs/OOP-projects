@@ -3,48 +3,71 @@ import java.util.*;
 //Create Car class as the Component of the decorator
 public abstract class Car
 {
-	 //Param that should not change
+//Car Params
     String licenseID = "N/A";
     String type = "Unknown Car";
 	int totalCost = 0;
-    String features = "";
-    int numSR = 0;
+	int dailyCost = 0;
+	int totalFeatureCost = 0;
+	int days = 0;
+    String features = "1";
+//Feature Params
+	int numSR = 0;
     int numCarSeat = 0;
     int gpsCount = 0;
 
-
-
+//Parameter getters and Setters (NON FEATURE)
+	public int getDailyCost(){
+		return dailyCost;
+	}
+	public void setDailyCost(int val){
+		this.dailyCost = val;
+	}
 	public String getLicense(){
-	return licenseID;
-}
+		return licenseID;
+	}
 	public String getType(){
-	return type;
-}
-
+		return type;
+	}
+	public void setTotalFeatureCost(int val){
+		this.totalFeatureCost += val;
+	}
+	public int getTotalFeatureCost(){
+		return totalFeatureCost;
+	}
 	public int getTotalCost(){
-		return this.totalCost;
+		return (days * dailyCost) + totalFeatureCost;
 	}
 	public void setTotalCost(int val){
-		this.totalCost += val;
+		totalCost += val;
+	}
+	public int getDays(){
+		return days;
+	}
+	public void setDays(int rentTime){
+		this.days = rentTime;
 	}
 
+//String Feature Manipulation
 	//returns a string of features
 	public String getFeatures(){
       return features;
     }
-	//removes Feature and updates cost
-	public void removeFeatures(String feature){
-		System.out.println("");
-	}
 	//adds to the string of features
 	public void setFeatures(String feature){
 		this.features += feature;
 	}
 	//removes specific feature from string
 	public void updateFeatures(String feature){
-		this.features = this.features.replaceFirst(feature, "");
+		features = features.replaceFirst(feature, "");
+	}
+	//removes Feature and updates cost
+	public void removeFeatures(String feature){
+		System.out.println("Check Decorator");
 	}
 
+
+//Features getters and setters
 	public int getNumGPS(){
 	  return this.gpsCount;
 	}
@@ -71,61 +94,45 @@ public abstract class Car
 class Economy extends Car{
     public Economy(String licenseID){
         licenseID = licenseID;
-        type = "economy";
+        type = "Economy";
         features = "";
-		totalCost = 20;
-    }
-    public int getTotalCost(){
-        return totalCost;
+		setDailyCost(20);
     }
 }
 
 class Luxury extends Car{
-    public Luxury(String licenseID){
-        type = "luxury";
-        licenseID = licenseID;
+    public Luxury(String licenseId){
+        type = "Luxury";
+        licenseID = licenseId;
 		features = "";
-		totalCost = 45;
+		setDailyCost(45);
     }
-    public int getTotalCost(){
-        return totalCost;
-    }
+
 }
 
 class Standard extends Car{
     public Standard(String licenseID){
-        type = "standard";
+        type = "Standard";
         licenseID = licenseID;
 		features = "";
-		totalCost = 30;
-    }
-    public int getTotalCost(){
-        return totalCost;
+		setDailyCost(30);
     }
 }
 
 class Suv extends Car{
     public Suv(String licenseID){
-        type = "suv";
+        type = "Suv";
         features = "";
         licenseID = licenseID;
-		totalCost = 35;
-    }
-
-    public int getTotalCost(){
-        return totalCost;
+		setDailyCost(35);
     }
 }
 
 class Minivan extends Car{
     public Minivan(String licenseID){
-        type = "minivan";
+        type = "Minivan";
 		features = "";
     	licenseID = licenseID;
-		totalCost = 25;
-    }
-
-    public int getTotalCost(){
-        return totalCost;
+		setDailyCost(25);
     }
 }

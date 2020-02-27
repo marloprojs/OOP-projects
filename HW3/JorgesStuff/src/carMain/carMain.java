@@ -3,70 +3,22 @@ import java.util.*;
 //import carMain.Car;
 public class carMain
 {
- 	public static void main(String args[])
- 	{
- //Testing to make sure Decorator Works
+ 	public static void main(String args[]){
+//++++++++++++++++++++++++TEST METHODS++++++++++++++++++++++++//
 
-//++++++++++++++++++++++++++++++ Test1 ++++++++++++++++++++++++++++++//
-/*
-	    Car car = new Luxury("Lux123");
-		car = new gps(car);
-		car = new gps(car);
-	    System.out.println("Car type is: " +car.getType() + " : "+car.getTotalCost() );
-*/
-//++++++++++++++++++++++++++++++ Test2 ++++++++++++++++++++++++++++++//
-/*
-		Car car2 = new Economy("Econ123");
-		car2 = new gps(car2);
-		System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
-		car2.removeFeatures("gps");
-		System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
-*/
-//++++++++++++++++++++++++++++++ Test3 ++++++++++++++++++++++++++++++//
-/*
-	    Car car2 = new Economy("Eco123"); //20
-	    car2 = new gps(car2); // 10
-	    car2 = new gps(car2); // 0
-		car2 = new gps(car2); //0
+	//Testing restraints on features with max of 1
+		//decoratorTest1();
 
-		car2 = new satelliteRadio(car2); //7
-		car2 = new satelliteRadio(car2);//0
+	//Testing removal of Features and prices updating
+		//decoratorTest2();
 
-		car2 = new carSeat(car2); //5
-		car2 = new carSeat(car2); //5
-		car2 = new carSeat(car2); // 5
-		car2 = new carSeat(car2); //5
-		car2 = new carSeat(car2); //0
-		car2 = new carSeat(car2); //0
+	//Testing max Feature addition
+		//decoratorTest3();
 
-		//Total = 57
-		System.out.println("Car Type is: " + car2.getType());
-		System.out.println("Total Cost is: $" + car2.getTotalCost());
-		String features = car2.getFeatures();
-		System.out.println("Feature List is: \n[" + features.substring(0, features.length()-2 ) + "]");
-*/
-//++++++++++++++++++++++++++++++ End of Testing ++++++++++++++++++++++++++++++//
+	//Testing Marissas factory implementation
+		//facotryTest1();
 
-
-
-//Testing to see Factory Working
-//++++++++++++++++++++++++++++++ Testing ++++++++++++++++++++++++++++++//
-// Order of inventory: eco, std, lux, su, min
-MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
-// FEATURES: "Car Seat"  "GPS"  "Satellite Radio"
-List<String> features = new ArrayList<String>();
-features.add("GPS");
-features.add("Satellite Radio");
-// MODELS:  "Economy"  "Standard"   "Luxury"  "SUV" "Minivan"
-HashMap<String, Object> testRental = mjm.rentCar("Luxury", 3, features);
-// Price should be $152
-System.out.println(testRental.get("statment"));
-
-// Have to cast Object to Car and List
-mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
-// Price should be $0s
-//System.out.println(testRental.get("car").getTotalCost());
-//++++++++++++++++++++++++++++++ End of Testing ++++++++++++++++++++++++++++++//
+//++++++++++++++++++++++++End of Test METHODS++++++++++++++++++++++++//
 
 
 
@@ -75,13 +27,7 @@ mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("featur
 
 
 
-
-
-
-
-
-
-//To Do:
+//To Do Thursday:
 	//Instantiate a Factory
 		//Pass in number of eco, std, lux, su, min
 			//Returns a stack of cars
@@ -129,5 +75,58 @@ mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("featur
               //randomize features
             //if no get a new cust
   //  }
+  }
+  public static void decoratorTest1(){
+	  Car car = new Luxury("Lux123");
+	  car = new gps(car);
+	  car = new gps(car);
+	  System.out.println("Car type is: " +car.getType() + " : "+car.getTotalCost() );
+  }
+  public static void decoratorTest2(){
+	  Car car2 = new Economy("Econ123");
+	  car2 = new gps(car2);
+	  System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
+	  car2.removeFeatures("GPS");
+	  System.out.println("Car type is: " +car2.getType() + " : "+car2.getTotalCost() +" : " +car2.getFeatures());
+  }
+  public static void decoratorTest3(){
+	  Car car2 = new Economy("Eco123"); //20
+	  car2 = new gps(car2); // 10
+	  car2 = new gps(car2); // 0
+	  car2 = new gps(car2); //0
+
+	  car2 = new satelliteRadio(car2); //7
+	  car2 = new satelliteRadio(car2);//0
+
+	  car2 = new carSeat(car2); //5
+	  car2 = new carSeat(car2); //5
+	  car2 = new carSeat(car2); // 5
+	  car2 = new carSeat(car2); //5
+	  car2 = new carSeat(car2); //0
+	  car2 = new carSeat(car2); //0
+
+	  //Total = 57
+	  System.out.println("Car Type is: " + car2.getType());
+	  System.out.println("Total Cost is: $" + car2.getTotalCost());
+	  String features = car2.getFeatures();
+	  System.out.println("Feature List is: \n[" + features.substring(0, features.length()-2 ) + "]");
+  }
+  public static void facotryTest1(){
+	  // Order of inventory: eco, std, lux, su, min
+	  MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+	  // FEATURES: "Car Seat"  "GPS"  "Satellite Radio"
+	  List<String> features = new ArrayList<String>();
+	  features.add("GPS");
+	  features.add("Satellite Radio");
+
+	  // MODELS:  "Economy"  "Standard"   "Luxury"  "SUV" "Minivan"
+	  HashMap<String, Object> testRental = mjm.rentCar("Luxury", 3, features);
+	  // Price should be $152
+	  System.out.println(testRental.get("statment"));
+
+	  // Have to cast Object to Car and List
+	  mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
+	  // Price should be $0s
+	  //System.out.println(testRental.get("car").getTotalCost());
   }
 }

@@ -32,14 +32,14 @@ public abstract class RentalCompany{
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
+	   car.setDays(days);
       // set features
       for (int i = 0; i < features.size(); i++) {
         car = UpdateRental(car, features.get(i));
       }
-      // Update how many days its being rented
-      car.days = days;
       // Do paperwork
       int price = car.getTotalCost();
+
       HashMap<String, Object> paperwork = creatRentalRecors(price, car, days, features);
 
       return paperwork;
@@ -49,15 +49,20 @@ public abstract class RentalCompany{
 
   public void returnCar(Car car, List<String> features){
     // Update days
-    car.days = 0;
+	car.setDays(0);
     // Undo features
+
     for (int i = 0; i < features.size(); i++) {
-      car = UndoRental(car, features.get(i));
+		car = UndoRental(car, features.get(i));
     }
+	System.out.println("Check for no Features:[" +car. getFeatures() + "]");
     // Update catalog
-    String model = car.type;
-    System.out.println(car.getFeatures());
+    String model = car.getType();
     this.catalog.get(model).push(car);
+
+	String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was returned and set to " + car.getDays() + " days at $" + car.getDailyCost() + " with default features [" +car.getFeatures()+"]";
+	System.out.println(statment);
+
     return;
   }
 
@@ -68,7 +73,8 @@ public abstract class RentalCompany{
     record.put("car", car);
     record.put("days", days);
     record.put("features", features);
-    String statment = "The " + car.type + " with the license "+ car.licenseID+" was rented for " + days + " days for $" + price + " with " + car.getFeatures();
+	String prettyFeatures = car.getFeatures().substring(0,car.getFeatures().length()-2);
+    String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was rented for " + car.getDays() + " days for $" + price + " with features [" +prettyFeatures+"]";
     record.put("statment", statment);
 
     return record;

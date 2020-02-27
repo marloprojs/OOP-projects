@@ -1,6 +1,6 @@
 package JorgesStuff;
 
-import java.util.*; 
+import java.util.*;
 
  // Factory //
 public class MJMRentalCompany extends RentalCompany{
@@ -24,7 +24,7 @@ public class MJMRentalCompany extends RentalCompany{
     }
     else if (model.equals("Luxury")){
       for( int i = 0; i < count; i++){
-        cars.push(new Luxury("lux-12"+i));
+        cars.push(new Luxury("lux-12" + i) );
       }
     }
     else if (model.equals("SUV")){
@@ -41,6 +41,7 @@ public class MJMRentalCompany extends RentalCompany{
   }
 
   public Car UpdateRental(Car car, String feature){
+	  //car = new carSeat(car)
     if (feature.equals("Car Seat")){
       car = new carSeat(car);
     }
@@ -54,15 +55,7 @@ public class MJMRentalCompany extends RentalCompany{
   }
 
   public Car UndoRental(Car car, String feature){
-    if (feature.equals("Car Seat")){
-      car = new removeCarSeat(car);
-    }
-    else if (feature.equals("GPS")){
-      car = new removeGps(car);
-    }
-    else {
-      car = new removeSatelliteRadio(car);
-    }
-    return car;
+	  car.removeFeatures(feature);
+	  return car;
   }
 }
