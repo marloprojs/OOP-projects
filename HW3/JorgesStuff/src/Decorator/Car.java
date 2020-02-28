@@ -92,18 +92,18 @@ public abstract class Car{
 //using extends since its an abstract class
 class Economy extends Car{
     public Economy(String licenseID){
-        licenseID = licenseID;
-        type = "Economy";
-        features = "";
+        this.licenseID = licenseID;
+        this.type = "Economy";
+        this.features = "";
 		setDailyCost(20);
     }
 }
 
 class Luxury extends Car{
     public Luxury(String licenseId){
-        type = "Luxury";
-        licenseID = licenseId;
-		features = "";
+        this,type = "Luxury";
+        this.licenseID = licenseId;
+		this.features = "";
 		setDailyCost(45);
     }
 
@@ -111,27 +111,27 @@ class Luxury extends Car{
 
 class Standard extends Car{
     public Standard(String licenseID){
-        type = "Standard";
-        licenseID = licenseID;
-		features = "";
+        this.type = "Standard";
+        this.licenseID = licenseID;
+		this.features = "";
 		setDailyCost(30);
     }
 }
 
 class Suv extends Car{
     public Suv(String licenseID){
-        type = "Suv";
-        features = "";
-        licenseID = licenseID;
+        this.type = "Suv";
+        this.features = "";
+        this.licenseID = licenseID;
 		setDailyCost(35);
     }
 }
 
 class Minivan extends Car{
     public Minivan(String licenseID){
-        type = "Minivan";
-		features = "";
-    	licenseID = licenseID;
+        this.type = "Minivan";
+		this.features = "";
+    	this.licenseID = licenseID;
 		setDailyCost(25);
     }
 }

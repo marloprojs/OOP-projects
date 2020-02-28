@@ -47,6 +47,7 @@ public abstract class RentalCompany{
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
+	  System.out.println(car.getLicense());
 	   car.setDays(days);
       // set features
       for (int i = 0; i < features.size(); i++) {
