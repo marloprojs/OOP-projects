@@ -2,10 +2,10 @@ package Default;
 import java.util.Observable;
 import java.util.Observer;
 
-public class CarRenter extends Observer
+public class CarRenter implements Observer
 {
-    private ObservableValue ov = null;
-    public TextObserver(ObservableValue ov)
+    private ObserverableValue ov = null;
+    public CarRenter(ObserverableValue ov)
     {
       this.ov = ov;
     }

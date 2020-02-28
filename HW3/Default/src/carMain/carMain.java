@@ -51,10 +51,10 @@ public class carMain
     // MODELS:  "Economy"  "Standard"   "Luxury"  "SUV" "Minivan"
     HashMap<String, Object> testRental = mjm.rentCar("Luxury", 3, features);
     // Price should be $152
-    System.out.println(testRental.get("statment"));
+    //System.out.println(testRental.get("statment"));
 
     // Have to cast Object to Car and List
-    mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
+    //mjm.returnCar((Car) testRental.get("car"), (List<String>) testRental.get("features"));
     // Price should be $0s
     //System.out.println(testRental.get("car").getTotalCost());
 

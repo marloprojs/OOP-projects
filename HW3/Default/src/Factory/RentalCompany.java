@@ -5,7 +5,10 @@ import java.util.*;
 public abstract class RentalCompany{
   
   private HashMap<String, Stack<Car>> catalog = new HashMap<String, Stack<Car>>();
-  
+  protected ObserverableValue ov = new ObserverableValue("");
+  protected CarRenter cr = new CarRenter(this.ov);
+
+
   //constructor (set the catalog)
   public RentalCompany(int eco, int std, int lux, int su, int min){
     Stack<Car> economy = getCars("Economy", eco);
@@ -19,6 +22,8 @@ public abstract class RentalCompany{
     this.catalog.put("Luxury", luxury);
     this.catalog.put("SUV", suv);
     this.catalog.put("Minivan", minivan);
+    
+    this.ov.addObserver(this.cr);
   }
   protected abstract Stack<Car> getCars(String model, int  count);
 
@@ -42,6 +47,9 @@ public abstract class RentalCompany{
       int price = car.getTotalCost();
       HashMap<String, Object> paperwork = creatRentalRecors(price, car, days, features);
       
+      // Tell the observer
+      this.ov.setValue((String)paperwork.get("statment"));
+
       return paperwork;
     }
     return null;

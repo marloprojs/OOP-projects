@@ -3,8 +3,8 @@ import java.util.Observable;
 
 public class ObserverableValue extends Observable
 {
-    String action = ""
-    public ObservableValue(String action)
+    String action = "";
+    public ObserverableValue(String action)
     {
         this.action = action;
     }
