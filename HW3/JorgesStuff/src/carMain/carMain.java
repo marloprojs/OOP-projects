@@ -146,15 +146,11 @@ public class carMain
 									customers[index].numOfCarsCurrentRent += 1;
 									totalCarsRentedToday++;
 									//prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
-								  //All cars must be delived at same time, can be retned differnt times tho
-								  //check other params
-
 							  }
 							  //can not rent any more cars
 							  else{
 								 // System.out.println("Customer already has 3 cars rented");
 							  }
-
 						 }
 						 //no current cars available to rent
 						 else{
