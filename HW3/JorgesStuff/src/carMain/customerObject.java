@@ -7,11 +7,13 @@ public abstract class customerObject{
 	int numOfCarsCurrentRent= 0;
 	int minRentDays;
 	int maxRentDays;
-	//Car[] cars = new Car[3];
+
+	Car[] cars = new Car[3];
 	int[] daysLeft = new int[] {-1,-1,-1};
+
 	public int nextOpenIndex(){
 		for(int i = 0; i < 3; i++){
-			if (daysLeft[i] == -1)
+			if (this.daysLeft[i] == -1)
 				return i;
 		}
 		return -1;
@@ -19,8 +21,8 @@ public abstract class customerObject{
 	public int getEarliestDaysLeft(){
 		int min = Integer.MAX_VALUE;
 		for(int i = 0; i < 3; i++){
-			if (daysLeft[i] < min && daysLeft[i] != -1){
-				min = daysLeft[i];
+			if (this.daysLeft[i] < min && this.daysLeft[i] != -1){
+				min = this.daysLeft[i];
 			}
 		}
 		return min;
@@ -45,6 +47,36 @@ public abstract class customerObject{
 			 features.add("Car Seat");
 		 }
 		 return features;
+	}
+	public void updateDaysLeft (){
+		for(int i = 0; i < 3; i++){
+			if(this.daysLeft[i] != -1){
+				this.daysLeft[i] += -1;
+			}
+		}
+	}
+	public void resetDaysLeft (){
+		this.daysLeft[0] = -1;
+		this.daysLeft[1] = -1;
+		this.daysLeft[2] = -1;
+		this.numOfCarsCurrentRent = 0;
+	}
+	public boolean checkZeros(){
+		for(int i = 0; i < 3; i++){
+			if(this.daysLeft[i] == 0){
+				return true;
+			}
+		}
+		return false;
+	}
+	public List<Integer> getCarIndex(){
+		List<Integer> carList = new ArrayList<Integer>();
+		for(int i = 0; i < 3; i++){
+			if(this.daysLeft[i] == 0){
+				carList.add(i);
+			}
+		}
+		return carList;
 	}
 }
 

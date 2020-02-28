@@ -43,7 +43,7 @@ public abstract class RentalCompany{
   }
   // Pass in model, days, and list of features you want
   // Either rental record dict or null if not avalible
-  public HashMap<String, Object> rentCar(String model, int days, List<String> features){
+  public Car rentCar(String model, int days, List<String> features){
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
@@ -57,7 +57,7 @@ public abstract class RentalCompany{
 
       HashMap<String, Object> paperwork = creatRentalRecors(price, car, days, features);
 
-      return paperwork;
+      return car;
     }
     return null;
   }
@@ -88,8 +88,8 @@ public abstract class RentalCompany{
     record.put("car", car);
     record.put("days", days);
     record.put("features", features);
-	String prettyFeatures = car.getFeatures().substring(0,car.getFeatures().length()-2);
-    String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was rented for " + car.getDays() + " days for $" + price + " with features [" +prettyFeatures+"]";
+	//String prettyFeatures = car.getFeatures().substring(0,car.getFeatures().length()-2);
+    String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was rented for " + car.getDays() + " days for $" + price + " with features [" +car.getFeatures()+"]";
     record.put("statment", statment);
 
     return record;
