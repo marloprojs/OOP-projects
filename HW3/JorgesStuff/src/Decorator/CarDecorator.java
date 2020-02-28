@@ -71,7 +71,7 @@ public abstract class CarDecorator extends Car{
 					setGPS(-1);
 					updateTotalCost("remove");
 					updateFeatures("GPS, ");
-					System.out.println("Removed GPS. Remainig features: " +car.getFeatures());
+					//System.out.println("Removed GPS. Remainig features: " +car.getFeatures());
 				}
 				else{
 					System.out.println("Can not remove gps. Gps count :" + car.getNumGPS());
@@ -83,7 +83,7 @@ public abstract class CarDecorator extends Car{
 					setSR(-1);
 					updateTotalCost("remove");
 					updateFeatures("Satellite Radio, ");
-					System.out.println("Removed Satellite Radio. Remainig features: " +car.getFeatures());
+					//System.out.println("Removed Satellite Radio. Remainig features: " +car.getFeatures());
 				}
 				else{
 					System.out.println("Can not remove satellite radio. Satellite radio count :" + car.getNumSR());
@@ -95,7 +95,7 @@ public abstract class CarDecorator extends Car{
 					setCarSeat(-1);
 					updateTotalCost("remove");
 					updateFeatures("Car Seat, ");
-					System.out.println("Removed Car Seat. Remainig features: " +car.getFeatures());
+					//System.out.println("Removed Car Seat. Remainig features: " +car.getFeatures());
 
 				}
 				else{
@@ -104,7 +104,8 @@ public abstract class CarDecorator extends Car{
 				break;
 			}
 			default:{
-				System.out.println("ERROR");
+				//System.out.println("CarDecorator: ERROR: default statement in removeFeature: "+ feature);
+				break;
 			}
 		}
 	}
@@ -144,7 +145,7 @@ public abstract class CarDecorator extends Car{
 				break;
 			}
 			default:{
-				System.out.println("ERROR");
+				//System.out.println("Car Decorator: ERROR in addFeature: "+ feature);
 				break;
 			}
 		}

@@ -47,7 +47,6 @@ public abstract class RentalCompany{
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
-	  System.out.println(car.getLicense());
 	   car.setDays(days);
       // set features
       for (int i = 0; i < features.size(); i++) {
@@ -71,14 +70,13 @@ public abstract class RentalCompany{
     for (int i = 0; i < features.size(); i++) {
 		car = UndoRental(car, features.get(i));
     }
-	System.out.println("Check for no Features:[" +car. getFeatures() + "]");
+	//System.out.println("Check for no Features:[" +car. getFeatures() + "]");
     // Update catalog
     String model = car.getType();
-	System.out.println(model);
     this.catalog.get(model).push(car);
 
 	String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was returned and set to " + car.getDays() + " days at $" + car.getDailyCost() + " with default features [" +car.getFeatures()+"]";
-	System.out.println(statment);
+	//System.out.println(statment);
 
     return;
   }

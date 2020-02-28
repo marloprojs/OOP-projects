@@ -28,141 +28,154 @@ public class carMain
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
 
 //Initializing 12 Cutomers
-    customerObject[] customers = new customerObject[12];
-	//Regular Customer(1)
-	customers[0] = new RegularCustomer("Karen");
-	//Casual Customer(6)
+	    customerObject[] customers = new customerObject[12];
+		//Regular Customer(1)
+		customers[0] = new RegularCustomer("Karen");
+		//Casual Customer(6)
+	    customers[1] = new CasualCustomer("Charlie");
+		customers[2] = new CasualCustomer("Erwein");
+		customers[3] = new CasualCustomer("Molly");
+	    customers[4] = new CasualCustomer("Dee");
+	    customers[5] = new CasualCustomer("Mandy");
+		customers[6] = new CasualCustomer("Mac");
 
-    customers[1] = new CasualCustomer("Charlie");
+		//Business Customer (5)
+	    customers[7] = new BusinessCustomer("Denniss");
+	    customers[8] = new BusinessCustomer("Frank");
+	    customers[9] = new BusinessCustomer("Bruce");
+	    customers[10] = new BusinessCustomer("Gunter");
+	    customers[11] = new BusinessCustomer("Josiah");
 
-	customers[2] = new CasualCustomer("Erwein");
-
-	customers[3] = new CasualCustomer("Molly");
-    customers[4] = new CasualCustomer("Dee");
-    customers[5] = new CasualCustomer("Mandy");
-	customers[6] = new CasualCustomer("Mac");
-
-	//Business Customer (5)
-    customers[7] = new BusinessCustomer("Denniss");
-    customers[8] = new BusinessCustomer("Frank");
-    customers[9] = new BusinessCustomer("Bruce");
-    customers[10] = new BusinessCustomer("Gunter");
-    customers[11] = new BusinessCustomer("Josiah");
-/*
-	for(int i = 0 ; i < 12; i++){
-		System.out.println(customers[i].name + " : " + customers[i].type );
-	}
-*/
-
-//Creating our Rental Factory Pattern
-	//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
-
-
-	//TO DO:
-		//Change days back 35
-		//on last day return all cars
-		//implement the Observer into this
-		//Do Read Me
-		//Comment code
-		//Extra Make sub method in main
-		//Remove all uneccessary system calls
+		//TO DO:
+			//[X] Change days back 35
+			//[X] on last day return all cars
+			//[] implement the Observer into this
+			//[] Do Read Me
+			//[] Comment code
+			//[] Extra Make sub method in main
+			//[X] Remove all uneccessary system calls
 
 
 
-
-	MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
-	for(int i = 0; i < 8; i++){
-		System.out.println("Day is: " + i);
-		//Cars can be rented
-			//1. update Car Retnal and returns if necessary
-			for(int j = 0; j < customers.length; j++){
-				customers[j].updateDaysLeft();
-				//Check if any cars are due
-				if(customers[j].checkZeros()){
-					List<Integer> carList = customers[j].getCarIndex();
-					//IF any cars are due, ALL CARS ARE DUE.
+		//Creating our Rental Factory Pattern
+			//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
+		MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+		for(int i = 1; i < 36; i++){
+			int totalCarsRentedToday = 0;
+			int totalCarsReturnedToday = 0;
+			System.out.println("Day is: " + i);
+			//return all Cars on last Day/ NO MORE RENTING
+			if(i== 35){
+				System.out.println("Returning all Cars from Customers");
+				for(int j = 0; j < customers.length; j++){
+					List<Integer> carList = customers[j].returnAllCarsLastDay();
 					customers[j].resetDaysLeft();
 					for(int carInd: carList){
-						System.out.println(carInd);
-						//Cars has features in string but we need them in a list to return it in mjm
-						//prettyPrintCustomer(customers[j], carInd ,false, customers[j].cars[carInd]);
-
-						//prettyPrintCustomer(customer[j].cars[carID]);
 						String featureString = customers[j].cars[carInd].getFeatures();
 						List<String> featureList = new ArrayList<String>(Arrays.asList(featureString.split(", ")));
 
 						mjm.returnCar(customers[j].cars[carInd],  featureList);
+						totalCarsReturnedToday ++;
 					}
 				}
 			}
-
-
-			//Get Random Customers count Ex: we want 7 customers
-			Random randomGenerator = new Random();
-			int randomInt = randomGenerator.nextInt(customers.length+1) + 0;
-			if(randomInt != 0){
-				//Making a Set of customers with their indexes randomly
-				Set<Integer>  randomCustomers = new HashSet<Integer>();
-				for (int j = 0; j < randomInt; j++){
-					randomCustomers.add(randomGenerator.nextInt(customers.length) + 0);
-				}
-
-				//looping through our customers
-			     for (int index : randomCustomers) {
-					 //cars are availabe to rent
-					 if(mjm.getAllCarType().size() > 0){
-						 //Check if they can rent car
-						  if(customers[index].numOfCarsCurrentRent <3){
-							  //Grab a random number from 0 to amount of cars abailable to rent (24 at start)
-							  int randomCarIndex = randomGenerator.nextInt(mjm.getAllCarType().size()) + 0;
-							  ArrayList<String> allCarsAvailable = mjm.getAllCarType();
-							  //Get the model Type chosen
-							  String modelTypeChosen = allCarsAvailable.get(randomCarIndex);
-							  //Get next open index to update returnDate
-							  int nextCustomerOpenIndex = customers[index].nextOpenIndex();
-							  int returnDate = customers[index].getEarliestDaysLeft();
-
-							  //meaning there is already a car rented and it has a day set to be renterd in
-							  Car paperwork;
-							  if(returnDate != Integer.MAX_VALUE){
-								  paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
-								  customers[index].daysLeft[nextCustomerOpenIndex] = returnDate;
-								  customers[index].cars[nextCustomerOpenIndex] = paperwork;
-							  }
-							  //first car being rented.
-							  else{
-								 returnDate = randomGenerator.nextInt(customers[index].maxRentDays +1) + customers[index].minRentDays;
-								 paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
-								 customers[index].daysLeft[0] = returnDate;
-								 customers[index].cars[0] =  paperwork;
-							  }
-							 	customers[index].numOfCarsCurrentRent += 1;
-								//prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
-							  //All cars must be delived at same time, can be retned differnt times tho
-							  //check other params
-
-						  }
-						  //can not rent any more cars
-						  else{
-							  System.out.println("Customer already has 3 cars rented");
-						  }
-
-					 }
-					 //no current cars available to rent
-					 else{
-						 System.out.println("MJM has no more cars");
-					 }
-				}
-			}
-			//0 customers came in
+			//still days to rent
 			else{
-				System.out.println("Lonely Day at the Office");
+			//Cars can be rented
+				//1. update Car Retnal and returns if necessary
+				for(int j = 0; j < customers.length; j++){
+					customers[j].updateDaysLeft();
+					//Check if any cars are due
+					if(customers[j].checkZeros()){
+						List<Integer> carList = customers[j].getCarIndex();
+						//IF any cars are due, ALL CARS ARE DUE.
+						customers[j].resetDaysLeft();
+						for(int carInd: carList){
+							//Cars has features in string but we need them in a list to return it in mjm
+							//prettyPrintCustomer(customers[j], carInd ,false, customers[j].cars[carInd]);
+
+							//prettyPrintCustomer(customer[j].cars[carID]);
+							String featureString = customers[j].cars[carInd].getFeatures();
+							List<String> featureList = new ArrayList<String>(Arrays.asList(featureString.split(", ")));
+
+							mjm.returnCar(customers[j].cars[carInd],  featureList);
+							totalCarsReturnedToday++;
+						}
+					}
+				}
+
+				//Get Random Customers count Ex: we want 7 customers
+				Random randomGenerator = new Random();
+				int randomInt = randomGenerator.nextInt(customers.length+1) + 0;
+				if(randomInt != 0){
+					//Making a Set of customers with their indexes randomly
+					Set<Integer>  randomCustomers = new HashSet<Integer>();
+					for (int j = 0; j < randomInt; j++){
+						randomCustomers.add(randomGenerator.nextInt(customers.length) + 0);
+					}
+
+					//looping through our customers
+					 for (int index : randomCustomers) {
+						 //cars are availabe to rent
+						 if(mjm.getAllCarType().size() > 0){
+							 //Check if they can rent car
+							  if(customers[index].numOfCarsCurrentRent <3){
+								  //Grab a random number from 0 to amount of cars abailable to rent (24 at start)
+								  int randomCarIndex = randomGenerator.nextInt(mjm.getAllCarType().size()) + 0;
+								  ArrayList<String> allCarsAvailable = mjm.getAllCarType();
+								  //Get the model Type chosen
+								  String modelTypeChosen = allCarsAvailable.get(randomCarIndex);
+								  //Get next open index to update returnDate
+								  int nextCustomerOpenIndex = customers[index].nextOpenIndex();
+								  int returnDate = customers[index].getEarliestDaysLeft();
+
+								  //meaning there is already a car rented and it has a day set to be renterd in
+								  Car paperwork;
+								  if(returnDate != Integer.MAX_VALUE){
+									  paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
+									  customers[index].daysLeft[nextCustomerOpenIndex] = returnDate;
+									  customers[index].cars[nextCustomerOpenIndex] = paperwork;
+								  }
+								  //first car being rented.
+								  else{
+									 returnDate = randomGenerator.nextInt(customers[index].maxRentDays +1) + customers[index].minRentDays;
+									 paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
+									 customers[index].daysLeft[0] = returnDate;
+									 customers[index].cars[0] =  paperwork;
+								  }
+									customers[index].numOfCarsCurrentRent += 1;
+									totalCarsRentedToday++;
+									//prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
+								  //All cars must be delived at same time, can be retned differnt times tho
+								  //check other params
+
+							  }
+							  //can not rent any more cars
+							  else{
+								 // System.out.println("Customer already has 3 cars rented");
+							  }
+
+						 }
+						 //no current cars available to rent
+						 else{
+							 System.out.println("MJM has no more cars");
+						 }
+					}
+				}
+				//0 customers came in
+				else{
+					System.out.println("Lonely Day at the Office");
+				}
 			}
+			System.out.println("Total Cars Returned Today: " + totalCarsReturnedToday);
+			System.out.println("Total Cars Rented Today: " + totalCarsRentedToday);
+			System.out.println("Total Cars in MJM: " + mjm.getAllCarType().size() + "\n");
 		}
+
 	}
 
 
-
+	//Helpfer Function Debuging Car Objects Moving
 	public static void prettyPrintCustomer(customerObject customer, int nextCustomerOpenIndex, boolean Rented, Car car){
   		if(Rented){
 			System.out.println("RENTING!!!");
@@ -174,6 +187,11 @@ public class carMain
 		System.out.println("Car Object Features: " +car.getFeatures() + " Car License: "+car.getLicense());
 	}
 
+
+
+
+
+//Test Helper Methids
   public static void decoratorTest1(){
 	  Car car = new Luxury("Lux123");
 	  car = new gps(car);

@@ -62,7 +62,8 @@ public abstract class Car{
 	}
 	//removes Feature and updates cost
 	public void removeFeatures(String feature){
-		System.out.println("Check Decorator");
+		return;
+			//System.out.println("");
 	}
 
 

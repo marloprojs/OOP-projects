@@ -78,6 +78,15 @@ public abstract class customerObject{
 		}
 		return carList;
 	}
+	public List<Integer> returnAllCarsLastDay(){
+		List<Integer> carList = new ArrayList<Integer>();
+		for(int i = 0; i < 3; i++){
+			if(this.daysLeft[i] != -1){
+				carList.add(i);
+			}
+		}
+		return carList;
+	}
 }
 
 class CasualCustomer extends customerObject{
