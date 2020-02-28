@@ -4,9 +4,16 @@ import java.util.Observer;
 
 public class CarRenter extends Observer
 {
-    List <Observer>observers = new ArrayList<Obj> ();
-    register_observer(Observer observer)
+    private ObservableValue ov = null;
+    public TextObserver(ObservableValue ov)
     {
-
+      this.ov = ov;
     }
+   public void update(Observable obs, Object obj)
+   {
+      if (obs == ov)
+      {
+         System.out.println(ov.getValue());
+      }
+   }
 }
