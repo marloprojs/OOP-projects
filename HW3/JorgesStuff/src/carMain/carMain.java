@@ -28,7 +28,7 @@ public class carMain
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
 
 //Initializing 12 Cutomers
-    customerObject[] customers = new customerObject[3];
+    customerObject[] customers = new customerObject[12];
 	//Regular Customer(1)
 	customers[0] = new RegularCustomer("Karen");
 	//Casual Customer(6)
@@ -36,7 +36,7 @@ public class carMain
     customers[1] = new CasualCustomer("Charlie");
 
 	customers[2] = new CasualCustomer("Erwein");
-/*
+
 	customers[3] = new CasualCustomer("Molly");
     customers[4] = new CasualCustomer("Dee");
     customers[5] = new CasualCustomer("Mandy");
@@ -48,7 +48,6 @@ public class carMain
     customers[9] = new BusinessCustomer("Bruce");
     customers[10] = new BusinessCustomer("Gunter");
     customers[11] = new BusinessCustomer("Josiah");
-	*/
 /*
 	for(int i = 0 ; i < 12; i++){
 		System.out.println(customers[i].name + " : " + customers[i].type );
@@ -57,6 +56,20 @@ public class carMain
 
 //Creating our Rental Factory Pattern
 	//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
+
+
+	//TO DO:
+		//Change days back 35
+		//on last day return all cars
+		//implement the Observer into this
+		//Do Read Me
+		//Comment code
+		//Extra Make sub method in main
+		//Remove all uneccessary system calls
+
+
+
+
 	MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
 	for(int i = 0; i < 8; i++){
 		System.out.println("Day is: " + i);
@@ -72,7 +85,7 @@ public class carMain
 					for(int carInd: carList){
 						System.out.println(carInd);
 						//Cars has features in string but we need them in a list to return it in mjm
-						prettyPrintCustomer(customers[j], carInd ,false, customers[j].cars[carInd]);
+						//prettyPrintCustomer(customers[j], carInd ,false, customers[j].cars[carInd]);
 
 						//prettyPrintCustomer(customer[j].cars[carID]);
 						String featureString = customers[j].cars[carInd].getFeatures();
@@ -124,7 +137,7 @@ public class carMain
 								 customers[index].cars[0] =  paperwork;
 							  }
 							 	customers[index].numOfCarsCurrentRent += 1;
-								prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
+								//prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
 							  //All cars must be delived at same time, can be retned differnt times tho
 							  //check other params
 
