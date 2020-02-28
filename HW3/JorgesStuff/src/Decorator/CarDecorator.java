@@ -1,8 +1,7 @@
 package JorgesStuff;
 
 //Create Car class as the Component of the decorator
-public abstract class CarDecorator extends Car
-{
+public abstract class CarDecorator extends Car{
     public Car car;
 
 //Decorator Feaitre getters and setters
