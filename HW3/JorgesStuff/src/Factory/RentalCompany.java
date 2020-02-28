@@ -26,6 +26,21 @@ public abstract class RentalCompany{
 
   protected abstract Car UndoRental(Car car, String feature);
 
+  public ArrayList<String> getAllCarType(){
+	  ArrayList<String> carList = new ArrayList<String>();
+	  String model;
+	  //getting the model types into a set
+   	  Set<String> keys = catalog.keySet();
+	  	//adding to totalCount
+		for(Iterator<String> it = keys.iterator(); it.hasNext(); ) {
+			model = it.next();
+			for(int i = 0; i < this.catalog.get(model).size(); i++){
+				carList.add(model);
+			}
+
+		}
+		return carList;
+  }
   // Pass in model, days, and list of features you want
   // Either rental record dict or null if not avalible
   public HashMap<String, Object> rentCar(String model, int days, List<String> features){

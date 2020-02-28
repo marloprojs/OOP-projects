@@ -25,45 +25,103 @@ public class carMain
 
 
 
+//++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
 
-
-//To Do Thursday:
-	//Instantiate a Factory
-		//Pass in number of eco, std, lux, su, min
-			//Returns a stack of cars
-
-
-      //Karen
-      //For loop for 35 dats, 34 nights
-        //12 customers
-          //6 Casual
-          //5 business
-          //1 Regular
-          //3 cars at a time
-          // Up to 7 days of rental
-          //Unique Names
-        //Features:
-          //Case1: Child car Seats (0 to 1)
-          //Case2: GPS (0 or 1)
-          //Case3: Satelite radio (0-1)
-        //ArrayList[12][2] table = new ArrayList[12][2];
-        //HashMap<String,String> customers = new HashMap<String,String>();
-/*
+//Initializing 12 Cutomers
     customerObject[] customers = new customerObject[12];
-    customers[0] = new customerObject("Karen", "Regular");
-    customers[1] = new customerObject("Charlie", "Casual");
-    customers[2] = new customerObject("Denniss", "Business");
-    customers[3] = new customerObject("Erwein", "Casual");
-    customers[4] = new customerObject("Frank", "Business");
-    customers[5] = new customerObject("Molly", "Casual");
-    customers[6] = new customerObject("Bruce", "Business");
-    customers[7] = new customerObject("Dee", "Casual");
-    customers[8] = new customerObject("Gunter", "Business");
-    customers[9] = new customerObject("Mandy", "Casual");
-    customers[10] = new customerObject("Josiah", "Business");
-    customers[11] = new customerObject("Mac", "Casual");
-    System.out.println("ITS ALIVE!!!!!");
+	//Regular Customer(1)
+	customers[0] = new RegularCustomer("Karen");
+	//Casual Customer(6)
+    customers[1] = new CasualCustomer("Charlie");
+    customers[2] = new CasualCustomer("Erwein");
+    customers[3] = new CasualCustomer("Molly");
+    customers[4] = new CasualCustomer("Dee");
+    customers[5] = new CasualCustomer("Mandy");
+	customers[6] = new CasualCustomer("Mac");
+
+	//Business Customer (5)
+    customers[7] = new BusinessCustomer("Denniss");
+    customers[8] = new BusinessCustomer("Frank");
+    customers[9] = new BusinessCustomer("Bruce");
+    customers[10] = new BusinessCustomer("Gunter");
+    customers[11] = new BusinessCustomer("Josiah");
+/*
+	for(int i = 0 ; i < 12; i++){
+		System.out.println(customers[i].name + " : " + customers[i].type );
+	}
 */
+
+//Creating our Rental Factory Pattern
+	//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
+	MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+		System.out.println(mjm.getAllCarType().size());
+		System.out.println(mjm.getAllCarType());
+	for(int i = 0; i < 35; i++){
+		//Cars can be rented
+		//moighjt need to change this a bit
+		if(mjm.getAllCarType().size() > 0){
+			//Get Random Customers count Ex: we want 7 customers
+			Random randomGenerator = new Random();
+			int randomInt = randomGenerator.nextInt(12) + 0;
+			//This will hold the specific index of the customer(s).
+				//This will give us 7 random indexs from the 12.
+			if(randomInt != 0){
+				Set<Integer>  randomCustomers = new HashSet<Integer>();
+				for (int j = 0; j < randomInt; j++){
+					randomCustomers.add(randomGenerator.nextInt(12) + 0);
+				}
+				System.out.println(randomCustomers);
+				//Check if they can rent car
+			     for (int index : randomCustomers) {
+					 //Less than 3 cars rented. Can rent another
+					 if(customers[index].numOfCarsCurrentRent <3){
+						 randomInt = randomGenerator.nextInt(mjm.getAllCarType().size()) + 0;
+						 ArrayList<String> allCarsAvailable = mjm.getAllCarType();
+						 String modeltTypeChosen = allCarsAvailable.get(randomInt);
+
+						 int indexOfNewCar = customers[index].nextOpenIndex();
+
+						 int returnDate = customers[index].getEarliestDaysLeft();
+						 //meaning there is already a car rented and it has a day set to be renterd in
+						 if(returnDate != Integer.MAX_VALUE){
+							 HashMap<String, Object> paperwork = mjm.rentCar(modeltTypeChosen, returnDate , customers[index].getRandomFeatures());
+							 customers[index].daysLeft[indexOfNewCar] = returnDate;
+						 }
+						 //first car being rented.
+						 else{
+						  	returnDate = randomGenerator.nextInt(customers[index].maxRentDays +1) + customers[index].minRentDays;
+							HashMap<String, Object> paperwork = mjm.rentCar(modeltTypeChosen, returnDate , customers[index].getRandomFeatures());
+							customers[index].daysLeft[indexOfNewCar] = returnDate;
+						 }
+						 //All cars must be delived at same time, can be retned differnt times tho
+						 //check other params
+
+					 }
+					 //can not rent any more cars
+					 else{
+
+					 }
+				}
+			}
+
+
+
+			//0 customers came in
+			else{
+
+			}
+
+
+		}
+		//no Cars in rental Company
+		else{
+
+		}
+	}
+
+
+
+    System.out.println("ITS ALIVE!!!!!");
   //  for(int i = 0; i < 35; i++){
       //need to check if there are any cars availaible
       //if yes

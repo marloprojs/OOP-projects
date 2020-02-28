@@ -1,8 +1,7 @@
 package JorgesStuff;
 import java.util.*;
 //Create Car class as the Component of the decorator
-public abstract class Car
-{
+public abstract class Car{
 //Car Params
     String licenseID = "N/A";
     String type = "Unknown Car";
