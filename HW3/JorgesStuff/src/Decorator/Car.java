@@ -101,7 +101,7 @@ class Economy extends Car{
 
 class Luxury extends Car{
     public Luxury(String licenseId){
-        this,type = "Luxury";
+        this.type = "Luxury";
         this.licenseID = licenseId;
 		this.features = "";
 		setDailyCost(45);

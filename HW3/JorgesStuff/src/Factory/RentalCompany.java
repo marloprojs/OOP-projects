@@ -11,7 +11,7 @@ public abstract class RentalCompany{
     Stack<Car> economy = getCars("Economy", eco);
     Stack<Car> standard = getCars("Standard", std);
     Stack<Car> luxury = getCars("Luxury", lux);
-    Stack<Car> suv = getCars("SUV", su);
+    Stack<Car> suv = getCars("Suv", su);
     Stack<Car> minivan = getCars("Minivan", min);
 
     this.catalog.put("Economy", economy);
@@ -74,6 +74,7 @@ public abstract class RentalCompany{
 	System.out.println("Check for no Features:[" +car. getFeatures() + "]");
     // Update catalog
     String model = car.getType();
+	System.out.println(model);
     this.catalog.get(model).push(car);
 
 	String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was returned and set to " + car.getDays() + " days at $" + car.getDailyCost() + " with default features [" +car.getFeatures()+"]";
