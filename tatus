@@ -1,0 +1,38 @@
+[1mdiff --git a/HW3/JorgesStuff/src/carMain/carMain.java b/HW3/JorgesStuff/src/carMain/carMain.java[m
+[1mindex 82fd038..d699fb9 100644[m
+[1m--- a/HW3/JorgesStuff/src/carMain/carMain.java[m
+[1m+++ b/HW3/JorgesStuff/src/carMain/carMain.java[m
+[36m@@ -18,16 +18,7 @@[m [mpublic class carMain[m
+ 	//Testing Marissas factory implementation[m
+ 		//facotryTest1();[m
+ [m
+[31m-//++++++++++++++++++++++++End of Test METHODS++++++++++++++++++++++++//[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-//To Do Thursday:[m
+[32m+[m[32m//++++++++++++++++++++++++End of Test METHODS++++++++++++++++++++++++////To Do Thursday:[m
+ 	//Instantiate a Factory[m
+ 		//Pass in number of eco, std, lux, su, min[m
+ 			//Returns a stack of cars[m
+[36m@@ -48,7 +39,6 @@[m [mpublic class carMain[m
+           //Case3: Satelite radio (0-1)[m
+         //ArrayList[12][2] table = new ArrayList[12][2];[m
+         //HashMap<String,String> customers = new HashMap<String,String>();[m
+[31m-/*[m
+     customerObject[] customers = new customerObject[12];[m
+     customers[0] = new customerObject("Karen", "Regular");[m
+     customers[1] = new customerObject("Charlie", "Casual");[m
+[36m@@ -63,7 +53,6 @@[m [mpublic class carMain[m
+     customers[10] = new customerObject("Josiah", "Business");[m
+     customers[11] = new customerObject("Mac", "Casual");[m
+     System.out.println("ITS ALIVE!!!!!");[m
+[31m-*/[m
+   //  for(int i = 0; i < 35; i++){[m
+       //need to check if there are any cars availaible[m
+       //if yes[m
