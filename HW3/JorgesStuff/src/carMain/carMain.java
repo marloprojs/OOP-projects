@@ -22,20 +22,27 @@ public class carMain
 
 //++++++++++++++++++++++++End of Test METHODS++++++++++++++++++++++++//
 
-
-
-
+//TO DO:
+	//[X] Change days back 35
+	//[X] on last day return all cars
+	//[X] implement the Observer into this
+	//[X] Do Read Me
+	//[X] Comment code
+	//[X] UML
+	//[] Extra Make sub method in main
+	//[X] Remove all uneccessary system calls
+	//[X] Create outputStuff.
 
 
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
-
-		outputFolder outStuff = new outputFolder();		
+//Initializing output Folder Object for output file
+		outputFolder outStuff = new outputFolder();
 
 //Initializing 12 Cutomers
 	    customerObject[] customers = new customerObject[12];
-		//Regular Customer(1)
+//Regular Customer(1)
 		customers[0] = new RegularCustomer("Karen");
-		//Casual Customer(6)
+//Casual Customer(6)
 	    customers[1] = new CasualCustomer("Charlie");
 		customers[2] = new CasualCustomer("Erwein");
 		customers[3] = new CasualCustomer("Molly");
@@ -43,34 +50,22 @@ public class carMain
 	    customers[5] = new CasualCustomer("Mandy");
 		customers[6] = new CasualCustomer("Mac");
 
-		//Business Customer (5)
+//Business Customer (5)
 	    customers[7] = new BusinessCustomer("Denniss");
 	    customers[8] = new BusinessCustomer("Frank");
 	    customers[9] = new BusinessCustomer("Bruce");
 	    customers[10] = new BusinessCustomer("Gunter");
 	    customers[11] = new BusinessCustomer("Josiah");
 
-		//TO DO:
-			//[X] Change days back 35
-			//[X] on last day return all cars
-			//[] implement the Observer into this
-			//[] Do Read Me
-			//[] Comment code
-			//[] Extra Make sub method in main
-			//[X] Remove all uneccessary system calls
-			//Create outputStuff.
-
-
-
-		//Creating our Rental Factory Pattern
-			//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
+//Creating our Rental Factory Pattern
+	//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
 		MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
 
 		for(int i = 1; i < 36; i++){
 
 			int totalCarsRentedToday = 0;
 			int totalCarsReturnedToday = 0;
-			
+
 			// Tell the observer
       		mjm.ov.setValue("Day is: " + i);
 
@@ -261,7 +256,6 @@ public class carMain
 	  String features = car2.getFeatures();
 	  System.out.println("Feature List is: \n[" + features.substring(0, features.length()-2 ) + "]");
   }
-/*
   public static void facotryTest1(){
 	  // Order of inventory: eco, std, lux, su, min
 	  MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
@@ -280,5 +274,5 @@ public class carMain
 	  // Price should be $0s
 	  //System.out.println(testRental.get("car").getTotalCost());
   }
-  */
+
 }
