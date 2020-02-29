@@ -144,12 +144,19 @@ public class carMain
 									  outStuff.addToCarRentalInfo(customers[index],(Car) paperwork.get("car") );
 								  }
 								  //first car being rented.
+
+								  //(int) (Math.random() * ((max - min) + 1)) + min
 								  else{
-									 returnDate = randomGenerator.nextInt(customers[index].maxRentDays +1) + customers[index].minRentDays;
+								  	//Random randomGenerator2 = new Random();
+										if(customers[index].type == "Business")
+											returnDate = 7;
+										else
+									 		returnDate = (int) (Math.random() * ((customers[index].getMaxDays() - customers[index].getMinDays()) + 1)) + customers[index].getMinDays() ;
+									 //randomGenerator2.nextInt(customers[index].getMaxDays() +1) + customers[index].getMinDays();
 									 paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
 									 customers[index].daysLeft[0] = returnDate;
 									 customers[index].cars[0] =  (Car) paperwork.get("car");
-									 outStuff.addToCarRentalInfo(customers[0],(Car) paperwork.get("car") );
+									 outStuff.addToCarRentalInfo(customers[index],(Car) paperwork.get("car") );
 								  }
 									customers[index].numOfCarsCurrentRent += 1;
 									totalCarsRentedToday++;

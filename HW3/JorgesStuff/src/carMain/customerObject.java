@@ -10,7 +10,12 @@ public abstract class customerObject{
 
 	Car[] cars = new Car[3];
 	int[] daysLeft = new int[] {-1,-1,-1};
-
+	public int getMinDays(){
+		return this.minRentDays;
+	}
+	public int getMaxDays(){
+		return this.maxRentDays; 
+	}
 	public int nextOpenIndex(){
 		for(int i = 0; i < 3; i++){
 			if (this.daysLeft[i] == -1)
