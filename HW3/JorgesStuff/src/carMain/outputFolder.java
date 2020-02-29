@@ -92,7 +92,7 @@ public class outputFolder{
 	public void endResultPart(){
 		endResultString += "+++++++++++++++++++ End Results +++++++++++++++++++\n"
 		+ "Total Rented Cars: " + totalRentals+"\n"
-		+ "Customer Business Rented: " + totalCasualRentals +"\n"
+		+ "Customer Business Rented: " + totalBusinessRentals +"\n"
 		+ "Customer Regular Rented: " + totalREgularRentals+"\n"
 		+ "Customer Casual Rented: " + totalCasualRentals+"\n"
 		+ "Total Revenue: $" +totalRevenue;
