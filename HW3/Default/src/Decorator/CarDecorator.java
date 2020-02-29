@@ -1,4 +1,4 @@
-package JorgesStuff;
+package Default;
 
 //Create Car class as the Component of the decorator
 public abstract class CarDecorator extends Car{

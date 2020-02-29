@@ -1,3 +1,16 @@
-1) be in the root folder. In this case Default in terminal
-2) javac -sourcepath src -d build src/**/*.java    (TO COMPILE ALL)
-3) java -cp .:build:**/*.class Default.carMain     (To RUN MAIN)
+ MJM Rental Company 
+ Jorge Moreno, Marissa Montano, & Marlo Terr
+
+    To compile and run our java code:
+        - Be in the Default folder. In this case 'OOP-Projects/HW3/Default'
+        - javac -sourcepath src -d build src/**/*.java    (TO COMPILE ALL)
+        - java -cp .:build:**/*.class Default.carMain     (To RUN MAIN)
+
+    To look at our output file:
+        - OOP-Projects/HW3/Default/rentalCompanyOutputFile.txt
+
+    Patterns we used:
+        - Factory for instantiating cars in our RentalCompany (MJMRentalCompany and RentalCompany)
+        - Decorator for adding/removing options to the ranted out cars (CarDecorator)
+        - Observer for recording events that happen in our rental company (ObservableValue and CarRenter)
+

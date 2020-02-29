@@ -1,4 +1,4 @@
-package JorgesStuff;
+package Default;
 import java.util.*;
 import java.io.*;
 
