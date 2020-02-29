@@ -1,14 +1,14 @@
 package Default;
 
-import java.util.*; 
+import java.util.*;
 
- // Factory //
 public class MJMRentalCompany extends RentalCompany{
-  
+
   public MJMRentalCompany(int eco, int std, int lux, int su, int min){
+    // FACTORY TO INIT OUR COMPANY CARS //
     super(eco, std, lux, su, min);
   }
-  
+
   public Stack<Car> getCars(String model, int count){
     Stack<Car> cars = new Stack<Car>();
 
@@ -24,14 +24,14 @@ public class MJMRentalCompany extends RentalCompany{
     }
     else if (model.equals("Luxury")){
       for( int i = 0; i < count; i++){
-        cars.push(new Luxury("lux-12"+i));
+        cars.push(new Luxury("lux-12" + i) );
       }
     }
     else if (model.equals("SUV")){
       for( int i = 0; i < count; i++){
         cars.push(new Suv("suv-12"+i));
       }
-    }   
+    }
     else{
       for( int i = 0; i < count; i++){
         cars.push(new Minivan("min-12"+i));
@@ -39,30 +39,24 @@ public class MJMRentalCompany extends RentalCompany{
     }
     return cars;
   }
-  
+
   public Car UpdateRental(Car car, String feature){
+	  // THIS USES THE DECORATOR TO ADD FEATURES
     if (feature.equals("Car Seat")){
       car = new carSeat(car);
     }
     else if (feature.equals("GPS")){
-      car = new gps(car);  
+      car = new gps(car);
     }
     else {
       car = new satelliteRadio(car);
     }
     return car;
   }
- 
+
   public Car UndoRental(Car car, String feature){
-    if (feature.equals("Car Seat")){
-      car = new removeCarSeat(car);
-    }
-    else if (feature.equals("GPS")){
-      car = new removeGps(car);  
-    }
-    else {
-      car = new removeSatelliteRadio(car);
-    }
-    return car;
+	  // THIS USES THE DECORATOR TO REMOVE FEATURES
+    car.removeFeatures(feature);
+	  return car;
   }
 }
