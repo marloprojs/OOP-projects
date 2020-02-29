@@ -1,0 +1,2053 @@
++++++++++++++++++++ Day 1 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 7
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 14
+		Car Features: Satellite Radio, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: std-124
+		Rented for: 12
+		Car Features: GPS, Car Seat, Car Seat, 
+Active Rentals
+	Customer Name: Karen
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Gunter
+		Car License: std-124
+Remaining Cars:21 :
+Total Cash Earned Today: 949
++++++++++++++++++++ Day 2 Results +++++++++++++++++++ 
+Total Cars Rented Today: 1
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 8
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Gunter
+		Car License: std-124
+Remaining Cars:20 :
+Total Cash Earned Today: 227
++++++++++++++++++++ Day 3 Results +++++++++++++++++++ 
+Total Cars Rented Today: 8
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: std-123
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-122
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 4
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: std-122
+		Rented for: 4
+		Car Features: GPS, Car Seat, 
+	Car 5:
+		Customer Name: Denniss
+		Car License: eco-123
+		Rented for: 12
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 6:
+		Customer Name: Karen
+		Car License: eco-122
+		Rented for: 10
+		Car Features: Satellite Radio, Car Seat, 
+	Car 7:
+		Customer Name: Bruce
+		Car License: min-121
+		Rented for: 7
+		Car Features: Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 8:
+		Customer Name: Gunter
+		Car License: lux-123
+		Rented for: 10
+		Car Features: GPS, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Charlie
+		Car License: std-123
+	Customer Name: Erwein
+		Car License: min-122
+	Customer Name: Dee
+		Car License: eco-124
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+Remaining Cars:12 :
+Total Cash Earned Today: 1498
++++++++++++++++++++ Day 4 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-122
+		Rented for: 2
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-121
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: std-123
+		Rented for: 3
+		Car Features: Satellite Radio, Car Seat, 
+	Car 4:
+		Customer Name: Denniss
+		Car License: min-123
+		Rented for: 11
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Karen
+		Car License: min-122
+		Rented for: 14
+		Car Features: Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Charlie
+		Car License: min-122
+	Customer Name: Molly
+		Car License: eco-121
+	Customer Name: Dee
+		Car License: eco-124
+	Customer Name: Mandy
+		Car License: std-123
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: min-122
+Remaining Cars:9 :
+Total Cash Earned Today: 965
++++++++++++++++++++ Day 5 Results +++++++++++++++++++ 
+Total Cars Rented Today: 6
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 3
+		Car Features: GPS, Car Seat, 
+	Car 2:
+		Customer Name: Charlie
+		Car License: std-121
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Dee
+		Car License: min-120
+		Rented for: 2
+		Car Features: GPS, Car Seat, 
+	Car 4:
+		Customer Name: Mandy
+		Car License: std-120
+		Rented for: 2
+		Car Features: 
+	Car 5:
+		Customer Name: Mac
+		Car License: eco-120
+		Rented for: 2
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 6:
+		Customer Name: Gunter
+		Car License: min-120
+		Rented for: 8
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Karen
+		Car License: min-121
+	Customer Name: Charlie
+		Car License: min-122
+	Customer Name: Charlie
+		Car License: std-121
+	Customer Name: Molly
+		Car License: eco-121
+	Customer Name: Dee
+		Car License: eco-124
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: std-123
+	Customer Name: Mandy
+		Car License: std-120
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+Remaining Cars:3 :
+Total Cash Earned Today: 574
++++++++++++++++++++ Day 6 Results +++++++++++++++++++ 
+Total Cars Rented Today: 2
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Mac
+		Car License: std-121
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Josiah
+		Car License: lux-122
+		Rented for: 12
+		Car Features: Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Karen
+		Car License: min-121
+	Customer Name: Molly
+		Car License: eco-121
+	Customer Name: Dee
+		Car License: eco-124
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: std-123
+	Customer Name: Mandy
+		Car License: std-120
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Mac
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+Remaining Cars:3 :
+Total Cash Earned Today: 624
++++++++++++++++++++ Day 7 Results +++++++++++++++++++ 
+Total Cars Rented Today: 6
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: lux-121
+		Rented for: 3
+		Car Features: GPS, 
+	Car 2:
+		Customer Name: Molly
+		Car License: std-121
+		Rented for: 1
+		Car Features: Satellite Radio, 
+	Car 3:
+		Customer Name: Karen
+		Car License: std-122
+		Rented for: 2
+		Car Features: Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: std-120
+		Rented for: 1
+		Car Features: Satellite Radio, 
+	Car 5:
+		Customer Name: Frank
+		Car License: min-120
+		Rented for: 6
+		Car Features: Car Seat, 
+	Car 6:
+		Customer Name: Josiah
+		Car License: lux-120
+		Rented for: 11
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-124
+	Customer Name: Karen
+		Car License: min-121
+	Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Molly
+		Car License: eco-121
+	Customer Name: Molly
+		Car License: std-121
+	Customer Name: Mandy
+		Car License: std-122
+	Customer Name: Mac
+		Car License: std-120
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 975
++++++++++++++++++++ Day 8 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: eco-121
+		Rented for: 4
+		Car Features: Satellite Radio, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Frank
+		Car License: min-124
+		Rented for: 5
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Dee
+		Car License: eco-121
+	Customer Name: Mandy
+		Car License: std-122
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:6 :
+Total Cash Earned Today: 363
++++++++++++++++++++ Day 9 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: std-122
+		Rented for: 6
+		Car Features: Satellite Radio, 
+	Car 2:
+		Customer Name: Mac
+		Car License: eco-120
+		Rented for: 2
+		Car Features: GPS, 
+	Car 3:
+		Customer Name: Bruce
+		Car License: std-120
+		Rented for: 1
+		Car Features: Satellite Radio, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Dee
+		Car License: eco-121
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: min-121
+	Customer Name: Bruce
+		Car License: std-120
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 284
++++++++++++++++++++ Day 10 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 3
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: lux-121
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: std-120
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, 
+	Car 4:
+		Customer Name: Dee
+		Car License: min-123
+		Rented for: 2
+		Car Features: GPS, 
+	Car 5:
+		Customer Name: Mac
+		Car License: std-121
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Charlie
+		Car License: min-121
+	Customer Name: Erwein
+		Car License: lux-121
+	Customer Name: Molly
+		Car License: std-120
+	Customer Name: Dee
+		Car License: eco-121
+	Customer Name: Dee
+		Car License: min-123
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Mac
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:3 :
+Total Cash Earned Today: 552
++++++++++++++++++++ Day 11 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: std-121
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Dee
+		Car License: std-123
+		Rented for: 1
+		Car Features: Satellite Radio, 
+	Car 3:
+		Customer Name: Karen
+		Car License: eco-120
+		Rented for: 1
+		Car Features: GPS, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Karen
+		Car License: std-121
+	Customer Name: Charlie
+		Car License: min-121
+	Customer Name: Erwein
+		Car License: lux-121
+	Customer Name: Molly
+		Car License: std-120
+	Customer Name: Dee
+		Car License: eco-121
+	Customer Name: Dee
+		Car License: min-123
+	Customer Name: Dee
+		Car License: std-123
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:3 :
+Total Cash Earned Today: 244
++++++++++++++++++++ Day 12 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Molly
+		Car License: min-123
+		Rented for: 1
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-120
+		Rented for: 4
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 3
+		Car Features: Satellite Radio, 
+	Car 4:
+		Customer Name: Karen
+		Car License: std-123
+		Rented for: 10
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Karen
+		Car License: std-121
+	Customer Name: Charlie
+		Car License: min-121
+	Customer Name: Erwein
+		Car License: lux-121
+	Customer Name: Molly
+		Car License: std-120
+	Customer Name: Molly
+		Car License: min-123
+	Customer Name: Mandy
+		Car License: eco-120
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: eco-122
+	Customer Name: Frank
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Gunter
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: min-120
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:3 :
+Total Cash Earned Today: 589
++++++++++++++++++++ Day 13 Results +++++++++++++++++++ 
+Total Cars Rented Today: 7
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 2
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 1
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Erwein
+		Car License: min-120
+		Rented for: 1
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: eco-122
+		Rented for: 4
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Mandy
+		Car License: eco-121
+		Rented for: 3
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 6:
+		Customer Name: Bruce
+		Car License: min-123
+		Rented for: 9
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 7:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 8
+		Car Features: GPS, Satellite Radio, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Karen
+		Car License: std-121
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: min-124
+	Customer Name: Erwein
+		Car License: lux-121
+	Customer Name: Erwein
+		Car License: min-120
+	Customer Name: Molly
+		Car License: eco-122
+	Customer Name: Mandy
+		Car License: eco-120
+	Customer Name: Mandy
+		Car License: eco-121
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:5 :
+Total Cash Earned Today: 816
++++++++++++++++++++ Day 14 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 3
+		Car Features: Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 11
+		Car Features: 
+	Car 3:
+		Customer Name: Bruce
+		Car License: std-124
+		Rented for: 8
+		Car Features: GPS, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: std-122
+	Customer Name: Karen
+		Car License: std-121
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Molly
+		Car License: eco-122
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: eco-120
+	Customer Name: Mandy
+		Car License: eco-121
+	Customer Name: Mac
+		Car License: min-121
+	Customer Name: Denniss
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: eco-123
+	Customer Name: Denniss
+		Car License: min-123
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:5 :
+Total Cash Earned Today: 644
++++++++++++++++++++ Day 15 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: lux-121
+		Rented for: 2
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 2
+		Car Features: Satellite Radio, Car Seat, 
+	Car 3:
+		Customer Name: Molly
+		Car License: min-124
+		Rented for: 2
+		Car Features: Satellite Radio, 
+	Car 4:
+		Customer Name: Dee
+		Car License: std-121
+		Rented for: 2
+		Car Features: GPS, Car Seat, 
+	Car 5:
+		Customer Name: Mandy
+		Car License: min-121
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Erwein
+		Car License: min-123
+	Customer Name: Molly
+		Car License: eco-122
+	Customer Name: Molly
+		Car License: min-124
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: std-121
+	Customer Name: Mandy
+		Car License: eco-120
+	Customer Name: Mandy
+		Car License: eco-121
+	Customer Name: Mandy
+		Car License: min-121
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:7 :
+Total Cash Earned Today: 397
++++++++++++++++++++ Day 16 Results +++++++++++++++++++ 
+Total Cars Rented Today: 6
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 8
+		Car Features: GPS, Satellite Radio, 
+	Car 2:
+		Customer Name: Erwein
+		Car License: min-120
+		Rented for: 1
+		Car Features: Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Molly
+		Car License: lux-123
+		Rented for: 1
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 1
+		Car Features: Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Karen
+		Car License: eco-121
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, 
+	Car 6:
+		Customer Name: Frank
+		Car License: std-122
+		Rented for: 9
+		Car Features: GPS, Satellite Radio, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Erwein
+		Car License: min-123
+	Customer Name: Erwein
+		Car License: min-120
+	Customer Name: Molly
+		Car License: eco-122
+	Customer Name: Molly
+		Car License: min-124
+	Customer Name: Molly
+		Car License: lux-123
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: std-121
+	Customer Name: Mandy
+		Car License: min-121
+	Customer Name: Mac
+		Car License: eco-121
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 786
++++++++++++++++++++ Day 17 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: eco-122
+		Rented for: 7
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 4
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: lux-123
+		Rented for: 3
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Karen
+		Car License: std-121
+		Rented for: 7
+		Car Features: Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Molly
+		Car License: min-121
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: lux-123
+	Customer Name: Mac
+		Car License: eco-121
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Josiah
+		Car License: min-122
+	Customer Name: Josiah
+		Car License: lux-122
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:8 :
+Total Cash Earned Today: 836
++++++++++++++++++++ Day 18 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: lux-120
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: lux-122
+		Rented for: 4
+		Car Features: GPS, Car Seat, 
+	Car 3:
+		Customer Name: Dee
+		Car License: min-122
+		Rented for: 3
+		Car Features: 
+	Car 4:
+		Customer Name: Mac
+		Car License: eco-120
+		Rented for: 2
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Gunter
+		Car License: min-124
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Charlie
+		Car License: lux-120
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Molly
+		Car License: min-121
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-122
+	Customer Name: Mandy
+		Car License: lux-123
+	Customer Name: Mac
+		Car License: eco-121
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Gunter
+		Car License: min-124
+Remaining Cars:6 :
+Total Cash Earned Today: 530
++++++++++++++++++++ Day 19 Results +++++++++++++++++++ 
+Total Cars Rented Today: 5
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 5
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-123
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Dee
+		Car License: lux-120
+		Rented for: 2
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Mandy
+		Car License: lux-121
+		Rented for: 1
+		Car Features: Satellite Radio, Car Seat, 
+	Car 5:
+		Customer Name: Karen
+		Car License: std-120
+		Rented for: 14
+		Car Features: Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: eco-123
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Molly
+		Car License: min-121
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-122
+	Customer Name: Dee
+		Car License: lux-120
+	Customer Name: Mandy
+		Car License: lux-123
+	Customer Name: Mandy
+		Car License: lux-121
+	Customer Name: Mac
+		Car License: eco-121
+	Customer Name: Mac
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+Remaining Cars:2 :
+Total Cash Earned Today: 880
++++++++++++++++++++ Day 20 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Charlie
+		Car License: lux-121
+		Rented for: 2
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 4
+		Car Features: Car Seat, 
+	Car 3:
+		Customer Name: Denniss
+		Car License: eco-120
+		Rented for: 4
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Josiah
+		Car License: lux-123
+		Rented for: 13
+		Car Features: Satellite Radio, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: eco-123
+	Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Molly
+		Car License: min-121
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-122
+	Customer Name: Dee
+		Car License: lux-120
+	Customer Name: Mac
+		Car License: min-123
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: eco-124
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+Remaining Cars:2 :
+Total Cash Earned Today: 966
++++++++++++++++++++ Day 21 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Charlie
+		Car License: min-124
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-122
+		Rented for: 2
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 3
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Josiah
+		Car License: lux-120
+		Rented for: 12
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: eco-123
+	Customer Name: Charlie
+		Car License: lux-121
+	Customer Name: Charlie
+		Car License: min-124
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Dee
+		Car License: min-122
+	Customer Name: Mandy
+		Car License: eco-124
+	Customer Name: Mac
+		Car License: min-123
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-123
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 798
++++++++++++++++++++ Day 22 Results +++++++++++++++++++ 
+Total Cars Rented Today: 6
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 2
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Mandy
+		Car License: lux-122
+		Rented for: 2
+		Car Features: GPS, Car Seat, 
+	Car 3:
+		Customer Name: Mac
+		Car License: min-124
+		Rented for: 2
+		Car Features: Satellite Radio, 
+	Car 4:
+		Customer Name: Frank
+		Car License: eco-123
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+	Car 5:
+		Customer Name: Karen
+		Car License: std-124
+		Rented for: 12
+		Car Features: Car Seat, Car Seat, 
+	Car 6:
+		Customer Name: Karen
+		Car License: lux-121
+		Rented for: 14
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: min-123
+	Customer Name: Dee
+		Car License: min-122
+	Customer Name: Mandy
+		Car License: eco-124
+	Customer Name: Mandy
+		Car License: lux-122
+	Customer Name: Mac
+		Car License: min-123
+	Customer Name: Mac
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:5 :
+Total Cash Earned Today: 1420
++++++++++++++++++++ Day 23 Results +++++++++++++++++++ 
+Total Cars Rented Today: 2
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Mandy
+		Car License: min-122
+		Rented for: 1
+		Car Features: GPS, 
+	Car 2:
+		Customer Name: Denniss
+		Car License: min-120
+		Rented for: 1
+		Car Features: Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-121
+	Customer Name: Karen
+		Car License: eco-122
+	Customer Name: Karen
+		Car License: min-120
+	Customer Name: Charlie
+		Car License: min-123
+	Customer Name: Mandy
+		Car License: eco-124
+	Customer Name: Mandy
+		Car License: lux-122
+	Customer Name: Mandy
+		Car License: min-122
+	Customer Name: Mac
+		Car License: min-123
+	Customer Name: Mac
+		Car License: min-124
+	Customer Name: Denniss
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-120
+	Customer Name: Frank
+		Car License: min-124
+	Customer Name: Frank
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-123
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 82
++++++++++++++++++++ Day 25 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 3
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 4
+		Car Features: GPS, Satellite Radio, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 2
+		Car Features: Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Gunter
+		Car License: eco-123
+		Rented for: 11
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: min-124
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:15 :
+Total Cash Earned Today: 586
++++++++++++++++++++ Day 26 Results +++++++++++++++++++ 
+Total Cars Rented Today: 2
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: std-122
+		Rented for: 3
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Bruce
+		Car License: min-123
+		Rented for: 8
+		Car Features: Satellite Radio, Car Seat, 
+Active Rentals
+		Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: min-124
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:13 :
+Total Cash Earned Today: 339
++++++++++++++++++++ Day 27 Results +++++++++++++++++++ 
+Total Cars Rented Today: 1
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Bruce
+		Car License: std-121
+		Rented for: 7
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:13 :
+Total Cash Earned Today: 268
++++++++++++++++++++ Day 28 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: std-123
+		Rented for: 4
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: eco-120
+		Rented for: 10
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Gunter
+		Car License: min-124
+		Rented for: 8
+		Car Features: Satellite Radio, Car Seat, 
+Active Rentals
+		Customer Name: Charlie
+		Car License: std-123
+	Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Mac
+		Car License: std-122
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:10 :
+Total Cash Earned Today: 759
++++++++++++++++++++ Day 29 Results +++++++++++++++++++ 
+Total Cars Rented Today: 3
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Erwein
+		Car License: lux-122
+		Rented for: 2
+		Car Features: GPS, Satellite Radio, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 3
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Denniss
+		Car License: min-122
+		Rented for: 9
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Charlie
+		Car License: std-123
+	Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:9 :
+Total Cash Earned Today: 488
++++++++++++++++++++ Day 30 Results +++++++++++++++++++ 
+Total Cars Rented Today: 2
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Erwein
+		Car License: min-123
+		Rented for: 1
+		Car Features: GPS, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 2
+		Car Features: GPS, Satellite Radio, 
+Active Rentals
+		Customer Name: Charlie
+		Car License: std-123
+	Customer Name: Erwein
+		Car License: min-124
+	Customer Name: Erwein
+		Car License: lux-122
+	Customer Name: Erwein
+		Car License: min-123
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Mandy
+		Car License: eco-124
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:7 :
+Total Cash Earned Today: 118
++++++++++++++++++++ Day 31 Results +++++++++++++++++++ 
+Total Cars Rented Today: 7
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 6
+		Car Features: Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Charlie
+		Car License: min-124
+		Rented for: 1
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 3
+		Car Features: Car Seat, Car Seat, 
+	Car 4:
+		Customer Name: Dee
+		Car License: min-121
+		Rented for: 1
+		Car Features: GPS, 
+	Car 5:
+		Customer Name: Karen
+		Car License: eco-122
+		Rented for: 3
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 6:
+		Customer Name: Denniss
+		Car License: std-122
+		Rented for: 7
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 7:
+		Customer Name: Karen
+		Car License: eco-121
+		Rented for: 13
+		Car Features: Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-123
+	Customer Name: Charlie
+		Car License: std-123
+	Customer Name: Charlie
+		Car License: min-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-121
+	Customer Name: Mandy
+		Car License: eco-124
+	Customer Name: Mac
+		Car License: eco-122
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Denniss
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-121
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:3 :
+Total Cash Earned Today: 1070
++++++++++++++++++++ Day 32 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 1
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: min-121
+		Rented for: 1
+		Car Features: GPS, Car Seat, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Molly
+		Car License: min-120
+		Rented for: 2
+		Car Features: Satellite Radio, Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: min-124
+		Rented for: 4
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-123
+	Customer Name: Charlie
+		Car License: eco-124
+	Customer Name: Erwein
+		Car License: min-121
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-124
+	Customer Name: Mac
+		Car License: eco-122
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Denniss
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-121
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: lux-123
+	Customer Name: Josiah
+		Car License: lux-120
+Remaining Cars:4 :
+Total Cash Earned Today: 383
++++++++++++++++++++ Day 33 Results +++++++++++++++++++ 
+Total Cars Rented Today: 4
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: lux-120
+		Rented for: 4
+		Car Features: GPS, Satellite Radio, Car Seat, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-124
+		Rented for: 1
+		Car Features: GPS, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Molly
+		Car License: lux-123
+		Rented for: 1
+		Car Features: Car Seat, 
+	Car 4:
+		Customer Name: Karen
+		Car License: std-120
+		Rented for: 11
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-123
+	Customer Name: Karen
+		Car License: lux-120
+	Customer Name: Erwein
+		Car License: eco-124
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Molly
+		Car License: lux-123
+	Customer Name: Dee
+		Car License: min-124
+	Customer Name: Mac
+		Car License: eco-122
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Denniss
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-121
+	Customer Name: Bruce
+		Car License: std-124
+	Customer Name: Bruce
+		Car License: min-123
+	Customer Name: Bruce
+		Car License: std-121
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+Remaining Cars:5 :
+Total Cash Earned Today: 706
++++++++++++++++++++ Day 34 Results +++++++++++++++++++ 
+Total Cars Rented Today: 6
+
+Cars Rented: 
+	Car 1:
+		Customer Name: Karen
+		Car License: min-123
+		Rented for: 3
+		Car Features: Satellite Radio, Car Seat, 
+	Car 2:
+		Customer Name: Karen
+		Car License: eco-122
+		Rented for: 2
+		Car Features: Satellite Radio, Car Seat, Car Seat, 
+	Car 3:
+		Customer Name: Karen
+		Car License: min-120
+		Rented for: 3
+		Car Features: Satellite Radio, 
+	Car 4:
+		Customer Name: Karen
+		Car License: std-121
+		Rented for: 1
+		Car Features: 
+	Car 5:
+		Customer Name: Frank
+		Car License: lux-123
+		Rented for: 10
+		Car Features: Car Seat, 
+	Car 6:
+		Customer Name: Josiah
+		Car License: min-120
+		Rented for: 10
+		Car Features: GPS, Car Seat, Car Seat, 
+Active Rentals
+		Customer Name: Karen
+		Car License: min-123
+	Customer Name: Karen
+		Car License: lux-120
+	Customer Name: Karen
+		Car License: min-123
+	Customer Name: Erwein
+		Car License: eco-122
+	Customer Name: Molly
+		Car License: min-120
+	Customer Name: Dee
+		Car License: min-124
+	Customer Name: Mandy
+		Car License: std-121
+	Customer Name: Denniss
+		Car License: eco-120
+	Customer Name: Denniss
+		Car License: min-122
+	Customer Name: Denniss
+		Car License: std-122
+	Customer Name: Frank
+		Car License: eco-121
+	Customer Name: Frank
+		Car License: lux-123
+	Customer Name: Gunter
+		Car License: lux-121
+	Customer Name: Gunter
+		Car License: eco-123
+	Customer Name: Gunter
+		Car License: min-124
+	Customer Name: Josiah
+		Car License: std-120
+	Customer Name: Josiah
+		Car License: min-120
+Remaining Cars:7 :
+Total Cash Earned Today: 1093
++++++++++++++++++++ End Results +++++++++++++++++++
+Total Rented Cars: 138
+Customer Business Rented: 33
+Customer Regular Rented: 78
+Customer Casual Rented: 33
+Total Revenue: $21809

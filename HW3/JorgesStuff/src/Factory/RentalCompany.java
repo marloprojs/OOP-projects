@@ -43,7 +43,7 @@ public abstract class RentalCompany{
   }
   // Pass in model, days, and list of features you want
   // Either rental record dict or null if not avalible
-  public Car rentCar(String model, int days, List<String> features){
+  public HashMap<String, Object> rentCar(String model, int days, List<String> features){
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
@@ -57,7 +57,7 @@ public abstract class RentalCompany{
 
       HashMap<String, Object> paperwork = creatRentalRecors(price, car, days, features);
 
-      return car;
+      return paperwork;
     }
     return null;
   }

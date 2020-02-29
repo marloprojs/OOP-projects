@@ -1,9 +1,11 @@
 package JorgesStuff;
 import java.util.*;
+import java.io.*;
 //import carMain.Car;
 public class carMain
 {
  	public static void main(String args[]){
+
 //++++++++++++++++++++++++TEST METHODS++++++++++++++++++++++++//
 
 	//Testing restraints on features with max of 1
@@ -26,6 +28,8 @@ public class carMain
 
 
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
+
+		outputFolder outStuff = new outputFolder();
 
 //Initializing 12 Cutomers
 	    customerObject[] customers = new customerObject[12];
@@ -54,6 +58,7 @@ public class carMain
 			//[] Comment code
 			//[] Extra Make sub method in main
 			//[X] Remove all uneccessary system calls
+			//Create outputStuff.
 
 
 
@@ -61,6 +66,7 @@ public class carMain
 			//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
 		MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
 		for(int i = 1; i < 36; i++){
+
 			int totalCarsRentedToday = 0;
 			int totalCarsReturnedToday = 0;
 			System.out.println("Day is: " + i);
@@ -73,7 +79,6 @@ public class carMain
 					for(int carInd: carList){
 						String featureString = customers[j].cars[carInd].getFeatures();
 						List<String> featureList = new ArrayList<String>(Arrays.asList(featureString.split(", ")));
-
 						mjm.returnCar(customers[j].cars[carInd],  featureList);
 						totalCarsReturnedToday ++;
 					}
@@ -119,6 +124,7 @@ public class carMain
 						 //cars are availabe to rent
 						 if(mjm.getAllCarType().size() > 0){
 							 //Check if they can rent car
+
 							  if(customers[index].numOfCarsCurrentRent <3){
 								  //Grab a random number from 0 to amount of cars abailable to rent (24 at start)
 								  int randomCarIndex = randomGenerator.nextInt(mjm.getAllCarType().size()) + 0;
@@ -130,23 +136,31 @@ public class carMain
 								  int returnDate = customers[index].getEarliestDaysLeft();
 
 								  //meaning there is already a car rented and it has a day set to be renterd in
-								  Car paperwork;
+								  HashMap<String,Object> paperwork;
 								  if(returnDate != Integer.MAX_VALUE){
 									  paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
 									  customers[index].daysLeft[nextCustomerOpenIndex] = returnDate;
-									  customers[index].cars[nextCustomerOpenIndex] = paperwork;
+									  customers[index].cars[nextCustomerOpenIndex] = (Car) paperwork.get("car");
+									  outStuff.addToCarRentalInfo(customers[index],(Car) paperwork.get("car") );
 								  }
 								  //first car being rented.
 								  else{
 									 returnDate = randomGenerator.nextInt(customers[index].maxRentDays +1) + customers[index].minRentDays;
 									 paperwork = mjm.rentCar(modelTypeChosen, returnDate , customers[index].getRandomFeatures());
 									 customers[index].daysLeft[0] = returnDate;
-									 customers[index].cars[0] =  paperwork;
+									 customers[index].cars[0] =  (Car) paperwork.get("car");
+									 outStuff.addToCarRentalInfo(customers[0],(Car) paperwork.get("car") );
 								  }
 									customers[index].numOfCarsCurrentRent += 1;
 									totalCarsRentedToday++;
+
 									//prettyPrintCustomer(customers[index], nextCustomerOpenIndex , true, paperwork);
 							  }
+							 // outStuff.initialDayStuff(totalCarsRentedToday,i);
+
+
+
+
 							  //can not rent any more cars
 							  else{
 								 // System.out.println("Customer already has 3 cars rented");
@@ -157,6 +171,12 @@ public class carMain
 							 System.out.println("MJM has no more cars");
 						 }
 					}
+					outStuff.initialDayStuff(totalCarsRentedToday,i);
+					outStuff.addToActiveCarRentals(customers);
+					outStuff.remainingCarString(mjm);
+					outStuff.addTotalDaySummary();
+					outStuff.writeToFile();
+					outStuff.resetStrings();
 				}
 				//0 customers came in
 				else{
@@ -167,6 +187,9 @@ public class carMain
 			System.out.println("Total Cars Rented Today: " + totalCarsRentedToday);
 			System.out.println("Total Cars in MJM: " + mjm.getAllCarType().size() + "\n");
 		}
+
+
+		outStuff.closeFile();
 
 	}
 
