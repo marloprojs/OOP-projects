@@ -29,7 +29,7 @@ public class carMain
 
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
 
-		outputFolder outStuff = new outputFolder();
+		outputFolder outStuff = new outputFolder();		
 
 //Initializing 12 Cutomers
 	    customerObject[] customers = new customerObject[12];
@@ -65,14 +65,19 @@ public class carMain
 		//Creating our Rental Factory Pattern
 			//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
 		MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
+
 		for(int i = 1; i < 36; i++){
 
 			int totalCarsRentedToday = 0;
 			int totalCarsReturnedToday = 0;
-			System.out.println("Day is: " + i);
+			
+			// Tell the observer
+      		mjm.ov.setValue("Day is: " + i);
+
 			//return all Cars on last Day/ NO MORE RENTING
 			if(i== 35){
-				System.out.println("Returning all Cars from Customers");
+				// Tell the observer
+				mjm.ov.setValue("Returning all Cars from Customers");
 				for(int j = 0; j < customers.length; j++){
 					List<Integer> carList = customers[j].returnAllCarsLastDay();
 					customers[j].resetDaysLeft();
@@ -168,7 +173,8 @@ public class carMain
 						 }
 						 //no current cars available to rent
 						 else{
-							 System.out.println("MJM has no more cars");
+							 // Tell the observer
+							 mjm.ov.setValue("MJM has no more cars");
 						 }
 					}
 					outStuff.initialDayStuff(totalCarsRentedToday,i);
@@ -180,12 +186,14 @@ public class carMain
 				}
 				//0 customers came in
 				else{
-					System.out.println("Lonely Day at the Office");
+					// Tell the observer
+					mjm.ov.setValue("Lonely Day at the Office");
 				}
 			}
-			System.out.println("Total Cars Returned Today: " + totalCarsReturnedToday);
-			System.out.println("Total Cars Rented Today: " + totalCarsRentedToday);
-			System.out.println("Total Cars in MJM: " + mjm.getAllCarType().size() + "\n");
+			// Tell the observer
+			mjm.ov.setValue("Total Cars Returned Today: " + totalCarsReturnedToday);
+			mjm.ov.setValue("Total Cars Rented Today: " + totalCarsRentedToday);
+			mjm.ov.setValue("Total Cars in MJM: " + mjm.getAllCarType().size() + "\n");
 		}
 
 

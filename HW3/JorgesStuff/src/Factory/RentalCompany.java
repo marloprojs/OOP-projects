@@ -5,6 +5,9 @@ import java.util.*;
 public abstract class RentalCompany{
 
   private HashMap<String, Stack<Car>> catalog = new HashMap<String, Stack<Car>>();
+  // Start our Obserever 
+  protected ObserverableValue ov = new ObserverableValue("");
+  protected CarRenter cr = new CarRenter(this.ov);
 
   //constructor (set the catalog)
   public RentalCompany(int eco, int std, int lux, int su, int min){
@@ -19,6 +22,11 @@ public abstract class RentalCompany{
     this.catalog.put("Luxury", luxury);
     this.catalog.put("SUV", suv);
     this.catalog.put("Minivan", minivan);
+
+    
+
+		// Initiating an observer 
+    this.ov.addObserver(cr);
   }
   protected abstract Stack<Car> getCars(String model, int  count);
 
@@ -47,7 +55,7 @@ public abstract class RentalCompany{
     //check if its in catalog process request
     if (this.catalog.get(model).empty() == false) {
       Car car = this.catalog.get(model).pop();
-	   car.setDays(days);
+	    car.setDays(days);
       // set features
       for (int i = 0; i < features.size(); i++) {
         car = UpdateRental(car, features.get(i));
@@ -55,8 +63,10 @@ public abstract class RentalCompany{
       // Do paperwork
       int price = car.getTotalCost();
 
-      HashMap<String, Object> paperwork = creatRentalRecors(price, car, days, features);
-
+      HashMap<String, Object> paperwork = createRentalRecords(price, car, days, features);
+      
+      // Tell the observer
+	    this.ov.setValue((String)paperwork.get("statment"));
       return paperwork;
     }
     return null;
@@ -64,31 +74,32 @@ public abstract class RentalCompany{
 
   public void returnCar(Car car, List<String> features){
     // Update days
-	car.setDays(0);
+	  car.setDays(0);
     // Undo features
 
     for (int i = 0; i < features.size(); i++) {
-		car = UndoRental(car, features.get(i));
+		  car = UndoRental(car, features.get(i));
     }
-	//System.out.println("Check for no Features:[" +car. getFeatures() + "]");
+	  //System.out.println("Check for no Features:[" +car. getFeatures() + "]");
     // Update catalog
     String model = car.getType();
     this.catalog.get(model).push(car);
 
-	String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was returned and set to " + car.getDays() + " days at $" + car.getDailyCost() + " with default features [" +car.getFeatures()+"]";
-	//System.out.println(statment);
+	  String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was returned and set to " + car.getDays() + " days at $" + car.getDailyCost() + " with default features [" +car.getFeatures()+"]";
+	  // Tell the observer
+	  this.ov.setValue(statment);
 
     return;
   }
 
-  public HashMap<String, Object> creatRentalRecors(int price, Car car, int days, List<String> features){
+  public HashMap<String, Object> createRentalRecords(int price, Car car, int days, List<String> features){
     HashMap<String, Object> record = new HashMap<String, Object>();
     // Store important things
     record.put("price", price);
     record.put("car", car);
     record.put("days", days);
     record.put("features", features);
-	//String prettyFeatures = car.getFeatures().substring(0,car.getFeatures().length()-2);
+	  //String prettyFeatures = car.getFeatures().substring(0,car.getFeatures().length()-2);
     String statment = "The " + car.getType() + " car with the license "+ car.getLicense()+" was rented for " + car.getDays() + " days for $" + price + " with features [" +car.getFeatures()+"]";
     record.put("statment", statment);
 
