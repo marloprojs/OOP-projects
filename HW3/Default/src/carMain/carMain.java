@@ -21,12 +21,20 @@ public class carMain
 		//facotryTest1();
 
 //++++++++++++++++++++++++End of Test METHODS++++++++++++++++++++++++//
-
+//TO DO:
+	//[X] Change days back 35
+	//[X] on last day return all cars
+	//[X] implement the Observer into this
+	//[X] Do Read Me
+	//[X] Comment code
+	//[] Extra Make sub method in main
+	//[X] Remove all uneccessary system calls
+	//[X] Create outputStuff.
 
 
 //++++++++++++++++++++++++Start of Simulation++++++++++++++++++++++++ //
 
-		outputFolder outStuff = new outputFolder();		
+		outputFolder outStuff = new outputFolder();
 
 //Initializing 12 Cutomers
 	    customerObject[] customers = new customerObject[12];
@@ -46,19 +54,6 @@ public class carMain
 	    customers[9] = new BusinessCustomer("Bruce");
 	    customers[10] = new BusinessCustomer("Gunter");
 	    customers[11] = new BusinessCustomer("Josiah");
-
-		//TO DO:
-			//[X] Change days back 35
-			//[X] on last day return all cars
-			//[X] implement the Observer into this
-			//[] Do Read Me
-			//[] Comment code
-			//[] Extra Make sub method in main
-			//[X] Remove all uneccessary system calls
-			//[X] Create outputStuff.
-
-
-
 		// CREATING OUR RENTAL COMPANY WITH OUR FACTORY PATTERN
 			//Economy(5), Standard(5), Luxury(4), Suv(5), Minivan(5)
 		MJMRentalCompany mjm = new MJMRentalCompany(5, 5, 4, 5, 5);
@@ -71,7 +66,7 @@ public class carMain
 
 			int totalCarsRentedToday = 0;
 			int totalCarsReturnedToday = 0;
-			
+
 			// TELL THE OBSERVER TO SET A NEW VALUE
       		mjm.ov.setValue("Day is: " + i);
 
