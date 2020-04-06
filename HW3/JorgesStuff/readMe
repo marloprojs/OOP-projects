@@ -1,3 +1,0 @@
-1) be in the root folder. In this case Default in terminal
-2) javac -sourcepath src -d build src/**/*.java    (TO COMPILE ALL)
-3) java -cp .:build:**/*.class JorgesStuff.carMain     (To RUN MAIN)

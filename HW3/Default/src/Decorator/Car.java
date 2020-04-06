@@ -1,4 +1,4 @@
-package JorgesStuff;
+package Default;
 import java.util.*;
 //Create Car class as the Component of the decorator
 public abstract class Car{
@@ -121,7 +121,7 @@ class Standard extends Car{
 
 class Suv extends Car{
     public Suv(String licenseID){
-        this.type = "Suv";
+        this.type = "SUV";
         this.features = "";
         this.licenseID = licenseID;
 		setDailyCost(35);
