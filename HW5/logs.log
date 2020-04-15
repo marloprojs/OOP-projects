@@ -1,0 +1,29 @@
+2020/04/08 09:17:46 - WARNING -  * Debugger is active!
+2020/04/08 09:17:46 - INFO -  * Debugger PIN: 337-846-565
+2020/04/08 09:17:46 - INFO -  * Running on http://localhost:3000/ (Press CTRL+C to quit)
+2020/04/08 09:17:49 - INFO - 127.0.0.1 - - [08/Apr/2020 09:17:49] "GET / HTTP/1.1" 302 -
+2020/04/08 09:17:56 - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com:443
+2020/04/08 09:17:57 - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - Starting new HTTPS connection (1): api.spotify.com:443
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/08 09:17:57 - INFO - 127.0.0.1 - - [08/Apr/2020 09:17:57] "GET /callback?code=AQBvcO14zOv--z8tyDRa0Mui_Z0oZGN-Fh6wDivP1v8cNjrznmbeAY8_ToLLMG96uXfz7SI8-MoFiLDbs1-WCphnm8nA1DbH-CSgxAf1z6nrSlrOTZ0gkdJ7t-9HVS5qbUQtxBGDaphfsY8Gxa3mbkyPLO8kIU_UKmiQWk1dPLfHhKmIMNwWQDLttnt_5qY4Uy8ceU0GO8-QDiv5miuw6YCdY_HP2w3KTeAyB68sQ7DETfHMgXZ0Y_C0g9TGc_mhYilc5mWfWhYe460x2j0w-EDphjBGH5mcqFZpCw3UPgxJQ_6NHsFOE26MqDUYQ85U2mYBSdMoDV43 HTTP/1.1" 200 -
+2020/04/08 09:17:58 - INFO - 127.0.0.1 - - [08/Apr/2020 09:17:58] "GET /static/style/baseStyle.css HTTP/1.1" 200 -
+2020/04/08 09:17:58 - INFO - 127.0.0.1 - - [08/Apr/2020 09:17:58] "GET /static/sPoTiFy.png HTTP/1.1" 200 -
+2020/04/08 09:17:58 - INFO - 127.0.0.1 - - [08/Apr/2020 09:17:58] "GET /static/default.png HTTP/1.1" 200 -
