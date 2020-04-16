@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+<h2>{{ playlist }}</h2>
+<br>
+
+<div class="">
+        <table style="width:75%"></table>
+        {% for playlist, url in data %}
+            <tr>
+            <a href="/{{ playlist }}"><th><img src="{{ url }}" height=100 width=100 alt={{ playlist }}></img></th>
+            <th style=" text-align: left; padding-left: 3%;"> {{ playlist }} </th></a>
+            </tr>
+        {% endfor %}
+        </table>
+   </div>
+
+{% endblock %} 

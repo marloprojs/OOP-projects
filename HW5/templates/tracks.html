@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+
+<br> 
+<br> 
+<br> 
+<br> 
+<h2>{{ playlist }}</h2>
+<br>
+
+<div class="">
+        <table style="width:75%"></table>
+        {% for track, name in data %}
+            <tr>
+            <th style=" text-align: left; padding-left: 3%;"> {{ name }} </th>
+            </tr>
+        {% endfor %}
+        </table>
+   </div>
+
+{% endblock %} 
