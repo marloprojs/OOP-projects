@@ -6,7 +6,7 @@ import os
 import sys
 import time
 import configparser
-import logging    
+import logging
 import requests
 import Controller
 
@@ -26,26 +26,27 @@ CLI_SEC = 'bc0f50ed398246f9b5bdd1a06e189b9a'
 
 @app.route("/")
 def verify():
-    ''' Function to login to a spotify account
-        Input: None
-        Output: Page redirect to login page
-    '''
-    auth_url = f'{API_BASE}/authorize?client_id={CLI_ID}&response_type=code&redirect_uri={REDIRECT_URI}&scope={SCOPE}'
-    return redirect(auth_url)
+	''' Function to login to a spotify account
+		Input: None
+		Output: Page redirect to login page
+		'''
+	auth_url = f'{API_BASE}/authorize?client_id={CLI_ID}&response_type=code&redirect_uri={REDIRECT_URI}&scope={SCOPE}'
+	return redirect(auth_url)
 
 @app.route("/home")
 def home():
-    ''' Function to display users owned playlist to home page
-        Input: None
-        Output: Page redirect to home page
-    '''
-    personal = Controller.getPlaylistInfo(session['toke'])
-    return render_template("home.html", data=personal)
+	''' Function to display users owned playlist to home page
+		Input: None
+		Output: Page redirect to home page
+	'''
+	personal = Controller.getPlaylistInfo(session['toke'])
+	#print(personal)
+	return render_template("home.html", data=personal)
 
 
 @app.route("/callback")
 def callback():
-    ''' Function to grab user login token 
+    ''' Function to grab user login token
         Input: None
         Output: page redirect to home page
     '''
@@ -65,7 +66,7 @@ def callback():
 
     return home()
 
-    
+
 @app.errorhandler(404)
 def page_not_found(error):
     ''' Function to handle a path not found ie. anything like localhost:port/fakePath
