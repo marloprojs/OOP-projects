@@ -15,7 +15,6 @@ def getPlaylistInfo(token):
 	sp = spotipy.client.Spotify(auth=token)
 	playlists = sp.current_user_playlists()
 	for playlist in playlists['items']:
-		#print(playlist)
 		# only display playlists they own (and 1st image of that playlist)
 		if playlist['owner']['id'] == sp.current_user()['id']:
 			if len(playlist['images']) == 0:

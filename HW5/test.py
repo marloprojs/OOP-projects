@@ -9,6 +9,7 @@ import configparser
 import logging
 import requests
 import Controller
+import Viewer
 
 #make a secret key for flask
 app = Flask(__name__)
@@ -44,6 +45,22 @@ def home():
 	return render_template("home.html", data=personal)
 
 
+@app.route("/recommend")
+def recommend():
+	personal = Controller.getPlaylistInfo(session['toke'])
+	return render_template("music.html", data=personal)
+
+
+
+@app.route("/<playlist>")
+def songs(playlist):
+
+	playlistId = Viewer.getPlaylistId(session['toke'], playlist)
+	personal = Viewer.getPlaylistSongs(session['toke'], playlistId)
+	return render_template("tracks.html", data=personal)
+
+
+
 @app.route("/callback")
 def callback():
     ''' Function to grab user login token
@@ -65,6 +82,7 @@ def callback():
     session["toke"] = res_body.get("access_token")
 
     return home()
+
 
 
 @app.errorhandler(404)

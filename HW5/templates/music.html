@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+<h1>Select PlayList</h1>
+<br>
+<br>
+<br>
+<br>
+<h2>{{ playlist }}</h2>
+<br>
+
+
+<div class="">
+	<table style="width:75%">
+		<tr>
+			<th>Playlist Art</th>
+			<th>Playlist Name</th>
+		</tr>
+	{% for playlist, url in data %}
+		<tr>
+			<td>
+				<a href="/{{ playlist }}">
+					<img src="{{ url }}" height=100 width=100 alt={{ playlist }}></img>
+				</a>
+			</td>
+
+			<td style=" padding-left: 3%;">
+				<a href="/{{ playlist }}">
+					{{ playlist }}
+				</a>
+			</td>
+		</tr>
+
+        {% endfor %}
+        </table>
+   </div>
+
+{% endblock %}
