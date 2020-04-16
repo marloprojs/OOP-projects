@@ -16,11 +16,18 @@
         <table style="width:75%">
 			<tr>
 				<th style="text-align: left;">Song Name</th>
+				<th style="text-align: left;">Artist Name(s)</th>
 			</tr>
         {% for track, name in data %}
             <tr>
-            	<td style=" text-align: left; padding-left: 3%;"> {{ name }} </td>
-            </tr>
+            	<td style=" text-align: left; padding-left: 3%;"> {{ name['name'] }}</td>
+				<td style=" text-align: left; padding-left: 3%;">
+					{% for artists in name['artists'] %}
+						{{ artists['name'] }} ,
+					{% endfor %}
+				</td>
+			</tr>
+
         {% endfor %}
         </table>
    </div>

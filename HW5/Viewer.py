@@ -26,5 +26,8 @@ def getPlaylistSongs(token, playlistId):
 	sp = spotipy.client.Spotify(auth=token)
 	tracks = sp.user_playlist_tracks(user=sp.current_user()['id'], playlist_id=playlistId)
 	for track in tracks['items']:
-		personal.append([track['track'], track['track']['name']])
+		artists = []
+		for art in track['track']['artists']:
+			artists.append([art['name']])
+		personal.append([track['track'], track['track']])
 	return personal
