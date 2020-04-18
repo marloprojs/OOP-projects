@@ -20,7 +20,7 @@ def getPlaylistId(token, playlistName):
 	return personal
 
 
-
+#need to go back and fix this ... my bad
 def getPlaylistSongs(token, playlistId):
 	personal = []
 	sp = spotipy.client.Spotify(auth=token)
@@ -30,4 +30,14 @@ def getPlaylistSongs(token, playlistId):
 		for art in track['track']['artists']:
 			artists.append([art['name']])
 		personal.append([track['track'], track['track']])
+	return personal
+
+def getSongIdList(token, playlistId):
+	songIds = []
+	sp = spotipy.client.Spotify(auth=token)
+	tracks = sp.user_playlist_tracks(user=sp.current_user()['id'], playlist_id=playlistId)
+	index = 1
+	for track in tracks['items']:
+		print(track['track']['id'])
+		personal.append(track['track']['id'])
 	return personal

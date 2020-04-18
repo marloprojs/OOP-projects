@@ -17,7 +17,7 @@ border-radius: 3px;
 .links{
 margin-left:auto;
 margin-right:auto;
-height:auto; 
+height:auto;
 width:auto;
 }
 
@@ -67,7 +67,7 @@ font: Helvetica;
 
 h1, h2{
 color: rgb(255, 255, 255);
-text-align: center; 
+text-align: center;
 font: Helvetica;
 }
 
@@ -152,7 +152,7 @@ table {
     text-align: center;
     border-bottom: 1px solid rgb(251, 244, 251);
 }
-  
+
 td, .listenLink{
     float: none !important;
     text-align: center;
@@ -181,11 +181,11 @@ td, .listenLink{
     content: '★ ';
 }
 .rate > input:checked ~ label {
-    color: #ffc700;    
+    color: #ffc700;
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
+    color: #deb217;
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,

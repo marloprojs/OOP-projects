@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+	<div class="filterForm"> <!--This was textbox -->
+      <form action="/">
+        <h1>New Playlist Creator</h1>
+        <div class="item">
+          <p>New Playlist Name:</p>
+          <div class="name-item">
+            <input type="text" name="name"  />
+          </div>
+        </div>
+        <div class="item status">
+          <p>Filter Criteria:</p>
+          <div class="status-item">
+            <label><input type="checkbox" name="Acousticness"> <span>Acousticness</span></label>
+			<br>
+            <label><input type="checkbox" name="Danceability"> <span>Danceability</span></label>
+			<br>
+            <label><input type="checkbox" name="Energy"> <span>Energy</span></label>
+			<br>
+			<label><input type="checkbox" name="Instrumentalness"> <span>Instrumentalness</span></label>
+			<br>
+			<label><input type="checkbox" name="Liveliness"> <span>Liveliness</span></label>
+			<br>
+			<label><input type="checkbox" name="Loudness"> <span>Loudness</span></label>
+			<br>
+			<label><input type="checkbox" name="Verbose"> <span>Verbose</span></label>
+			<br>
+			<label><input type="checkbox" name="Valence"> <span>Valence</span></label>
+			<br>
+			<label><input type="checkbox" name="Tempo"> <span>Tempo</span></label>
+		  </div>
+        </div>
+         <div class="btn-block">
+          <button type="submit" href="/">Create New PlayList</button>
+        </div>
+      </form>
+    </div>
+
+{% endblock %}

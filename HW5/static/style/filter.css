@@ -1,0 +1,45 @@
+/*
+For form in filtetPAge.html
+*/
+.filterForm {
+	background-color: rgb(132, 115, 143);
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	padding: 3px;
+}
+/*
+.item {
+	position: relative;
+	margin: 10px 0;
+}
+*/
+
+.name-item {
+	 /*display: flex;*/
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+ }
+
+ .status-item{
+ 	 text-align: left;
+ }
+
+ .status-item input, .status-item span {
+
+	 width: auto;
+	 vertical-align: middle;
+ }
+ .status-item input {
+	 margin: 0;
+ }
+ .status-item span {
+	 margin: 0 20px 0 5px;
+ }
+ .btn-block {
+	margin-top: 20px;
+	text-align: center;
+}

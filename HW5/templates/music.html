@@ -22,7 +22,7 @@
 	{% for playlist, url in data %}
 		<tr>
 			<td>
-				<a href="/{{ playlist }}">
+				<a href="/filter{{ playlist }}">
 					<img src="{{ url }}" height=100 width=100 alt={{ playlist }}></img>
 				</a>
 			</td>

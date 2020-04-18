@@ -59,6 +59,12 @@ def songs(playlist):
 	personal = Viewer.getPlaylistSongs(session['toke'], playlistId)
 	return render_template("tracks.html", data=personal)
 
+@app.route("/filter<playlist>")
+def filterPage(playlist):
+	playlistId = Viewer.getPlaylistId(session['toke'], playlist)
+	songIdList = Viewer.getSongIdList(session['toke'], playlistId)
+	return render_template("filterPage.html")
+
 
 
 @app.route("/callback")
