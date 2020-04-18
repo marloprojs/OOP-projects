@@ -38,6 +38,5 @@ def getSongIdList(token, playlistId):
 	tracks = sp.user_playlist_tracks(user=sp.current_user()['id'], playlist_id=playlistId)
 	index = 1
 	for track in tracks['items']:
-		print(track['track']['id'])
-		personal.append(track['track']['id'])
-	return personal
+		songIds.append(track['track']['id'])
+	return songIds
