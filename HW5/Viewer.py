@@ -60,3 +60,15 @@ def filterSongs(token, songIDList, filterCriteriaDict, newPlayListName):
 			updatedSongList.append(songInfo['id'])
 	#print(updatedSongList)
 	return updatedSongList
+
+
+
+
+def createPlayList(token, dataInfo):
+	sp = spotipy.client.Spotify(auth=token)
+	#creatinng new PlayList
+	sp.user_playlist_create(sp.current_user()['id'], dataInfo[0])
+	sp.user_playlist_add_tracks(sp.current_user()['id'],getPlaylistId(token, dataInfo[0]), dataInfo[1])
+
+	PlyListSongs = getSongIdList(token, getPlaylistId(token, dataInfo[0]))
+	return [dataInfo[0], PlyListSongs]

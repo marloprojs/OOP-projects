@@ -84,8 +84,8 @@ def newPlayList(playlist):
 
 	#[NameOfNewPlayList, [List of filtered Song List]]
 	newPlayListInfo = [formDictionary['name'], newSongList ]
-
-	return render_template("newPlaylist.html", data=newPlayListInfo )
+	newPlayListCreatore = Viewer.createPlayList(session['toke'], newPlayListInfo)
+	return render_template("newPlaylist.html", data=newPlayListCreatore )
 
 
 @app.route("/callback")
