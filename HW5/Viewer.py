@@ -41,16 +41,22 @@ def getSongIdList(token, playlistId):
 	return songIds
 
 def filterSongs(token, songIDList, filterCriteriaDict, newPlayListName):
-		updatedSongList = []
-		print("New PlayList Name Will be : " + newPlayListName)
-		print("Filter Criteria Stuff is: " ,filterCriteriaDict)
-		print("Songs are: " , songIDList)
-		sp = spotipy.client.Spotify(auth=token)
-		songAudioFeatures = sp.audio_features(songIDList)
-
-		#for songInfo in songAudioFeatures:
-		#	for feature in filterCriteriaDict:
-		#		if(songInfo[feature] >= )
-			#want to get the features we are looking for
-		 	#comapre them to what the song has
-			# accept or decline song id.
+	#dictionary values are passed as a string. Need to get the value as float
+	for key in filterCriteriaDict:
+		valuesStringtoList = filterCriteriaDict[key].split(" to ")
+		filterCriteriaDict[key] = [float(valuesStringtoList[0]), float(valuesStringtoList[1])]
+	updatedSongList = []
+	sp = spotipy.client.Spotify(auth=token)
+	#we can pass in a list of songIDs which we have already
+	songAudioFeatures = sp.audio_features(songIDList)
+	#print (songAudioFeatures)
+	for songInfo in songAudioFeatures: #getting one song at a time
+		addNewSong = True
+		for featureKey in filterCriteriaDict: #getting each Feature user selected
+			#Song does not meet criteria. features in song are lower case. whoops lol
+			if(songInfo[featureKey.lower()] <  filterCriteriaDict[featureKey][0]) or (songInfo[featureKey.lower()] >  filterCriteriaDict[featureKey][1]):
+				addNewSong = False
+		if addNewSong == True:
+			updatedSongList.append(songInfo['id'])
+	#print(updatedSongList)
+	return updatedSongList

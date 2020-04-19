@@ -7,9 +7,17 @@
 {% block body %}
 
 <br>
-	{% for key, value in data.items() %}
-		{{ key }} : {{ value }}
+
+New Song PlayList = 	{{ data[0] }}
+<br>
+Song Ids:
+<br>
+	{%for i in data[1]%}
+		{{ i }}
 		<br>
 	{% endfor %}
+
+	{{ data[1] }}
+
 
 {% endblock %}
