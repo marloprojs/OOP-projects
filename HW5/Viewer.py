@@ -36,7 +36,21 @@ def getSongIdList(token, playlistId):
 	songIds = []
 	sp = spotipy.client.Spotify(auth=token)
 	tracks = sp.user_playlist_tracks(user=sp.current_user()['id'], playlist_id=playlistId)
-	index = 1
 	for track in tracks['items']:
 		songIds.append(track['track']['id'])
 	return songIds
+
+def filterSongs(token, songIDList, filterCriteriaDict, newPlayListName):
+		updatedSongList = []
+		print("New PlayList Name Will be : " + newPlayListName)
+		print("Filter Criteria Stuff is: " ,filterCriteriaDict)
+		print("Songs are: " , songIDList)
+		sp = spotipy.client.Spotify(auth=token)
+		songAudioFeatures = sp.audio_features(songIDList)
+
+		#for songInfo in songAudioFeatures:
+		#	for feature in filterCriteriaDict:
+		#		if(songInfo[feature] >= )
+			#want to get the features we are looking for
+		 	#comapre them to what the song has
+			# accept or decline song id.

@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+<div class="filterForm"> <!--This was textbox -->
+  <form action="/newPlayList{{ data }}" method="POST">
+		<h1>New Playlist Creator</h1>
+		<div class="item">
+	  		<p>New Playlist Name:</p>
+  			<div class="name-item">
+				<input type="text" name="name"  />
+  			</div>
+		</div>
+		<div class="item status">
+			<p>Filter Criteria:</p>
+	  		<div class="status-item">
+				<label class = "vertical-Filter">
+			  		<input type="checkbox" name="Acousticness" id = "Acousticness">
+			  		<span>Acousticness</span>
+					<input type="text" name = "AcousticnessText" id = "amount" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+	  			</label>
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Danceability" id = "Danceability">
+					<span>Danceability</span>
+					<input type="text" name = "DanceabilityText" id = "amount1" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+
+	            <label  class = "vertical-Filter">
+					<input type="checkbox" name="Energy" id = "Energy">
+					<span>Energy</span>
+					<input type="text" name = "EnergyText" id = "amount2" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Instrumentalness" id="Instrumentalness">
+					<span>Instrumentalness</span>
+					<input type="text" name = "InstrumentalnessText" id = "amount3" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Liveliness" id="Liveliness">
+					<span>Liveliness</span>
+					<input type="text" name = "LivelinessText" id = "amount4" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Loudness" id = "Loudness">
+					<span>Loudness</span>
+					<input type="text" name = "LoudnessText" id = "amount5" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Speechiness" id = "Speechiness" >
+					<span>Verbose</span>
+					<input type="text" name = "SpeechinessText" id = "amount6" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Tempo" id = "Tempo">
+					<span>Tempo</span>
+					<input type="text" name = "TempoText" id = "amount7" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Valence" id = "Valence">
+					<span>Valence</span>
+					<input type="text" name = "ValenceText" id = "amount8" class = "checkBoxText" readonly style="border:0;" disabled required >
+					<div class = "slider"></div>
+				</label>
+
+			</div>
+		</div>
+	  	<div class="btn-block">
+	   		<button type="submit" >Create New PlayList</button>
+	 	</div>
+	</form>
+</div>
+
+
+
+<script>
+//Need to create two more for the other weird ones.
+
+$( function() {
+	/*
+	$( ".slider" ).each(function(i,e){
+		divID = this.id
+		inputRegion = $(this).parent().find("input[name='o']").attr('id')
+
+		$(e).slider({
+			range: true,
+			min: 0,
+			max: 500,
+			values: [ 75, 300 ],
+			slide: function(e, ui) {
+				//alert(divParentID)
+				$('#' +inputRegion).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		$('#'+inputRegion).val( "$" + $('#'+divID).slider( "values", 0 ) +
+		  " - $" + $('#'+divID).slider( "values", 1 ) );
+	});
+	*/
+
+	$( ".slider" ).slider({
+
+	  range: true,
+	  min: 0.0,
+	  max: 1.0,
+	  values: [ 0.4, 0.5],
+  	  step: 0.001,
+	  slide: function( event, ui ) {
+
+		  data = $(this).parent().find("input[type='text']").attr('id')
+	   		data2 = $(this).parent().find("input[type='text']").attr('name')
+			data3 = document.getElementsByName(data2)
+			if(data3[0].disabled == false){
+				$('#' + data).val(ui.values[ 0 ] + " - " + ui.values[ 1 ] );
+			}
+	  }
+	});
+  });
+
+
+  document.getElementById('Acousticness').onchange = function() {
+  	document.getElementsByName('AcousticnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Danceability').onchange = function() {
+  	document.getElementsByName('DanceabilityText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Energy').onchange = function() {
+  	document.getElementsByName('EnergyText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Instrumentalness').onchange = function() {
+  	document.getElementsByName('InstrumentalnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Liveliness').onchange = function() {
+  	document.getElementsByName('LivelinessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Loudness').onchange = function() {
+  	document.getElementsByName('LoudnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Speechiness').onchange = function() {
+  	document.getElementsByName('SpeechinessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Valence').onchange = function() {
+  	document.getElementsByName('ValenceText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Tempo').onchange = function() {
+  	document.getElementsByName('TempoText')[0].disabled = !this.checked;
+  };
+
+
+  </script>
+
+
+{% endblock %}

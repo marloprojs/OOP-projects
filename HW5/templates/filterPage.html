@@ -2,10 +2,12 @@
 {% block head %}
  {{ super() }}
 {% endblock %}
+
 {% block body %}
 
+
 	<div class="filterForm"> <!--This was textbox -->
-      <form action="/">
+      <form action="/newPlayList{{ data }}" method="POST">
         <h1>New Playlist Creator</h1>
         <div class="item">
           <p>New Playlist Name:</p>
@@ -16,29 +18,104 @@
         <div class="item status">
           <p>Filter Criteria:</p>
           <div class="status-item">
-            <label><input type="checkbox" name="Acousticness"> <span>Acousticness</span></label>
-			<br>
-            <label><input type="checkbox" name="Danceability"> <span>Danceability</span></label>
-			<br>
-            <label><input type="checkbox" name="Energy"> <span>Energy</span></label>
-			<br>
-			<label><input type="checkbox" name="Instrumentalness"> <span>Instrumentalness</span></label>
-			<br>
-			<label><input type="checkbox" name="Liveliness"> <span>Liveliness</span></label>
-			<br>
-			<label><input type="checkbox" name="Loudness"> <span>Loudness</span></label>
-			<br>
-			<label><input type="checkbox" name="Verbose"> <span>Verbose</span></label>
-			<br>
-			<label><input type="checkbox" name="Valence"> <span>Valence</span></label>
-			<br>
-			<label><input type="checkbox" name="Tempo"> <span>Tempo</span></label>
+            <label class = "vertical-Filter">
+				<input type="checkbox" name="Acousticness" id = "Acousticness">
+				<span>Acousticness</span>
+				<input type="number" step="0.00001" id="AcousticnessText" name="AcousticnessText" class = "checkBoxText" disabled required>
+			</label>
+
+
+            <label class = "vertical-Filter">
+				<input type="checkbox" name="Danceability" id = "Danceability">
+				<span>Danceability</span>
+				<input type="number" step="0.00001" id="DanceabilityText" name = "DanceabilityText" class = "checkBoxText" disabled required>
+			</label>
+
+
+            <label  class = "vertical-Filter">
+				<input type="checkbox" name="Energy" id = "Energy">
+				<span>Energy</span>
+				<input type="number" step="0.00001" id="EnergyText" name = "EnergyText" class = "checkBoxText" disabled required>
+			</label>
+
+
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Instrumentalness" id="Instrumentalness">
+				<span>Instrumentalness</span>
+				<input type="number" step="0.00001" id="InstrumentalnessText" name = "InstrumentalnessText" class = "checkBoxText" disabled required>
+			</label>
+
+
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Liveliness" id="Liveliness">
+				<span>Liveliness</span>
+				<input type="number" step="0.00001" id="LivelinessText" name = "LivelinessText" class = "checkBoxText" disabled required>
+			</label>
+
+
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Loudness" id = "Loudness">
+				<span>Loudness</span>
+				<input type="number"step="0.00001"  id="LoudnessText" name = "LoudnessText" class = "checkBoxText" disabled required>
+			</label>
+
+
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Speechiness" id = "Speechiness" >
+				<span>Verbose</span>
+				<input type="number" step="0.00001" id="SpeechinessText" name = "SpeechinessText" class = "checkBoxText" disabled required>
+			</label>
+
+
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Valence" id = "Valence">
+				<span>Valence</span>
+				<input type="number" step="0.00001" id="ValenceText" Name = "ValenceText" class = "checkBoxText" disabled required>
+			</label>
+			
+			<label class = "vertical-Filter">
+				<input type="checkbox" name="Tempo" id = "Tempo">
+				<span>Tempo</span>
+				<input type="number" step="0.00001" id="TempoText" Name = "TempoText" class = "checkBoxText" disabled required>
+			</label>
 		  </div>
         </div>
+
          <div class="btn-block">
-          <button type="submit" href="/">Create New PlayList</button>
+          <button type="submit" >Create New PlayList</button>
         </div>
       </form>
     </div>
+	<script>
+
+	document.getElementById('Acousticness').onchange = function() {
+	    document.getElementById('AcousticnessText').disabled = !this.checked;
+	};
+	document.getElementById('Danceability').onchange = function() {
+		document.getElementById('DanceabilityText').disabled = !this.checked;
+	};
+	document.getElementById('Energy').onchange = function() {
+		document.getElementById('EnergyText').disabled = !this.checked;
+	};
+	document.getElementById('Instrumentalness').onchange = function() {
+		document.getElementById('InstrumentalnessText').disabled = !this.checked;
+	};
+	document.getElementById('Liveliness').onchange = function() {
+		document.getElementById('LivelinessText').disabled = !this.checked;
+	};
+	document.getElementById('Loudness').onchange = function() {
+		document.getElementById('LoudnessText').disabled = !this.checked;
+	};
+	document.getElementById('Verbose').onchange = function() {
+		document.getElementById('VerboseText').disabled = !this.checked;
+	};
+	document.getElementById('Valence').onchange = function() {
+		document.getElementById('ValenceText').disabled = !this.checked;
+	};
+	document.getElementById('Tempo').onchange = function() {
+		document.getElementById('TempoText').disabled = !this.checked;
+	};
+
+	</script>
 
 {% endblock %}

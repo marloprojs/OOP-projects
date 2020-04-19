@@ -56,15 +56,39 @@ def recommend():
 def songs(playlist):
 
 	playlistId = Viewer.getPlaylistId(session['toke'], playlist)
-	personal = Viewer.getPlaylistSongs(session['toke'], playlistId)
-	return render_template("tracks.html", data=personal)
+	if(playlistId):
+		personal = Viewer.getPlaylistSongs(session['toke'], playlistId)
+		return render_template("tracks.html", data=personal)
+
+	else:
+		return render_template("tracks.html")
 
 @app.route("/filter<playlist>")
 def filterPage(playlist):
+	#playlistId = Viewer.getPlaylistId(session['toke'], playlist)
+	#songIdList = Viewer.getSongIdList(session['toke'], playlistId)
+	return render_template("newTest.html" ,data = playlist)
+
+
+
+@app.route("/newPlayList<playlist>", methods = ['POST', 'GET']) #<featureList>")
+def newPlayList(playlist): # , featureList):
+	formDictionary = request.form.to_dict()
+	print(formDictionary)
+	listOfFeatures = ["Acousticness", "Danceability", "Energy", "Instrumentalness", "Liveliness", "Loudness", "speechiness", "Valence", "Tempo"]
+	userSelectFeatureValueDictionary = {}
+	for key in formDictionary:
+		if key in listOfFeatures:
+
+			updateFeature = key + "Text" #need to add Text to get the value user put in the text box
+			userSelectFeatureValueDictionary[key] = formDictionary[updateFeature]
+	print(userSelectFeatureValueDictionary)
 	playlistId = Viewer.getPlaylistId(session['toke'], playlist)
 	songIdList = Viewer.getSongIdList(session['toke'], playlistId)
-	return render_template("filterPage.html")
-
+	newSongList = Viewer.filterSongs(session['toke'],songIdList,userSelectFeatureValueDictionary,formDictionary['name'])
+	#testing = [playlist,featureList]
+	print(playlist)
+	return render_template("newPlaylist.html", data=formDictionary )
 
 
 @app.route("/callback")

@@ -26,6 +26,11 @@ For form in filtetPAge.html
 
  .status-item{
  	 text-align: left;
+	 display: inline-flex;
+	 color: black;
+	 align-content: space-between;
+	 flex-direction: column;
+
  }
 
  .status-item input, .status-item span {
@@ -42,4 +47,16 @@ For form in filtetPAge.html
  .btn-block {
 	margin-top: 20px;
 	text-align: center;
+}
+.checkBoxText{
+	padding: inherit;
+}
+
+.innerVerticle {
+	text-align: right;
+	margin-top: -20px;
+}
+
+.vertical-Filter{
+	margin-bottom: 5px;
 }
