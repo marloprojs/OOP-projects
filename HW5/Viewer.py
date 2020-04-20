@@ -68,7 +68,7 @@ def createPlayList(token, dataInfo):
 	sp = spotipy.client.Spotify(auth=token)
 	#creatinng new PlayList
 	plaListName = dataInfo[0]
-	playListSongList = dataInfo[1)
+	playListSongList = dataInfo[1]
 	sp.user_playlist_create(sp.current_user()['id'], plaListName)
 	playListID = getPlaylistId(token, plaListName)
 	#Cant add songs if there are no songs....
