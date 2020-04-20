@@ -84,8 +84,11 @@ def newPlayList(playlist):
 
 	#[NameOfNewPlayList, [List of filtered Song List]]
 	newPlayListInfo = [formDictionary['name'], newSongList ]
+	#Creates playlist with given name and list of songs. returns [playlistname, playlistIdsChosen]
 	newPlayListCreatore = Viewer.createPlayList(session['toke'], newPlayListInfo)
-	return render_template("newPlaylist.html", data=newPlayListCreatore )
+	#tracks.html and getPlayListSongs work together to get author and song name in table form
+	personal = Viewer.getPlaylistSongs(session['toke'],Viewer.getPlaylistId(session['toke'], newPlayListCreatore[0]))
+	return render_template("tracks.html", data=personal )
 
 
 @app.route("/callback")
