@@ -2,120 +2,230 @@
 {% block head %}
  {{ super() }}
 {% endblock %}
-
 {% block body %}
 
+<div class="filterForm"> <!--This was textbox -->
+  <form action="/newPlayList{{ data }}" method="POST">
+		<h1>New Playlist Creator</h1>
+		<div class="item">
+	  		<p>New Playlist Name:</p>
+  			<div class="name-item">
+				<input type="text" name="name" required />
+  			</div>
+		</div>
+		<div class="item status">
+			<p>Filter Criteria:</p>
+	  		<div class="status-item">
 
-	<div class="filterForm"> <!--This was textbox -->
-      <form action="/newPlayList{{ data }}" method="POST">
-        <h1>New Playlist Creator</h1>
-        <div class="item">
-          <p>New Playlist Name:</p>
-          <div class="name-item">
-            <input type="text" name="name"  />
-          </div>
-        </div>
-        <div class="item status">
-          <p>Filter Criteria:</p>
-          <div class="status-item">
-            <label class = "vertical-Filter">
-				<input type="checkbox" name="Acousticness" id = "Acousticness">
-				<span>Acousticness</span>
-				<input type="number" step="0.00001" id="AcousticnessText" name="AcousticnessText" class = "checkBoxText" disabled required>
-			</label>
+				<label class = "vertical-Filter">
+			  		<input type="checkbox" name="Acousticness" id = "Acousticness">
+					<label class = "tooltip">
+			  		<span>Acousticness</span>
+					 <span class = "tooltiptext">	A confidence measure from 0.0 to 1.0 of whether the track is acoustic. 1.0 represents high confidence the track is acoustic</span>
+					</label>
+					<input type="text" name = "AcousticnessText" id = "amount" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+	  			</label>
 
-
-            <label class = "vertical-Filter">
-				<input type="checkbox" name="Danceability" id = "Danceability">
-				<span>Danceability</span>
-				<input type="number" step="0.00001" id="DanceabilityText" name = "DanceabilityText" class = "checkBoxText" disabled required>
-			</label>
-
-
-            <label  class = "vertical-Filter">
-				<input type="checkbox" name="Energy" id = "Energy">
-				<span>Energy</span>
-				<input type="number" step="0.00001" id="EnergyText" name = "EnergyText" class = "checkBoxText" disabled required>
-			</label>
-
-
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Instrumentalness" id="Instrumentalness">
-				<span>Instrumentalness</span>
-				<input type="number" step="0.00001" id="InstrumentalnessText" name = "InstrumentalnessText" class = "checkBoxText" disabled required>
-			</label>
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Danceability" id = "Danceability">
+					<label class = "tooltip">
+						<span>Danceability</span>
+						<span class = "tooltiptext">Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable.</span>
+					</label>
+					<input type="text" name = "DanceabilityText" id = "amount1" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
 
 
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Liveliness" id="Liveliness">
-				<span>Liveliness</span>
-				<input type="number" step="0.00001" id="LivelinessText" name = "LivelinessText" class = "checkBoxText" disabled required>
-			</label>
+	            <label  class = "vertical-Filter">
+					<input type="checkbox" name="Energy" id = "Energy">
+					<label class = "tooltip">
+						<span>Energy</span>
+						<span class = "tooltiptext">Energy is a measure from 0.0 to 1.0 and represents a perceptual measure of intensity and activity. Typically, energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. </span>
+					</label>
+					<input type="text" name = "EnergyText" id = "amount2" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
 
 
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Loudness" id = "Loudness">
-				<span>Loudness</span>
-				<input type="number"step="0.00001"  id="LoudnessText" name = "LoudnessText" class = "checkBoxText" disabled required>
-			</label>
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Instrumentalness" id="Instrumentalness">
+					<label class = "tooltip">
+						<span>Instrumentalness</span>
+						<span class = "tooltiptext">Predicts whether a track contains no vocals. “Ooh” and “aah” sounds are treated as instrumental in this context. Rap or spoken word tracks are clearly “vocal”. The closer the instrumentalness value is to 1.0, the greater likelihood the track contains no vocal content. Values above 0.5 are intended to represent instrumental tracks, but confidence is higher as the value approaches 1.0.</span>
+					</label>
+					<input type="text" name = "InstrumentalnessText" id = "amount3" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
 
 
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Speechiness" id = "Speechiness" >
-				<span>Verbose</span>
-				<input type="number" step="0.00001" id="SpeechinessText" name = "SpeechinessText" class = "checkBoxText" disabled required>
-			</label>
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Liveness" id="Liveness">
+					<label class = "tooltip">
+						<span>Liveness</span>
+						<span class = "tooltiptext">Detects the presence of an audience in the recording. Higher liveness values represent an increased probability that the track was performed live. A value above 0.8 provides strong likelihood that the track is live.</span>
+					</label>
+					<input type="text" name = "LivenessText" id = "amount4" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
+
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Loudness" id = "Loudness">
+					<label class = "tooltip">
+						<span>Loudness</span>
+						<span class = "tooltiptext">The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typical range between -60 and 0 db. </span>
+					</label>
+					<input type="text" name = "LoudnessText"  id = "amount5" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div id = "loudness-slider" style= "margin-top:5px" ></div>
+				</label>
 
 
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Valence" id = "Valence">
-				<span>Valence</span>
-				<input type="number" step="0.00001" id="ValenceText" Name = "ValenceText" class = "checkBoxText" disabled required>
-			</label>
-			
-			<label class = "vertical-Filter">
-				<input type="checkbox" name="Tempo" id = "Tempo">
-				<span>Tempo</span>
-				<input type="number" step="0.00001" id="TempoText" Name = "TempoText" class = "checkBoxText" disabled required>
-			</label>
-		  </div>
-        </div>
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Speechiness" id = "Speechiness" >
+					<label class = "tooltip">
+						<span>Speechiness</span>
+						<span class = "tooltiptext">Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks. </span>
+					</label>
+					<input type="text" name = "SpeechinessText" id = "amount6" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div class = "slider"></div>
+				</label>
 
-         <div class="btn-block">
-          <button type="submit" >Create New PlayList</button>
-        </div>
-      </form>
-    </div>
-	<script>
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Tempo" id = "Tempo">
+					<label class = "tooltip">
+						<span>Tempo</span>
+						<span class = "tooltiptext">The overall estimated tempo of a track in beats per minute (BPM). In musical terminology, tempo is the speed or pace of a given piece and derives directly from the average beat duration.</span>
+					</label>
+					<input type="text" name = "TempoText" id = "amount7" class = "checkBoxText" readonly style="border:0;" disabled required>
+					<div id = "tempo-slider" style= "margin-top:5px" ></div>
+				</label>
 
-	document.getElementById('Acousticness').onchange = function() {
-	    document.getElementById('AcousticnessText').disabled = !this.checked;
-	};
-	document.getElementById('Danceability').onchange = function() {
-		document.getElementById('DanceabilityText').disabled = !this.checked;
-	};
-	document.getElementById('Energy').onchange = function() {
-		document.getElementById('EnergyText').disabled = !this.checked;
-	};
-	document.getElementById('Instrumentalness').onchange = function() {
-		document.getElementById('InstrumentalnessText').disabled = !this.checked;
-	};
-	document.getElementById('Liveliness').onchange = function() {
-		document.getElementById('LivelinessText').disabled = !this.checked;
-	};
-	document.getElementById('Loudness').onchange = function() {
-		document.getElementById('LoudnessText').disabled = !this.checked;
-	};
-	document.getElementById('Verbose').onchange = function() {
-		document.getElementById('VerboseText').disabled = !this.checked;
-	};
-	document.getElementById('Valence').onchange = function() {
-		document.getElementById('ValenceText').disabled = !this.checked;
-	};
-	document.getElementById('Tempo').onchange = function() {
-		document.getElementById('TempoText').disabled = !this.checked;
-	};
+				<label class = "vertical-Filter">
+					<input type="checkbox" name="Valence" id = "Valence">
+					<label class = "tooltip">
+						<span>Valence</span>
+						<span class = "tooltiptext">A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). </span>
+					</label>
+					<input type="text" name = "ValenceText" id = "amount8" class = "checkBoxText" readonly style="border:0;" disabled required >
+					<div class = "slider"></div>
+				</label>
 
-	</script>
+			</div>
+		</div>
+	  	<div class="btn-block">
+	   		<button type="submit" >Create New PlayList</button>
+	 	</div>
+	</form>
+</div>
+
+<script>
+//Need to create two more for the other weird ones.
+
+$( function() {
+	/*
+	$( ".slider" ).each(function(i,e){
+		divID = this.id
+		inputRegion = $(this).parent().find("input[name='o']").attr('id')
+
+		$(e).slider({
+			range: true,
+			min: 0,
+			max: 500,
+			values: [ 75, 300 ],
+			slide: function(e, ui) {
+				//alert(divParentID)
+				$('#' +inputRegion).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+			}
+		});
+		$('#'+inputRegion).val( "$" + $('#'+divID).slider( "values", 0 ) +
+		  " - $" + $('#'+divID).slider( "values", 1 ) );
+	});
+	*/
+
+	$( ".slider" ).slider({
+
+	  range: true,
+	  min: 0.0,
+	  max: 1.0,
+	  values: [ 0.4, 0.5],
+  	  step: 0.001,
+	  slide: function( event, ui ) {
+
+		  data = $(this).parent().find("input[type='text']").attr('id')
+	   		data2 = $(this).parent().find("input[type='text']").attr('name')
+			data3 = document.getElementsByName(data2)
+			if(data3[0].disabled == false){
+				$('#' + data).val(ui.values[ 0 ] + " to " + ui.values[ 1 ] );
+			}
+	  }
+	});
+
+	$( "#tempo-slider" ).slider({
+
+	  range: true,
+	  min: 0,
+	  max: 500,
+	  values: [ 75, 250],
+	  slide: function( event, ui ) {
+	  	data = $(this).parent().find("input[type='text']").attr('id')
+		data2 = $(this).parent().find("input[type='text']").attr('name')
+		data3 = document.getElementsByName(data2)
+		if(data3[0].disabled == false){
+		$('#' + data).val(ui.values[ 0 ] + " to " + ui.values[ 1 ] );
+		}
+	  }
+	});
+
+	$( "#loudness-slider" ).slider({
+
+	  range: true,
+	  min: -60,
+	  max: 0,
+	  values: [ -30, -10],
+	  slide: function( event, ui ) {
+		data = $(this).parent().find("input[type='text']").attr('id')
+		data2 = $(this).parent().find("input[type='text']").attr('name')
+		data3 = document.getElementsByName(data2)
+		if(data3[0].disabled == false){
+		$('#' + data).val(ui.values[ 0 ] + " to " + ui.values[ 1 ] );
+		}
+	  }
+	});
+
+  });
+
+
+  document.getElementById('Acousticness').onchange = function() {
+  	document.getElementsByName('AcousticnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Danceability').onchange = function() {
+  	document.getElementsByName('DanceabilityText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Energy').onchange = function() {
+  	document.getElementsByName('EnergyText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Instrumentalness').onchange = function() {
+  	document.getElementsByName('InstrumentalnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Liveness').onchange = function() {
+  	document.getElementsByName('LivenessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Loudness').onchange = function() {
+  	document.getElementsByName('LoudnessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Speechiness').onchange = function() {
+  	document.getElementsByName('SpeechinessText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Valence').onchange = function() {
+  	document.getElementsByName('ValenceText')[0].disabled = !this.checked;
+  };
+  document.getElementById('Tempo').onchange = function() {
+  	document.getElementsByName('TempoText')[0].disabled = !this.checked;
+  };
+
+
+  </script>
+
 
 {% endblock %}

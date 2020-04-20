@@ -65,14 +65,14 @@ def songs(playlist):
 
 @app.route("/filter<playlist>")
 def filterPage(playlist):
-	return render_template("newTest.html" ,data = playlist)
+	return render_template("filterPage.html" ,data = playlist)
 
 
 #Grabbing form data
 @app.route("/newPlayList<playlist>", methods = ['POST', 'GET'])
 def newPlayList(playlist):
 	formDictionary = request.form.to_dict()
-	listOfFeatures = ["Acousticness", "Danceability", "Energy", "Instrumentalness", "Liveliness", "Loudness", "speechiness", "Valence", "Tempo"]
+	listOfFeatures = ["Acousticness", "Danceability", "Energy", "Instrumentalness", "Liveness", "Loudness", "speechiness", "Valence", "Tempo"]
 	userSelectFeatureValueDictionary = {}
 	for key in formDictionary:
 		if key in listOfFeatures:

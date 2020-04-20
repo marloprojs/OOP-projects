@@ -67,8 +67,12 @@ def filterSongs(token, songIDList, filterCriteriaDict, newPlayListName):
 def createPlayList(token, dataInfo):
 	sp = spotipy.client.Spotify(auth=token)
 	#creatinng new PlayList
-	sp.user_playlist_create(sp.current_user()['id'], dataInfo[0])
-	sp.user_playlist_add_tracks(sp.current_user()['id'],getPlaylistId(token, dataInfo[0]), dataInfo[1])
-
+	plaListName = dataInfo[0]
+	playListSongList = dataInfo[1)
+	sp.user_playlist_create(sp.current_user()['id'], plaListName)
+	playListID = getPlaylistId(token, plaListName)
+	#Cant add songs if there are no songs....
+	if(len(playListSongList) > 0 ):
+		sp.user_playlist_add_tracks(sp.current_user()['id'],playListID  , playListSongList)
 	PlyListSongs = getSongIdList(token, getPlaylistId(token, dataInfo[0]))
 	return [dataInfo[0], PlyListSongs]
