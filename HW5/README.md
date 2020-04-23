@@ -1,3 +1,7 @@
+Spot Dat New Playlist 
+
+Marlo Terr | Marissa Montano |  Jorge Moreno
+
 # How to run Flask server:
 ```bash
 python Model.py
