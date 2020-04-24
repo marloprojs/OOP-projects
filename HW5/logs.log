@@ -1,2 +1,100 @@
-2020/04/24 14:32:16 - WARNING -  * Debugger is active!
-2020/04/24 14:32:16 - INFO -  * Debugger PIN: 304-646-423
+2020/04/24 15:01:34 - WARNING -  * Debugger is active!
+2020/04/24 15:01:34 - INFO -  * Debugger PIN: 304-646-423
+2020/04/24 15:01:37 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:37] "GET / HTTP/1.1" 302 -
+2020/04/24 15:01:37 - DEBUG - Starting new HTTPS connection (1): accounts.spotify.com
+2020/04/24 15:01:37 - DEBUG - https://accounts.spotify.com:443 "POST /api/token HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:38] "GET /callback?code=AQBFkF36s2bdExiQG3fbvDA3fdgUSRfXB0VpuK78orgi4t-42fn-nfDsreRmduoktrid58xWR6Gt-Hxuh4ejTBseICKD125x46pteeYVC-TUEu4ctJT2QEl3g2_kATqPlovZOKsb9Ppb7ZbmxkCGoiVT_B0ZVrdP88xMD5CTx3UnKhZYSEm2syZ28p907ctHSaJMUND3VqHC4fN9MKmW0cAmq_FBFnr5VN51fZ65MJzFR3iRdYuvutep-_MvNf6tUgTKRCtooDjG6IAmKLG8eFFYMB9MfJbnH27J5I-s9VelCLMz7780x7Z3jSJEW2D0X8Zi7x00iKuO HTTP/1.1" 200 -
+2020/04/24 15:01:38 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:38] "GET /resources/demos/style.css HTTP/1.1" 404 -
+2020/04/24 15:01:38 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:38 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:38] "GET /favicon.ico HTTP/1.1" 200 -
+2020/04/24 15:01:43 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:43 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:43 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:43 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:43 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:43 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:43] "GET /recommend HTTP/1.1" 200 -
+2020/04/24 15:01:43 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:43] "GET /resources/demos/style.css HTTP/1.1" 404 -
+2020/04/24 15:01:43 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:44 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:44 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:44 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:44 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:44 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:44] "GET /favicon.ico HTTP/1.1" 200 -
+2020/04/24 15:01:48 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:48] "GET /filterRunning HTTP/1.1" 200 -
+2020/04/24 15:01:48 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:48] "GET /resources/demos/style.css HTTP/1.1" 404 -
+2020/04/24 15:01:48 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:48 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:48 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:48 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:48 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:48 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:48] "GET /favicon.ico HTTP/1.1" 200 -
+2020/04/24 15:01:56 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:56 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/playlists/0GMZiH3us5JGoR8ZLKgorH/tracks?limit=100&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/audio-features/?ids=6oJ6le65B3SEqPwMRNXWjY,1c3GkbZBnyrQ1cm4TGHFrK,64rL48E6xWMIXdpcFDEiB8,25sgk305KZfyuqVBQIahim HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "POST /v1/users/21svumav4iygye4inw4ef57qi/playlists HTTP/1.1" 201 None
+2020/04/24 15:01:57 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:57 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/playlists/7xLkGIqESEcpnFe6tWBL0V/tracks?limit=100&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:58 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/playlists/7xLkGIqESEcpnFe6tWBL0V/tracks?limit=100&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:59 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:59] "POST /newPlayListRunning HTTP/1.1" 200 -
+2020/04/24 15:01:59 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:59] "GET /resources/demos/style.css HTTP/1.1" 404 -
+2020/04/24 15:01:59 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:59 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:01:59 - INFO - 127.0.0.1 - - [24/Apr/2020 15:01:59] "GET /favicon.ico HTTP/1.1" 200 -
+2020/04/24 15:02:03 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:02:03 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - INFO - 127.0.0.1 - - [24/Apr/2020 15:02:04] "GET /home HTTP/1.1" 200 -
+2020/04/24 15:02:04 - INFO - 127.0.0.1 - - [24/Apr/2020 15:02:04] "GET /resources/demos/style.css HTTP/1.1" 404 -
+2020/04/24 15:02:04 - DEBUG - Starting new HTTPS connection (1): api.spotify.com
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/playlists?limit=50&offset=0 HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - DEBUG - https://api.spotify.com:443 "GET /v1/me/ HTTP/1.1" 200 None
+2020/04/24 15:02:04 - INFO - 127.0.0.1 - - [24/Apr/2020 15:02:04] "GET /favicon.ico HTTP/1.1" 200 -
