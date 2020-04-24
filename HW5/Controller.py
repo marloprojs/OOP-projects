@@ -38,7 +38,7 @@ def getPlaylistInfo(token):
 def getAuthUrl(ip, port):
 	''' Function to get authorization page url
 		Input: ip and port
-		Output: auth redirect url 
+		Output: auth redirect url
 	'''
 	redirect = "http://"+ip+":"+str(port)+"/callback"
 	auth_url = f'{API_BASE}/authorize?client_id={CLI_ID}&response_type=code&redirect_uri={redirect}&scope={SCOPE}'
@@ -77,7 +77,7 @@ def getPlaylistSongs(token, playlistId):
 			artists.append([art['name']])
 		personal.append([track['track'], track['track']])
 	return personal
-	
+
 
 def getCallback(ip, port, code):
 	''' Function get a callback token
@@ -133,6 +133,7 @@ def createPlayList(token, dataInfo):
 	sp = spotipy.client.Spotify(auth=token)
 	#creatinng new PlayList
 	plaListName = dataInfo[0]
+	print("New playlist name: ", plaListName)
 	playListSongList = dataInfo[1]
 	sp.user_playlist_create(sp.current_user()['id'], plaListName)
 	playListID = getPlaylistId(token, plaListName)
@@ -141,4 +142,3 @@ def createPlayList(token, dataInfo):
 		sp.user_playlist_add_tracks(sp.current_user()['id'],playListID  , playListSongList)
 	PlyListSongs = getSongIdList(token, getPlaylistId(token, dataInfo[0]))
 	return [dataInfo[0], PlyListSongs]
-
