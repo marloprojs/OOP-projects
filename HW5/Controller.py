@@ -10,12 +10,12 @@ import configparser
 import requests
 import logging
 
-API_BASE = 'https://accounts.spotify.com'
-REDIRECT_URI = "http://localhost:3000/callback"
-SCOPE = 'playlist-modify-private,playlist-modify-public,playlist-read-collaborative,playlist-read-private'
-CLI_ID = 'c5e2d53ffcd64af3839e40efbe4a7382'
-CLI_SEC = 'bc0f50ed398246f9b5bdd1a06e189b9a'
-
+class spot:
+	API_BASE = 'https://accounts.spotify.com'
+	REDIRECT_URI = "http://localhost:3000/callback"
+	SCOPE = 'playlist-modify-private,playlist-modify-public,playlist-read-collaborative,playlist-read-private'
+	CLI_ID = 'c5e2d53ffcd64af3839e40efbe4a7382'
+	CLI_SEC = 'bc0f50ed398246f9b5bdd1a06e189b9a'
 
 def getPlaylistInfo(token):
 	''' Function to display users own playlist
@@ -35,13 +35,13 @@ def getPlaylistInfo(token):
 	return personal
 
 
-def getAuthUrl(ip, port):
+def getAuthUrl(ip, port, spotObj):
 	''' Function to get authorization page url
 		Input: ip and port
-		Output: auth redirect url 
+		Output: auth redirect url
 	'''
 	redirect = "http://"+ip+":"+str(port)+"/callback"
-	auth_url = f'{API_BASE}/authorize?client_id={CLI_ID}&response_type=code&redirect_uri={redirect}&scope={SCOPE}'
+	auth_url = f'{spotObj.API_BASE}/authorize?client_id={spotObj.CLI_ID}&response_type=code&redirect_uri={redirect}&scope={spotObj.SCOPE}'
 	return auth_url
 
 ## api dont like???? ################################################################################
@@ -77,21 +77,21 @@ def getPlaylistSongs(token, playlistId):
 			artists.append([art['name']])
 		personal.append([track['track'], track['track']])
 	return personal
-	
 
-def getCallback(ip, port, code):
+
+def getCallback(ip, port, code, spotObj):
 	''' Function get a callback token
         Input: IP, Port, and code
         Output: Session token
     '''
 	redirect = "http://"+ip+":"+str(port)+"/callback"
-	auth_token_url = f"{API_BASE}/api/token"
+	auth_token_url = f"{spotObj.API_BASE}/api/token"
 	res = requests.post(auth_token_url, data={
 		"grant_type":"authorization_code",
 		"code":code,
 		"redirect_uri":redirect,
-		"client_id":CLI_ID,
-		"client_secret":CLI_SEC
+		"client_id":spotObj.CLI_ID,
+		"client_secret":spotObj.CLI_SEC
 		})
 	res_body = res.json()
 	token = res_body.get("access_token")
@@ -133,6 +133,7 @@ def createPlayList(token, dataInfo):
 	sp = spotipy.client.Spotify(auth=token)
 	#creatinng new PlayList
 	plaListName = dataInfo[0]
+	print("New playlist name: ", plaListName)
 	playListSongList = dataInfo[1]
 	sp.user_playlist_create(sp.current_user()['id'], plaListName)
 	playListID = getPlaylistId(token, plaListName)
@@ -141,4 +142,3 @@ def createPlayList(token, dataInfo):
 		sp.user_playlist_add_tracks(sp.current_user()['id'],playListID  , playListSongList)
 	PlyListSongs = getSongIdList(token, getPlaylistId(token, dataInfo[0]))
 	return [dataInfo[0], PlyListSongs]
-

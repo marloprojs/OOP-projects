@@ -20,7 +20,7 @@ DIR = os.path.dirname(os.path.abspath(__file__))
 CFG_FILE_PATH = os.path.join(DIR, 'config.cfg')
 IP = "localhost"
 PORT = 3000
-
+SPOTOBJ = Controller.spot()
 
 @app.route("/")
 def verify():
@@ -28,7 +28,7 @@ def verify():
 		Input: None
 		Output: Page redirect to login page
 		'''
-	auth_url = Controller.getAuthUrl(IP, PORT)
+	auth_url = Controller.getAuthUrl(IP, PORT, SPOTOBJ)
 	return redirect(auth_url)
 
 @app.route("/home")
@@ -92,7 +92,7 @@ def newPlayList(playlist):
 	newPlayListCreatore = Controller.createPlayList(session['toke'], newPlayListInfo)
 	#tracks.html and getPlayListSongs work together to get author and song name in table form
 	personal = Controller.getPlaylistSongs(session['toke'],Controller.getPlaylistId(session['toke'], newPlayListCreatore[0]))
-	return render_template("tracks.html", data=personal )
+	return render_template("tracks.html", data=personal, header=formDictionary['name'])
 
 
 @app.route("/callback")
@@ -103,7 +103,7 @@ def callback():
     '''
     code = request.args.get('code')
     session.clear()
-    session["toke"] = Controller.getCallback(IP, PORT, code)
+    session["toke"] = Controller.getCallback(IP, PORT, code, SPOTOBJ)
 
     return home()
 
