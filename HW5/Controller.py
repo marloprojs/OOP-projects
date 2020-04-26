@@ -142,3 +142,15 @@ def createPlayList(token, dataInfo):
 		sp.user_playlist_add_tracks(sp.current_user()['id'],playListID  , playListSongList)
 	PlyListSongs = getSongIdList(token, getPlaylistId(token, dataInfo[0]))
 	return [dataInfo[0], PlyListSongs]
+
+def getSinglePlaylistLinfo(token,playList):
+	#personal = []
+	sp = spotipy.client.Spotify(auth=token)
+	playlists = sp.current_user_playlists()
+	playlistName = playList.strip()
+	for playlist in playlists['items']:
+		# only display playlists they own (and 1st image of that playlist)
+		if playlist['name'].strip() == playlistName:
+			#personal.append(playlist)
+			return playlist
+	return 
