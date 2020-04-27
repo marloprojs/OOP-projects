@@ -123,7 +123,7 @@ class Control_class:
 		PlyListSongs = self.getSongIdList(token, self.getPlaylistId(token, dataInfo[0]))
 		return [dataInfo[0], PlyListSongs]
 
-	def getSinglePlaylistLinfo(token,playList):
+	def getSinglePlaylistLinfo(self,token,playList):
 		#personal = []
 		sp = spotipy.client.Spotify(auth=token)
 		playlists = sp.current_user_playlists()
