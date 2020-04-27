@@ -1,0 +1,92 @@
+/*
+For form in filtetPAge.html
+*/
+.filterForm {
+	background-color: rgb(132, 115, 143);
+	margin: auto;
+	width: 80%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: inherit;
+	padding: 3px;
+}
+/*
+.item {
+	position: relative;
+	margin: 10px 0;
+}
+*/
+
+.name-item {
+	 /*display: flex;*/
+	 flex-wrap: wrap;
+	 justify-content: space-between;
+ }
+
+ .status-item{
+ 	 text-align: left;
+	 display: inline-flex;
+	 color: black;
+	 align-content: space-between;
+	 flex-direction: column;
+
+ }
+
+ .status-item input, .status-item span {
+
+	 width: auto;
+	 vertical-align: middle;
+ }
+ .status-item input {
+	 margin: 0;
+ }
+ .status-item span {
+	 margin: 0 20px 0 5px;
+ }
+ .btn-block {
+	margin-top: 20px;
+	text-align: center;
+}
+.checkBoxText{
+	padding: inherit;
+}
+
+.innerVerticle {
+	text-align: right;
+	margin-top: -20px;
+}
+
+.vertical-Filter{
+	margin-bottom: 10px;
+}
+
+.slider{
+	margin-top: 5px;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 240%;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  right: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

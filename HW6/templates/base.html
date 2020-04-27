@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> SDNP</title>
+        <link rel="stylesheet" href="./static/style/baseStyle.css" type="text/css">
+		<link rel="stylesheet" href="./static/style/filter.css" type="text/css">
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet2" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+		<!-- jQuery library -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link rel="stylesheet" href="/resources/demos/style.css">
+    </head>
+    <body>
+        <div class="header">
+            <h1> Spot Dat New Playlist</h1>
+        </div>
+        <hr>
+        <div class="links">
+            <div class="vertical-menu">
+				<div class=vert><a href = "/home">Home Page</a></div>
+                <div class=vert><a href="/recommend">New PlayList</a></div>
+                <div class=vert><a href="/about">About</a></div>
+                <div class=vert><a href="/contact">Contact Us</a></div>
+           </div>
+        </div>
+        <div class="change">
+            {% block body %}
+
+            {% endblock%}
+        </div>
+
+    </body>
+</html>

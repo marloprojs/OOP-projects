@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+<div style=" text-align: center;">
+	<a href="{{ header['external_urls']['spotify'] }}" style=float:none>
+		<h2>{{ header['name'] }}</h2>
+	</a>
+</div>
+<div class="">
+        <table style="width:100%">
+			<tr>
+				<th style="text-align: left;">Song Name</th>
+				<th style="text-align: left;">Artist Name(s)</th>
+			</tr>
+        {% for track, name in data %}
+            <tr>
+            	<td>
+					<div style=" text-align: left; padding-left: 3%; float: left">
+						<a href="{{ name['external_urls']['spotify'] }}">
+							{{ name['name'] }}
+						</a>
+					</div>
+				</td>
+				<td >
+					<div style=" text-align: left; padding-left: 3%; float: left">
+					{% for artists in name['artists'] %}
+						<a href="{{ artists['external_urls']['spotify'] }}">
+							{{ artists['name'] }} ,
+						</a>
+					{% endfor %}
+					</div>
+				</td>
+			</tr>
+
+        {% endfor %}
+        </table>
+   </div>
+
+{% endblock %}

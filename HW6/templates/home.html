@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block head %}
+ {{ super() }}
+{% endblock %}
+{% block body %}
+
+<br>
+<br>
+<br>
+<br>
+<h2>When you want a new playlist, but don't want to do any work</h2>
+<br>
+
+<img src="./static/sPoTiFy.png" alt="Bad Logo">
+
+
+<div>
+    <h4  >Welcome to Spot Dat New Playlist</h4>
+    <p >
+        The customizable playlist creation system made just for you!
+	</p>
+	<br>
+    <br>
+	<div class="">
+		<table style="width:75%"></table>
+		{% for playlist, url in data %}
+			<tr>
+			<th><img src="{{ url }}" height=100 width=100 alt={{ playlist }}></img></th>
+			<th style=" text-align: left; padding-left: 3%;"> {{ playlist['url'] }} </th>
+			</tr>
+		{% endfor %}
+		</table>
+	</div>
+    <br>
+    <br>
+    <p style="font-style: oblique"> Please see other pages to learn more </p>
+</div>
+
+{% endblock%}
