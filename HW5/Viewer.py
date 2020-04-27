@@ -30,7 +30,7 @@ def verify():
 		Input: None
 		Output: Page redirect to login page
 		'''
-	auth_url = Controller.getAuthUrl(IP, PORT, SPOTOBJ)
+	auth_url = Model.getAuthUrl(IP, PORT, SPOTOBJ)
 	return redirect(auth_url)
 
 @app.route("/home")
@@ -87,7 +87,7 @@ def newPlayList(playlist):
 
 	playlistId = Controller.getPlaylistId(session['toke'], playlist)
 	songIdList = Controller.getSongIdList(session['toke'], playlistId)
-	newSongList = Controller.filterSongs(session['toke'],songIdList,userSelectFeatureValueDictionary,formDictionary['name'])
+	newSongList = Controller.filterSongs(session['toke'],songIdList,userSelectFeatureValueDictionary)
 
 	#[NameOfNewPlayList, [List of filtered Song List]]
 	newPlayListInfo = [formDictionary['name'], newSongList ]

@@ -34,16 +34,6 @@ class Control_class:
 					personal.append([playlist['name'], playlist['images'][0] ['url']])
 		return personal
 
-
-	def getAuthUrl(self, ip, port, spotObj):
-		''' Function to get authorization page url
-			Input: ip and port
-			Output: auth redirect url
-		'''
-		redirect = "http://"+ip+":"+str(port)+"/callback"
-		auth_url = f'{spotObj.API_BASE}/authorize?client_id={spotObj.CLI_ID}&response_type=code&redirect_uri={redirect}&scope={spotObj.SCOPE}'
-		return auth_url
-
 	## api dont like???? ################################################################################
 	#need to strip whitespace from front and. Playlist may have them in spotify app but api does not like them
 	def getPlaylistId(self, token, playlistName):
@@ -80,6 +70,11 @@ class Control_class:
 
 
 	def getSongIdList(self, token, playlistId):
+		'''Function to display users songs in spesific playlist.
+				Different from above because thos returns only the songs IDs
+			Input: session token and playlist id
+			Output: list of [track['track']['id']]
+		'''
 		songIds = []
 		sp = spotipy.client.Spotify(auth=token)
 		tracks = sp.user_playlist_tracks(user=sp.current_user()['id'], playlist_id=playlistId)
@@ -87,7 +82,11 @@ class Control_class:
 			songIds.append(track['track']['id'])
 		return songIds
 
-	def filterSongs(self, token, songIDList, filterCriteriaDict, newPlayListName):
+	def filterSongs(self, token, songIDList, filterCriteriaDict):
+		'''Function to filter songs from given filter criteria
+			Input: session token, list of Song Ids, Dictionary of filters and range
+			Output: List of updated SongIds that meet filter criteria
+		'''
 		#dictionary values are passed as a string. Need to get the value as float
 		for key in filterCriteriaDict:
 			valuesStringtoList = filterCriteriaDict[key].split(" to ")
@@ -110,6 +109,10 @@ class Control_class:
 
 
 	def createPlayList(self, token, dataInfo):
+		'''Function to create new playlist from given list of song ids and name
+			Input: session token, list with first index: name of new playlist, second index: list of song ids to add
+			Output: list[playlist name, [list of updated songids]]
+		'''
 		sp = spotipy.client.Spotify(auth=token)
 		#creatinng new PlayList
 		plaListName = dataInfo[0]
@@ -124,6 +127,10 @@ class Control_class:
 		return [dataInfo[0], PlyListSongs]
 
 	def getSinglePlaylistLinfo(self,token,playList):
+		'''Helper function to get a users playlist meta info. (used in track.html)
+			Input: session token, Playlist name
+			Output: Dictionary of the playlists metaData
+		'''
 		#personal = []
 		sp = spotipy.client.Spotify(auth=token)
 		playlists = sp.current_user_playlists()

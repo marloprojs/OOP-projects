@@ -38,3 +38,12 @@ class Model_class:
 		res_body = res.json()
 		token = res_body.get("access_token")
 		return token
+		
+	def getAuthUrl(self, ip, port, spotObj):
+		''' Function to get authorization page url
+			Input: ip and port
+			Output: auth redirect url
+		'''
+		redirect = "http://"+ip+":"+str(port)+"/callback"
+		auth_url = f'{spotObj.API_BASE}/authorize?client_id={spotObj.CLI_ID}&response_type=code&redirect_uri={redirect}&scope={spotObj.SCOPE}'
+		return auth_url
