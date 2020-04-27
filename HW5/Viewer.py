@@ -8,8 +8,8 @@ import time
 import configparser
 import logging
 import requests
-import Controller
-import Model
+import Controller as Control
+import Model as Mod
 
 #make a secret key for flask
 app = Flask(__name__)
@@ -20,7 +20,9 @@ DIR = os.path.dirname(os.path.abspath(__file__))
 CFG_FILE_PATH = os.path.join(DIR, 'config.cfg')
 IP = "localhost"
 PORT = 3000
-SPOTOBJ = Controller.spot()
+SPOTOBJ = Control.spot()
+Controller = Control.Control_class()
+Model = Mod.Model_class()
 
 @app.route("/")
 def verify():
@@ -61,7 +63,6 @@ def songs(playlist):
 	'''
 	playlistId = Controller.getPlaylistId(session['toke'], playlist)
 	if(playlistId):
-		#print(playlistId)
 		personal = Controller.getPlaylistSongs(session['toke'], playlistId)
 		playListAllInfo = Controller.getSinglePlaylistLinfo(session['toke'], playlist)
 		return render_template("tracks.html", data=personal,header=playListAllInfo)
@@ -95,7 +96,6 @@ def newPlayList(playlist):
 	#tracks.html and getPlayListSongs work together to get author and song name in table form
 	personal = Controller.getPlaylistSongs(session['toke'],Controller.getPlaylistId(session['toke'], newPlayListCreatore[0]))
 	playListAllInfo = Controller.getSinglePlaylistLinfo(session['toke'], formDictionary['name'])
-
 	return render_template("tracks.html", data=personal, header=playListAllInfo)
 
 
@@ -107,7 +107,7 @@ def callback():
     '''
     code = request.args.get('code')
     session.clear()
-    session["toke"] = Controller.getCallback(IP, PORT, code, SPOTOBJ)
+    session["toke"] = Model.getCallback(IP, PORT, code, SPOTOBJ)
 
     return home()
 
